@@ -1,25 +1,24 @@
 # 301 preusmerenja sa starog WordPress sajta mojambijent.com
 # Format: stara-adresa  nova-adresa  301   (Netlify _redirects; za Apache: Redirect 301 /stara /nova)
-# PAŽNJA: stare adrese ispod su PRETPOSTAVKA tipičnih WordPress putanja.
+# PAŽNJA: stare adrese su PRETPOSTAVKA tipičnih WordPress putanja.
 # [PROVERITI SA STAROG SAJTA]: izvezite listu stranica iz WordPress-a ili Google Search Console i dopunite.
 
-/kontakt/            /kontakt.html             301
-/kontakt-2/          /kontakt.html             301
-/o-nama/             /o-nama.html              301
-/galerija/           /radovi.html              301
-/radovi/             /radovi.html              301
-/portfolio/          /radovi.html              301
-/kuhinje/            /radovi.html#kuhinje      301
-/kuhinje-po-meri/    /radovi.html#kuhinje      301
-/plakari/            /radovi.html#plakari      301
-/americki-plakari/   /radovi.html#plakari      301
-/spavace-sobe/       /radovi.html#spavace      301
-/decije-sobe/        /radovi.html#decije       301
-/dnevne-sobe/        /radovi.html#dnevne       301
-/kupatila/           /radovi.html#kupatila     301
-/hodnici/            /radovi.html#hodnici      301
-/zidni-kreveti/      /index.html#zidni-krevet  301
-/usluge/             /kako-radimo.html         301
+/kontakt/               /kontakt.html          301
+/o-nama/                /o-nama.html           301
+/galerija/              /radovi.html           301
+/radovi/                /radovi.html           301
+/portfolio/             /radovi.html           301
+/kuhinje/               /kuhinje.html          301
+/kuhinje-po-meri/       /kuhinje.html          301
+/plakari/               /plakari.html          301
+/americki-plakari/      /plakari.html          301
+/hodnici/               /plakari.html          301
+/spavace-sobe/          /sobe.html             301
+/decije-sobe/           /sobe.html             301
+/dnevne-sobe/           /sobe.html             301
+/zidni-kreveti/         /sobe.html#zidni-krevet 301
+/kupatila/              /kupatila.html         301
+/usluge/                /index.html            301
 /politika-privatnosti/  /privatnost.html       301
-/privacy-policy/     /privatnost.html          301
-/[STARA-ADRESA]/     /[NOVA-ADRESA]            301
+/privacy-policy/        /privatnost.html       301
+/[STARA-ADRESA]/        /[NOVA-ADRESA]         301

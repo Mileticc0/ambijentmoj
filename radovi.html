@@ -3,273 +3,227 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#FAF8F5">
 <link rel="icon" type="image/png" sizes="32x32" href="assets/img/logo/favicon-32.png">
 <link rel="apple-touch-icon" href="assets/img/logo/favicon-180.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Literata:opsz,wght@7..72,400&family=Schibsted+Grotesk:wght@500;600&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500&family=Hanken+Grotesk:wght@400;500&display=swap">
 <link rel="stylesheet" href="assets/css/site.css">
 <script>document.documentElement.classList.add('js')</script>
-<title>Radovi: kuhinje, plakari i nameštaj po meri Novi Sad · Moj Ambijent</title>
-<meta name="description" content="Kuhinje po meri, američki plakari, zidni kreveti, dnevne sobe, kupatila i hodnici iz radionice Moj Ambijent u Novom Sadu. Filtrirajte po prostoriji i materijalu.">
-<meta name="theme-color" content="#F3F0EB">
+<title>Radovi: nameštaj po meri Novi Sad · Moj Ambijent</title>
+<meta name="description" content="Radovi radionice Moj Ambijent: kompletan stan u Novom Sadu, stan u Puli, kuhinje, plakari, sobe i kupatila po meri. Fotografije i snimci sa terena.">
 <link rel="canonical" href="https://mojambijent.com/radovi.html">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Radovi · Moj Ambijent, Novi Sad">
 <meta property="og:description" content="Sve što vidite izrađeno je po meri za jedan konkretan prostor.">
-<meta property="og:image" content="https://mojambijent.com/assets/img/kuhinja-led-1-1600.jpg">
+<meta property="og:image" content="https://mojambijent.com/assets/img/stan-ns-kuhinja-1600.jpg">
+<link rel="stylesheet" href="assets/css/usluga.css">
 <link rel="stylesheet" href="assets/css/radovi.css">
 </head>
 <body>
 <a class="skip" href="#sadrzaj">Preskoči na sadržaj</a>
 
-<header class="hdr" data-ton="lak">
-  <a class="hdr-brand" href="index.html" aria-label="Moj Ambijent, početna">
-    <span class="znak" aria-hidden="true">
-      <img class="z-tamno" src="assets/img/logo/znak-tamni.png" width="160" height="208" alt="">
-      <img class="z-svetlo" src="assets/img/logo/znak-zlatni.png" width="160" height="208" alt="">
-    </span>
-    <span class="label">Moj Ambijent</span>
+<header class="hdr">
+  <a class="marka" href="index.html" aria-label="Moj Ambijent, početna">
+    <img src="assets/img/logo/znak-tamni.png" width="176" height="228" alt="">
+    <span>Moj Ambijent</span>
   </a>
-  <nav class="hdr-nav label" aria-label="Glavni meni">
+  <nav class="meni label" aria-label="Glavni meni">
     <ul>
+      <li><a href="kuhinje.html">Kuhinje</a></li>
+      <li><a href="plakari.html">Plakari</a></li>
+      <li><a href="sobe.html">Sobe</a></li>
+      <li><a href="kupatila.html">Kupatila</a></li>
       <li><a href="radovi.html" aria-current="page">Radovi</a></li>
-      <li><a href="kako-radimo.html">Kako radimo</a></li>
       <li><a href="o-nama.html">O nama</a></li>
-      <li><a href="kontakt.html">Kontakt</a></li>
     </ul>
-    <span class="hdr-ind" aria-hidden="true"></span>
+    <span class="meni-ind" aria-hidden="true"></span>
   </nav>
   <a class="hdr-tel label num" href="tel:+381631105456">063 110 54 56</a>
-  <a class="btn" href="kontakt.html">Zakaži merenje<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
+  <a class="btn" href="kontakt.html">Zakažite merenje</a>
 </header>
 
 <main id="sadrzaj">
-  <section class="sec galerija" data-ton="lak" data-paint="page" aria-labelledby="h-radovi">
-    <div class="wrap grid uvod">
+  <section class="r-uvod" aria-labelledby="h-radovi">
+    <div class="wrap grid">
       <h1 id="h-radovi">Radovi</h1>
       <p>Sve što vidite izrađeno je po meri za jedan konkretan prostor.</p>
-    </div>
-
-    <div class="wrap filteri" aria-label="Filteri">
-      <div class="f-red" role="group" aria-labelledby="f-pr">
-        <span class="f-ime label" id="f-pr">Prostorija</span>
-        <div class="f-opcije">
-          <button class="f-dugme label" type="button" data-pr="" aria-pressed="true">Sve</button>
-          <button class="f-dugme label" type="button" data-pr="kuhinje" aria-pressed="false">Kuhinje</button>
-          <button class="f-dugme label" type="button" data-pr="plakari" aria-pressed="false">Plakari</button>
-          <button class="f-dugme label" type="button" data-pr="spavace" aria-pressed="false">Spavaće</button>
-          <button class="f-dugme label" type="button" data-pr="dnevne" aria-pressed="false">Dnevne</button>
-          <button class="f-dugme label" type="button" data-pr="kupatila" aria-pressed="false">Kupatila</button>
-          <button class="f-dugme label" type="button" data-pr="hodnici" aria-pressed="false">Hodnici</button>
-          <button class="f-dugme label" type="button" data-pr="decije" aria-pressed="false">Dečije</button>
-        </div>
+      <div class="filter" role="group" aria-label="Prikaži radove">
+        <button class="f-dugme" type="button" data-kat="" aria-pressed="true">Sve</button>
+        <button class="f-dugme" type="button" data-kat="kuhinje" aria-pressed="false">Kuhinje</button>
+        <button class="f-dugme" type="button" data-kat="plakari" aria-pressed="false">Plakari</button>
+        <button class="f-dugme" type="button" data-kat="sobe" aria-pressed="false">Sobe</button>
+        <button class="f-dugme" type="button" data-kat="kupatila" aria-pressed="false">Kupatila</button>
+        <button class="f-dugme" type="button" data-kat="hodnici" aria-pressed="false">Hodnici</button>
       </div>
-      <div class="f-red" role="group" aria-labelledby="f-mat">
-        <span class="f-ime label" id="f-mat">Materijal</span>
-        <div class="f-uzorci">
-          <button class="f-uz" type="button" data-mat="orah" aria-pressed="false" style="--t: var(--orah)"><span class="plocica" aria-hidden="true"></span><span class="label">Orah</span></button>
-          <button class="f-uz" type="button" data-mat="hrast" aria-pressed="false" style="--t: var(--hrast)"><span class="plocica" aria-hidden="true"></span><span class="label">Hrast</span></button>
-          <button class="f-uz" type="button" data-mat="lak" aria-pressed="false" style="--t: var(--lak)"><span class="plocica" aria-hidden="true"></span><span class="label">Beli mat</span></button>
-          <button class="f-uz" type="button" data-mat="krem" aria-pressed="false" style="--t: var(--krem)"><span class="plocica" aria-hidden="true"></span><span class="label">Krem</span></button>
-          <button class="f-uz" type="button" data-mat="kamen" aria-pressed="false" style="--t: var(--kamen)"><span class="plocica" aria-hidden="true"></span><span class="label">Kamen</span></button>
-          <button class="f-uz" type="button" data-mat="antracit" aria-pressed="false" style="--t: var(--antracit)"><span class="plocica" aria-hidden="true"></span><span class="label">Antracit</span></button>
-        </div>
-      </div>
-      <p class="f-stanje label" aria-live="polite">Svi radovi</p>
-    </div>
-
-    <div class="wrap m-grupe">
-      <section class="m-grupa" id="kuhinje" data-pr="kuhinje" aria-labelledby="h-kuhinje">
-        <h2 id="h-kuhinje">Kuhinje</h2>
-        <ul class="masonry">
-          <li class="m-rad" data-mat="hrast"><button class="m-btn" type="button" data-f="kuhinja-led-1" data-w="1639" data-h="2048"><span class="m-foto"><img src="assets/img/kuhinja-led-1-800.jpg" srcset="assets/img/kuhinja-led-1-800.jpg 800w, assets/img/kuhinja-led-1-1600.jpg 1600w" sizes="(min-width: 960px) 30vw, (min-width: 600px) 46vw, 92vw" width="1639" height="2048" loading="lazy" decoding="async" alt="Kuhinja u svetlom hrastu sa kamenom radnom pločom i LED trakom"></span><span class="label">Kuhinja · Hrast</span></button></li>
-          <li class="m-rad" data-mat="orah"><button class="m-btn" type="button" data-f="kuhinja-orah-lampe-2" data-w="2048" data-h="2048"><span class="m-foto"><img src="assets/img/kuhinja-orah-lampe-2-800.jpg" srcset="assets/img/kuhinja-orah-lampe-2-800.jpg 800w, assets/img/kuhinja-orah-lampe-2-1600.jpg 1600w" sizes="(min-width: 960px) 30vw, (min-width: 600px) 46vw, 92vw" width="2048" height="2048" loading="lazy" decoding="async" alt="Kuhinja sa donjim elementima u tonu oraha i visećim lampama"></span><span class="label">Kuhinja · Orah</span></button></li>
-          <li class="m-rad" data-mat="kamen"><button class="m-btn" type="button" data-f="kuhinja-siva-lamele" data-w="2048" data-h="2048"><span class="m-foto"><img src="assets/img/kuhinja-siva-lamele-800.jpg" srcset="assets/img/kuhinja-siva-lamele-800.jpg 800w, assets/img/kuhinja-siva-lamele-1600.jpg 1600w" sizes="(min-width: 960px) 30vw, (min-width: 600px) 46vw, 92vw" width="2048" height="2048" loading="lazy" decoding="async" alt="Mala kuhinja u sivom tonu sa lamelama"></span><span class="label">Kuhinja · Kamen</span></button></li>
-          <li class="m-rad" data-mat="orah"><button class="m-btn" type="button" data-f="kuhinja-orah-lampe-1" data-w="2048" data-h="2048"><span class="m-foto"><img src="assets/img/kuhinja-orah-lampe-1-800.jpg" srcset="assets/img/kuhinja-orah-lampe-1-800.jpg 800w, assets/img/kuhinja-orah-lampe-1-1600.jpg 1600w" sizes="(min-width: 960px) 30vw, (min-width: 600px) 46vw, 92vw" width="2048" height="2048" loading="lazy" decoding="async" alt="Kuhinja sa elementima u tonu oraha i četiri viseće lampe"></span><span class="label">Kuhinja · Orah</span></button></li>
-          <li class="m-rad" data-mat="orah"><button class="m-btn" type="button" data-f="kuhinja-krem-3" data-w="2048" data-h="2048"><span class="m-foto"><img src="assets/img/kuhinja-krem-3-800.jpg" srcset="assets/img/kuhinja-krem-3-800.jpg 800w, assets/img/kuhinja-krem-3-1600.jpg 1600w" sizes="(min-width: 960px) 30vw, (min-width: 600px) 46vw, 92vw" width="2048" height="2048" loading="lazy" decoding="async" alt="Kuhinja u obliku slova U, donji elementi u tonu oraha"></span><span class="label">Kuhinja · Orah</span></button></li>
-          <li class="m-rad" data-mat="orah"><button class="m-btn" type="button" data-f="kuhinja-krem-2" data-w="2048" data-h="2048"><span class="m-foto"><img src="assets/img/kuhinja-krem-2-800.jpg" srcset="assets/img/kuhinja-krem-2-800.jpg 800w, assets/img/kuhinja-krem-2-1600.jpg 1600w" sizes="(min-width: 960px) 30vw, (min-width: 600px) 46vw, 92vw" width="2048" height="2048" loading="lazy" decoding="async" alt="Kuhinja sa visokim elementima i drvenim donjim delom"></span><span class="label">Kuhinja · Orah</span></button></li>
-          <li class="m-rad" data-mat="hrast"><button class="m-btn" type="button" data-f="stan-ns-kuhinja" data-w="2048" data-h="2047"><span class="m-foto"><img src="assets/img/stan-ns-kuhinja-800.jpg" srcset="assets/img/stan-ns-kuhinja-800.jpg 800w, assets/img/stan-ns-kuhinja-1600.jpg 1600w" sizes="(min-width: 960px) 30vw, (min-width: 600px) 46vw, 92vw" width="2048" height="2047" loading="lazy" decoding="async" alt="Kuhinja sa visokim elementima u svetlom drvetu"></span><span class="label">Kuhinja · Hrast</span></button></li>
-          <li class="m-rad" data-mat="hrast"><button class="m-btn" type="button" data-f="kuhinja-moderna-orah" data-w="2048" data-h="2048"><span class="m-foto"><img src="assets/img/kuhinja-moderna-orah-800.jpg" srcset="assets/img/kuhinja-moderna-orah-800.jpg 800w, assets/img/kuhinja-moderna-orah-1600.jpg 1600w" sizes="(min-width: 960px) 30vw, (min-width: 600px) 46vw, 92vw" width="2048" height="2048" loading="lazy" decoding="async" alt="Moderna kuhinja sa ugradnim rernama u drvenom elementu"></span><span class="label">Kuhinja · Hrast</span></button></li>
-          <li class="m-rad" data-mat="hrast"><button class="m-btn" type="button" data-f="kuhinja-staklena-pregrada-2" data-w="2048" data-h="2048"><span class="m-foto"><img src="assets/img/kuhinja-staklena-pregrada-2-800.jpg" srcset="assets/img/kuhinja-staklena-pregrada-2-800.jpg 800w, assets/img/kuhinja-staklena-pregrada-2-1600.jpg 1600w" sizes="(min-width: 960px) 30vw, (min-width: 600px) 46vw, 92vw" width="2048" height="2048" loading="lazy" decoding="async" alt="Visoki elementi u drvetu iza staklene pregrade sa crnim ramom"></span><span class="label">Kuhinja · Hrast</span></button></li>
-          <li class="m-rad" data-mat="hrast"><button class="m-btn" type="button" data-f="kuhinja-zelena" data-w="2048" data-h="2048"><span class="m-foto"><img src="assets/img/kuhinja-zelena-800.jpg" srcset="assets/img/kuhinja-zelena-800.jpg 800w, assets/img/kuhinja-zelena-1600.jpg 1600w" sizes="(min-width: 960px) 30vw, (min-width: 600px) 46vw, 92vw" width="2048" height="2048" loading="lazy" decoding="async" alt="Kuhinja sa zelenim frontovima i drvenom radnom pločom"></span><span class="label">Kuhinja · Hrast</span></button></li>
-          <li class="m-rad" data-mat="hrast"><button class="m-btn" type="button" data-f="pula-kuhinja-sank" data-w="1639" data-h="2048"><span class="m-foto"><img src="assets/img/pula-kuhinja-sank-800.jpg" srcset="assets/img/pula-kuhinja-sank-800.jpg 800w, assets/img/pula-kuhinja-sank-1600.jpg 1600w" sizes="(min-width: 960px) 30vw, (min-width: 600px) 46vw, 92vw" width="1639" height="2048" loading="lazy" decoding="async" alt="Kuhinja sa šankom i barskim stolicama u stanu u Puli"></span><span class="label">Kuhinja · Hrast</span></button></li>
-          <li class="m-rad" data-mat="hrast"><button class="m-btn" type="button" data-f="stan-ns-fioka-detalj" data-w="2048" data-h="2047"><span class="m-foto"><img src="assets/img/stan-ns-fioka-detalj-800.jpg" srcset="assets/img/stan-ns-fioka-detalj-800.jpg 800w, assets/img/stan-ns-fioka-detalj-1600.jpg 1600w" sizes="(min-width: 960px) 30vw, (min-width: 600px) 46vw, 92vw" width="2048" height="2047" loading="lazy" decoding="async" alt="Izvučena fioka u svetlom drvetu ispod bele radne ploče"></span><span class="label">Kuhinja · Hrast</span></button></li>
-          <li class="m-rad" data-mat="lak"><button class="m-btn" type="button" data-f="kuhinja-bela-ostrvo-1" data-w="1660" data-h="2048"><span class="m-foto"><img src="assets/img/kuhinja-bela-ostrvo-1-800.jpg" srcset="assets/img/kuhinja-bela-ostrvo-1-800.jpg 800w, assets/img/kuhinja-bela-ostrvo-1-1600.jpg 1600w" sizes="(min-width: 960px) 30vw, (min-width: 600px) 46vw, 92vw" width="1660" height="2048" loading="lazy" decoding="async" alt="Bela kuhinja sa ostrvom i crnom indukcionom pločom"></span><span class="label">Kuhinja · Beli mat</span></button></li>
-          <li class="m-rad" data-mat="lak"><button class="m-btn" type="button" data-f="kuhinja-bela-ostrvo-2" data-w="1660" data-h="2048"><span class="m-foto"><img src="assets/img/kuhinja-bela-ostrvo-2-800.jpg" srcset="assets/img/kuhinja-bela-ostrvo-2-800.jpg 800w, assets/img/kuhinja-bela-ostrvo-2-1600.jpg 1600w" sizes="(min-width: 960px) 30vw, (min-width: 600px) 46vw, 92vw" width="1660" height="2048" loading="lazy" decoding="async" alt="Bela kuhinja sa ostrvom i radnom pločom uz prozor"></span><span class="label">Kuhinja · Beli mat</span></button></li>
-          <li class="m-rad" data-mat="lak"><button class="m-btn" type="button" data-f="kuhinja-bela-ostrvo-3" data-w="1660" data-h="2048"><span class="m-foto"><img src="assets/img/kuhinja-bela-ostrvo-3-800.jpg" srcset="assets/img/kuhinja-bela-ostrvo-3-800.jpg 800w, assets/img/kuhinja-bela-ostrvo-3-1600.jpg 1600w" sizes="(min-width: 960px) 30vw, (min-width: 600px) 46vw, 92vw" width="1660" height="2048" loading="lazy" decoding="async" alt="Beli frontovi bez ručki u kuhinji sa ostrvom"></span><span class="label">Kuhinja · Beli mat</span></button></li>
-          <li class="m-rad" data-mat="lak"><button class="m-btn" type="button" data-f="vitrina-led" data-w="1660" data-h="2048"><span class="m-foto"><img src="assets/img/vitrina-led-800.jpg" srcset="assets/img/vitrina-led-800.jpg 800w, assets/img/vitrina-led-1600.jpg 1600w" sizes="(min-width: 960px) 30vw, (min-width: 600px) 46vw, 92vw" width="1660" height="2048" loading="lazy" decoding="async" alt="Bela kuhinja sa vitrinom osvetljenom LED trakom"></span><span class="label">Kuhinja · Beli mat</span></button></li>
-          <li class="m-rad" data-mat="lak"><button class="m-btn" type="button" data-f="hodnik-kuhinja" data-w="1638" data-h="2048"><span class="m-foto"><img src="assets/img/hodnik-kuhinja-800.jpg" srcset="assets/img/hodnik-kuhinja-800.jpg 800w, assets/img/hodnik-kuhinja-1600.jpg 1600w" sizes="(min-width: 960px) 30vw, (min-width: 600px) 46vw, 92vw" width="1638" height="2048" loading="lazy" decoding="async" alt="Bela kuhinja sa crnim gornjim delom, pogled iz hodnika"></span><span class="label">Kuhinja · Beli mat</span></button></li>
-          <li class="m-rad" data-mat="lak"><button class="m-btn" type="button" data-f="kuhinja-bela-beton" data-w="2048" data-h="2048"><span class="m-foto"><img src="assets/img/kuhinja-bela-beton-800.jpg" srcset="assets/img/kuhinja-bela-beton-800.jpg 800w, assets/img/kuhinja-bela-beton-1600.jpg 1600w" sizes="(min-width: 960px) 30vw, (min-width: 600px) 46vw, 92vw" width="2048" height="2048" loading="lazy" decoding="async" alt="Bela kuhinja sa sivom zidnom oblogom i drvenom radnom pločom"></span><span class="label">Kuhinja · Beli mat</span></button></li>
-          <li class="m-rad" data-mat="lak"><button class="m-btn" type="button" data-f="kuhinja-bela-beton-2" data-w="2048" data-h="2047"><span class="m-foto"><img src="assets/img/kuhinja-bela-beton-2-800.jpg" srcset="assets/img/kuhinja-bela-beton-2-800.jpg 800w, assets/img/kuhinja-bela-beton-2-1600.jpg 1600w" sizes="(min-width: 960px) 30vw, (min-width: 600px) 46vw, 92vw" width="2048" height="2047" loading="lazy" decoding="async" alt="Bela kuhinja u obliku slova L sa drvenom radnom pločom"></span><span class="label">Kuhinja · Beli mat</span></button></li>
-          <li class="m-rad" data-mat="lak"><button class="m-btn" type="button" data-f="kuhinja-kamen-rerna" data-w="2048" data-h="2048"><span class="m-foto"><img src="assets/img/kuhinja-kamen-rerna-800.jpg" srcset="assets/img/kuhinja-kamen-rerna-800.jpg 800w, assets/img/kuhinja-kamen-rerna-1600.jpg 1600w" sizes="(min-width: 960px) 30vw, (min-width: 600px) 46vw, 92vw" width="2048" height="2048" loading="lazy" decoding="async" alt="Visoki beli element sa ugradnom rernom"></span><span class="label">Kuhinja · Beli mat</span></button></li>
-          <li class="m-rad" data-mat="lak"><button class="m-btn" type="button" data-f="stan-ns-kuhinja-mermer" data-w="2048" data-h="2047"><span class="m-foto"><img src="assets/img/stan-ns-kuhinja-mermer-800.jpg" srcset="assets/img/stan-ns-kuhinja-mermer-800.jpg 800w, assets/img/stan-ns-kuhinja-mermer-1600.jpg 1600w" sizes="(min-width: 960px) 30vw, (min-width: 600px) 46vw, 92vw" width="2048" height="2047" loading="lazy" decoding="async" alt="Fioka sa podelom za escajg ispod mermerne radne ploče"></span><span class="label">Kuhinja · Beli mat</span></button></li>
-          <li class="m-rad" data-mat="krem"><button class="m-btn" type="button" data-f="kuhinja-orah-l" data-w="1638" data-h="2048"><span class="m-foto"><img src="assets/img/kuhinja-orah-l-800.jpg" srcset="assets/img/kuhinja-orah-l-800.jpg 800w, assets/img/kuhinja-orah-l-1600.jpg 1600w" sizes="(min-width: 960px) 30vw, (min-width: 600px) 46vw, 92vw" width="1638" height="2048" loading="lazy" decoding="async" alt="Kuhinja u obliku slova L u krem tonu"></span><span class="label">Kuhinja · Krem</span></button></li>
-          <li class="m-rad" data-mat="krem"><button class="m-btn" type="button" data-f="kuhinja-krem-1" data-w="2048" data-h="2048"><span class="m-foto"><img src="assets/img/kuhinja-krem-1-800.jpg" srcset="assets/img/kuhinja-krem-1-800.jpg 800w, assets/img/kuhinja-krem-1-1600.jpg 1600w" sizes="(min-width: 960px) 30vw, (min-width: 600px) 46vw, 92vw" width="2048" height="2048" loading="lazy" decoding="async" alt="Kuhinja sa svetlom kamenom radnom pločom i rernom ispod"></span><span class="label">Kuhinja · Krem</span></button></li>
-          <li class="m-rad" data-mat="krem"><button class="m-btn" type="button" data-f="kuhinja-staklena-pregrada-1" data-w="2048" data-h="2048"><span class="m-foto"><img src="assets/img/kuhinja-staklena-pregrada-1-800.jpg" srcset="assets/img/kuhinja-staklena-pregrada-1-800.jpg 800w, assets/img/kuhinja-staklena-pregrada-1-1600.jpg 1600w" sizes="(min-width: 960px) 30vw, (min-width: 600px) 46vw, 92vw" width="2048" height="2048" loading="lazy" decoding="async" alt="Kuhinja u krem tonu iza staklene pregrade"></span><span class="label">Kuhinja · Krem</span></button></li>
-          <li class="m-rad" data-mat="kamen"><button class="m-btn" type="button" data-f="kuhinja-led-2" data-w="1639" data-h="2048"><span class="m-foto"><img src="assets/img/kuhinja-led-2-800.jpg" srcset="assets/img/kuhinja-led-2-800.jpg 800w, assets/img/kuhinja-led-2-1600.jpg 1600w" sizes="(min-width: 960px) 30vw, (min-width: 600px) 46vw, 92vw" width="1639" height="2048" loading="lazy" decoding="async" alt="Kuhinja sa kamenim ostrvom i barskim stolicama"></span><span class="label">Kuhinja · Kamen</span></button></li>
-          <li class="m-rad" data-mat="kamen"><button class="m-btn" type="button" data-f="kuhinja-led-3" data-w="1638" data-h="2048"><span class="m-foto"><img src="assets/img/kuhinja-led-3-800.jpg" srcset="assets/img/kuhinja-led-3-800.jpg 800w, assets/img/kuhinja-led-3-1600.jpg 1600w" sizes="(min-width: 960px) 30vw, (min-width: 600px) 46vw, 92vw" width="1638" height="2048" loading="lazy" decoding="async" alt="Kuhinja sa ostrvom od kamena i LED trakama na plafonu"></span><span class="label">Kuhinja · Kamen</span></button></li>
-          <li class="m-rad" data-mat="kamen"><button class="m-btn" type="button" data-f="kuhinja-led-barske-stolice" data-w="1638" data-h="2048"><span class="m-foto"><img src="assets/img/kuhinja-led-barske-stolice-800.jpg" srcset="assets/img/kuhinja-led-barske-stolice-800.jpg 800w, assets/img/kuhinja-led-barske-stolice-1600.jpg 1600w" sizes="(min-width: 960px) 30vw, (min-width: 600px) 46vw, 92vw" width="1638" height="2048" loading="lazy" decoding="async" alt="Barske stolice uz kameno ostrvo kuhinje"></span><span class="label">Kuhinja · Kamen</span></button></li>
-          <li class="m-rad" data-mat="kamen"><button class="m-btn" type="button" data-f="kuhinja-mala" data-w="2048" data-h="2048"><span class="m-foto"><img src="assets/img/kuhinja-mala-800.jpg" srcset="assets/img/kuhinja-mala-800.jpg 800w, assets/img/kuhinja-mala-1600.jpg 1600w" sizes="(min-width: 960px) 30vw, (min-width: 600px) 46vw, 92vw" width="2048" height="2048" loading="lazy" decoding="async" alt="Mala kuhinja u sivom tonu sa otvorenim policama"></span><span class="label">Kuhinja · Kamen</span></button></li>
-          <li class="m-rad" data-mat="kamen"><button class="m-btn" type="button" data-f="kuhinja-mala-detalj" data-w="2048" data-h="2048"><span class="m-foto"><img src="assets/img/kuhinja-mala-detalj-800.jpg" srcset="assets/img/kuhinja-mala-detalj-800.jpg 800w, assets/img/kuhinja-mala-detalj-1600.jpg 1600w" sizes="(min-width: 960px) 30vw, (min-width: 600px) 46vw, 92vw" width="2048" height="2048" loading="lazy" decoding="async" alt="Detalj male kuhinje sa lamelama i policom"></span><span class="label">Kuhinja · Kamen</span></button></li>
-          <li class="m-rad" data-mat="kamen"><button class="m-btn" type="button" data-f="detalj-sank" data-w="1638" data-h="2048"><span class="m-foto"><img src="assets/img/detalj-sank-800.jpg" srcset="assets/img/detalj-sank-800.jpg 800w, assets/img/detalj-sank-1600.jpg 1600w" sizes="(min-width: 960px) 30vw, (min-width: 600px) 46vw, 92vw" width="1638" height="2048" loading="lazy" decoding="async" alt="Detalj šanka sa kamenom oblogom"></span><span class="label">Kuhinja · Kamen</span></button></li>
-          <li class="m-rad" data-mat="kamen"><button class="m-btn" type="button" data-f="detalj-lamele-stolica" data-w="1638" data-h="2048"><span class="m-foto"><img src="assets/img/detalj-lamele-stolica-800.jpg" srcset="assets/img/detalj-lamele-stolica-800.jpg 800w, assets/img/detalj-lamele-stolica-1600.jpg 1600w" sizes="(min-width: 960px) 30vw, (min-width: 600px) 46vw, 92vw" width="1638" height="2048" loading="lazy" decoding="async" alt="Barska stolica uz šank sa lamelama"></span><span class="label">Kuhinja · Kamen</span></button></li>
-          <li class="m-rad" data-mat="antracit"><button class="m-btn" type="button" data-f="detalj-lamele" data-w="2048" data-h="2048"><span class="m-foto"><img src="assets/img/detalj-lamele-800.jpg" srcset="assets/img/detalj-lamele-800.jpg 800w, assets/img/detalj-lamele-1600.jpg 1600w" sizes="(min-width: 960px) 30vw, (min-width: 600px) 46vw, 92vw" width="2048" height="2048" loading="lazy" decoding="async" alt="Detalj tamnih lamela na šanku"></span><span class="label">Kuhinja · Antracit</span></button></li>
-        </ul>
-      </section>
-      <section class="m-grupa" id="plakari" data-pr="plakari" aria-labelledby="h-plakari">
-        <h2 id="h-plakari">Plakari</h2>
-        <ul class="masonry">
-          <li class="m-rad" data-mat="lak"><button class="m-btn" type="button" data-f="americki-plakar" data-w="1639" data-h="2048"><span class="m-foto"><img src="assets/img/americki-plakar-800.jpg" srcset="assets/img/americki-plakar-800.jpg 800w, assets/img/americki-plakar-1600.jpg 1600w" sizes="(min-width: 960px) 30vw, (min-width: 600px) 46vw, 92vw" width="1639" height="2048" loading="lazy" decoding="async" alt="Američki plakar sa kliznim vratima i otvorenim policama"></span><span class="label">Plakar · Beli mat</span></button></li>
-          <li class="m-rad" data-mat="lak"><button class="m-btn" type="button" data-f="plakar-iz-snova" data-w="2048" data-h="2048"><span class="m-foto"><img src="assets/img/plakar-iz-snova-800.jpg" srcset="assets/img/plakar-iz-snova-800.jpg 800w, assets/img/plakar-iz-snova-1600.jpg 1600w" sizes="(min-width: 960px) 30vw, (min-width: 600px) 46vw, 92vw" width="2048" height="2048" loading="lazy" decoding="async" alt="Beli plakar do plafona sa LED osvetljenjem"></span><span class="label">Plakar · Beli mat</span></button></li>
-          <li class="m-rad" data-mat="lak"><button class="m-btn" type="button" data-f="plakar-beli-vitrina" data-w="2048" data-h="2048"><span class="m-foto"><img src="assets/img/plakar-beli-vitrina-800.jpg" srcset="assets/img/plakar-beli-vitrina-800.jpg 800w, assets/img/plakar-beli-vitrina-1600.jpg 1600w" sizes="(min-width: 960px) 30vw, (min-width: 600px) 46vw, 92vw" width="2048" height="2048" loading="lazy" decoding="async" alt="Beli plakar sa staklenom vitrinom u crnom ramu"></span><span class="label">Plakar · Beli mat</span></button></li>
-        </ul>
-      </section>
-      <section class="m-grupa" id="spavace" data-pr="spavace" aria-labelledby="h-spavace">
-        <h2 id="h-spavace">Spavaće sobe</h2>
-        <ul class="masonry">
-          <li class="m-rad" data-mat="krem"><button class="m-btn" type="button" data-f="stan-ns-spavaca-2" data-w="2048" data-h="2047"><span class="m-foto"><img src="assets/img/stan-ns-spavaca-2-800.jpg" srcset="assets/img/stan-ns-spavaca-2-800.jpg 800w, assets/img/stan-ns-spavaca-2-1600.jpg 1600w" sizes="(min-width: 960px) 30vw, (min-width: 600px) 46vw, 92vw" width="2048" height="2047" loading="lazy" decoding="async" alt="Spavaća soba u krem tonu sa ugradnim ormarom"></span><span class="label">Spavaća · Krem</span></button></li>
-          <li class="m-rad" data-mat="hrast"><button class="m-btn" type="button" data-f="zidni-krevet-otvoren" data-w="1638" data-h="2048"><span class="m-foto"><img src="assets/img/zidni-krevet-otvoren-800.jpg" srcset="assets/img/zidni-krevet-otvoren-800.jpg 800w, assets/img/zidni-krevet-otvoren-1600.jpg 1600w" sizes="(min-width: 960px) 30vw, (min-width: 600px) 46vw, 92vw" width="1638" height="2048" loading="lazy" decoding="async" alt="Zidni krevet spušten, sa drvenim nogarima"></span><span class="label">Spavaća · Hrast</span></button></li>
-          <li class="m-rad" data-mat="lak"><button class="m-btn" type="button" data-f="spavaca-ugradni-plakar" data-w="1639" data-h="2048"><span class="m-foto"><img src="assets/img/spavaca-ugradni-plakar-800.jpg" srcset="assets/img/spavaca-ugradni-plakar-800.jpg 800w, assets/img/spavaca-ugradni-plakar-1600.jpg 1600w" sizes="(min-width: 960px) 30vw, (min-width: 600px) 46vw, 92vw" width="1639" height="2048" loading="lazy" decoding="async" alt="Spavaća soba sa belim ugradnim plakarom"></span><span class="label">Spavaća · Beli mat</span></button></li>
-          <li class="m-rad" data-mat="krem"><button class="m-btn" type="button" data-f="spavaca-miran-san" data-w="2048" data-h="2048"><span class="m-foto"><img src="assets/img/spavaca-miran-san-800.jpg" srcset="assets/img/spavaca-miran-san-800.jpg 800w, assets/img/spavaca-miran-san-1600.jpg 1600w" sizes="(min-width: 960px) 30vw, (min-width: 600px) 46vw, 92vw" width="2048" height="2048" loading="lazy" decoding="async" alt="Spavaća soba u krem tonu sa zidnim panelima"></span><span class="label">Spavaća · Krem</span></button></li>
-          <li class="m-rad" data-mat="krem"><button class="m-btn" type="button" data-f="spavaca-led" data-w="2048" data-h="2048"><span class="m-foto"><img src="assets/img/spavaca-led-800.jpg" srcset="assets/img/spavaca-led-800.jpg 800w, assets/img/spavaca-led-1600.jpg 1600w" sizes="(min-width: 960px) 30vw, (min-width: 600px) 46vw, 92vw" width="2048" height="2048" loading="lazy" decoding="async" alt="Spavaća soba sa LED osvetljenjem iza kreveta"></span><span class="label">Spavaća · Krem</span></button></li>
-          <li class="m-rad" data-mat="krem"><button class="m-btn" type="button" data-f="zidni-krevet-zatvoren" data-w="1638" data-h="2048"><span class="m-foto"><img src="assets/img/zidni-krevet-zatvoren-800.jpg" srcset="assets/img/zidni-krevet-zatvoren-800.jpg 800w, assets/img/zidni-krevet-zatvoren-1600.jpg 1600w" sizes="(min-width: 960px) 30vw, (min-width: 600px) 46vw, 92vw" width="1638" height="2048" loading="lazy" decoding="async" alt="Zidni krevet zatvoren, sa sofom ispred"></span><span class="label">Spavaća · Krem</span></button></li>
-          <li class="m-rad" data-mat="krem"><button class="m-btn" type="button" data-f="zidni-krevet-plakar" data-w="1638" data-h="2048"><span class="m-foto"><img src="assets/img/zidni-krevet-plakar-800.jpg" srcset="assets/img/zidni-krevet-plakar-800.jpg 800w, assets/img/zidni-krevet-plakar-1600.jpg 1600w" sizes="(min-width: 960px) 30vw, (min-width: 600px) 46vw, 92vw" width="1638" height="2048" loading="lazy" decoding="async" alt="Zidni krevet u plakaru, sa ormarima i policama oko njega"></span><span class="label">Spavaća · Krem</span></button></li>
-          <li class="m-rad" data-mat="antracit"><button class="m-btn" type="button" data-f="spavaca-klizni-plakar" data-w="1639" data-h="2048"><span class="m-foto"><img src="assets/img/spavaca-klizni-plakar-800.jpg" srcset="assets/img/spavaca-klizni-plakar-800.jpg 800w, assets/img/spavaca-klizni-plakar-1600.jpg 1600w" sizes="(min-width: 960px) 30vw, (min-width: 600px) 46vw, 92vw" width="1639" height="2048" loading="lazy" decoding="async" alt="Spavaća soba sa kliznim plakarom u tamnom tonu"></span><span class="label">Spavaća · Antracit</span></button></li>
-          <li class="m-rad" data-mat="antracit"><button class="m-btn" type="button" data-f="stan-ns-spavaca-1" data-w="2048" data-h="2048"><span class="m-foto"><img src="assets/img/stan-ns-spavaca-1-800.jpg" srcset="assets/img/stan-ns-spavaca-1-800.jpg 800w, assets/img/stan-ns-spavaca-1-1600.jpg 1600w" sizes="(min-width: 960px) 30vw, (min-width: 600px) 46vw, 92vw" width="2048" height="2048" loading="lazy" decoding="async" alt="Spavaća soba sa tamnim ormarom i drvenim panelom"></span><span class="label">Spavaća · Antracit</span></button></li>
-        </ul>
-      </section>
-      <section class="m-grupa" id="dnevne" data-pr="dnevne" aria-labelledby="h-dnevne">
-        <h2 id="h-dnevne">Dnevne sobe</h2>
-        <ul class="masonry">
-          <li class="m-rad" data-mat="antracit"><button class="m-btn" type="button" data-f="dnevna-tv-zid" data-w="2048" data-h="2048"><span class="m-foto"><img src="assets/img/dnevna-tv-zid-800.jpg" srcset="assets/img/dnevna-tv-zid-800.jpg 800w, assets/img/dnevna-tv-zid-1600.jpg 1600w" sizes="(min-width: 960px) 30vw, (min-width: 600px) 46vw, 92vw" width="2048" height="2048" loading="lazy" decoding="async" alt="TV zid u tamnom tonu sa LED osvetljenjem"></span><span class="label">Dnevna · Antracit</span></button></li>
-          <li class="m-rad" data-mat="orah"><button class="m-btn" type="button" data-f="dnevna-tv-mermer" data-w="1636" data-h="2048"><span class="m-foto"><img src="assets/img/dnevna-tv-mermer-800.jpg" srcset="assets/img/dnevna-tv-mermer-800.jpg 800w, assets/img/dnevna-tv-mermer-1600.jpg 1600w" sizes="(min-width: 960px) 30vw, (min-width: 600px) 46vw, 92vw" width="1636" height="2048" loading="lazy" decoding="async" alt="TV zid sa mermernim panelom i tamnom drvenom oblogom"></span><span class="label">Dnevna · Orah</span></button></li>
-          <li class="m-rad" data-mat="hrast"><button class="m-btn" type="button" data-f="stan-ns-dnevna" data-w="2048" data-h="2048"><span class="m-foto"><img src="assets/img/stan-ns-dnevna-800.jpg" srcset="assets/img/stan-ns-dnevna-800.jpg 800w, assets/img/stan-ns-dnevna-1600.jpg 1600w" sizes="(min-width: 960px) 30vw, (min-width: 600px) 46vw, 92vw" width="2048" height="2048" loading="lazy" decoding="async" alt="Dnevna soba sa TV komodom u svetlom drvetu"></span><span class="label">Dnevna · Hrast</span></button></li>
-          <li class="m-rad" data-mat="hrast"><button class="m-btn" type="button" data-f="dnevna-tv-orah" data-w="2048" data-h="2048"><span class="m-foto"><img src="assets/img/dnevna-tv-orah-800.jpg" srcset="assets/img/dnevna-tv-orah-800.jpg 800w, assets/img/dnevna-tv-orah-1600.jpg 1600w" sizes="(min-width: 960px) 30vw, (min-width: 600px) 46vw, 92vw" width="2048" height="2048" loading="lazy" decoding="async" alt="Beli TV zid sa drvenom komodom i LED trakom"></span><span class="label">Dnevna · Hrast</span></button></li>
-          <li class="m-rad" data-mat="hrast"><button class="m-btn" type="button" data-f="pula-dnevna-1" data-w="2048" data-h="2048"><span class="m-foto"><img src="assets/img/pula-dnevna-1-800.jpg" srcset="assets/img/pula-dnevna-1-800.jpg 800w, assets/img/pula-dnevna-1-1600.jpg 1600w" sizes="(min-width: 960px) 30vw, (min-width: 600px) 46vw, 92vw" width="2048" height="2048" loading="lazy" decoding="async" alt="Dnevna soba u stanu u Puli sa drvenom zidnom oblogom"></span><span class="label">Dnevna · Hrast</span></button></li>
-          <li class="m-rad" data-mat="lak"><button class="m-btn" type="button" data-f="dnevna-kompletna" data-w="2048" data-h="2048"><span class="m-foto"><img src="assets/img/dnevna-kompletna-800.jpg" srcset="assets/img/dnevna-kompletna-800.jpg 800w, assets/img/dnevna-kompletna-1600.jpg 1600w" sizes="(min-width: 960px) 30vw, (min-width: 600px) 46vw, 92vw" width="2048" height="2048" loading="lazy" decoding="async" alt="Dnevna soba sa belim TV zidom i trpezarijom"></span><span class="label">Dnevna · Beli mat</span></button></li>
-          <li class="m-rad" data-mat="antracit"><button class="m-btn" type="button" data-f="pula-dnevna-2" data-w="1639" data-h="2048"><span class="m-foto"><img src="assets/img/pula-dnevna-2-800.jpg" srcset="assets/img/pula-dnevna-2-800.jpg 800w, assets/img/pula-dnevna-2-1600.jpg 1600w" sizes="(min-width: 960px) 30vw, (min-width: 600px) 46vw, 92vw" width="1639" height="2048" loading="lazy" decoding="async" alt="Dnevna soba u stanu u Puli sa tamnom TV komodom"></span><span class="label">Dnevna · Antracit</span></button></li>
-          <li class="m-rad" data-mat="antracit"><button class="m-btn" type="button" data-f="dnevna-crna-tv" data-w="2048" data-h="2048"><span class="m-foto"><img src="assets/img/dnevna-crna-tv-800.jpg" srcset="assets/img/dnevna-crna-tv-800.jpg 800w, assets/img/dnevna-crna-tv-1600.jpg 1600w" sizes="(min-width: 960px) 30vw, (min-width: 600px) 46vw, 92vw" width="2048" height="2048" loading="lazy" decoding="async" alt="Crni TV zid sa radnim stolom i osvetljenim nišama"></span><span class="label">Dnevna · Antracit</span></button></li>
-          <li class="m-rad" data-mat="antracit"><button class="m-btn" type="button" data-f="dnevna-garnitura" data-w="1639" data-h="2048"><span class="m-foto"><img src="assets/img/dnevna-garnitura-800.jpg" srcset="assets/img/dnevna-garnitura-800.jpg 800w, assets/img/dnevna-garnitura-1600.jpg 1600w" sizes="(min-width: 960px) 30vw, (min-width: 600px) 46vw, 92vw" width="1639" height="2048" loading="lazy" decoding="async" alt="Beli ormari sa tamnom vitrinom iza sofe"></span><span class="label">Dnevna · Antracit</span></button></li>
-        </ul>
-      </section>
-      <section class="m-grupa" id="kupatila" data-pr="kupatila" aria-labelledby="h-kupatila">
-        <h2 id="h-kupatila">Kupatila</h2>
-        <ul class="masonry">
-          <li class="m-rad" data-mat="hrast"><button class="m-btn" type="button" data-f="kupatilo-orah" data-w="1639" data-h="2048"><span class="m-foto"><img src="assets/img/kupatilo-orah-800.jpg" srcset="assets/img/kupatilo-orah-800.jpg 800w, assets/img/kupatilo-orah-1600.jpg 1600w" sizes="(min-width: 960px) 30vw, (min-width: 600px) 46vw, 92vw" width="1639" height="2048" loading="lazy" decoding="async" alt="Kupatilo sa drvenim policama i ormarićem iznad veš mašine"></span><span class="label">Kupatilo · Hrast</span></button></li>
-          <li class="m-rad" data-mat="hrast"><button class="m-btn" type="button" data-f="kupatilo-ves-masina" data-w="1638" data-h="2048"><span class="m-foto"><img src="assets/img/kupatilo-ves-masina-800.jpg" srcset="assets/img/kupatilo-ves-masina-800.jpg 800w, assets/img/kupatilo-ves-masina-1600.jpg 1600w" sizes="(min-width: 960px) 30vw, (min-width: 600px) 46vw, 92vw" width="1638" height="2048" loading="lazy" decoding="async" alt="Ugradni element oko veš mašine sa drvenim policama"></span><span class="label">Kupatilo · Hrast</span></button></li>
-          <li class="m-rad" data-mat="lak"><button class="m-btn" type="button" data-f="stan-ns-kupatilo" data-w="2048" data-h="2047"><span class="m-foto"><img src="assets/img/stan-ns-kupatilo-800.jpg" srcset="assets/img/stan-ns-kupatilo-800.jpg 800w, assets/img/stan-ns-kupatilo-1600.jpg 1600w" sizes="(min-width: 960px) 30vw, (min-width: 600px) 46vw, 92vw" width="2048" height="2047" loading="lazy" decoding="async" alt="Kupatilo sa belim elementima i okruglim ogledalom"></span><span class="label">Kupatilo · Beli mat</span></button></li>
-          <li class="m-rad" data-mat="kamen"><button class="m-btn" type="button" data-f="kupatilo-ogledalo" data-w="1638" data-h="2048"><span class="m-foto"><img src="assets/img/kupatilo-ogledalo-800.jpg" srcset="assets/img/kupatilo-ogledalo-800.jpg 800w, assets/img/kupatilo-ogledalo-1600.jpg 1600w" sizes="(min-width: 960px) 30vw, (min-width: 600px) 46vw, 92vw" width="1638" height="2048" loading="lazy" decoding="async" alt="Kupatilo sa okruglim ogledalom i tamnim elementom"></span><span class="label">Kupatilo · Kamen</span></button></li>
-        </ul>
-      </section>
-      <section class="m-grupa" id="hodnici" data-pr="hodnici" aria-labelledby="h-hodnici">
-        <h2 id="h-hodnici">Hodnici</h2>
-        <ul class="masonry">
-          <li class="m-rad" data-mat="hrast"><button class="m-btn" type="button" data-f="hodnik-klupa" data-w="2048" data-h="2048"><span class="m-foto"><img src="assets/img/hodnik-klupa-800.jpg" srcset="assets/img/hodnik-klupa-800.jpg 800w, assets/img/hodnik-klupa-1600.jpg 1600w" sizes="(min-width: 960px) 30vw, (min-width: 600px) 46vw, 92vw" width="2048" height="2048" loading="lazy" decoding="async" alt="Hodnik sa ugradnom klupom i ormarom u svetlom drvetu"></span><span class="label">Hodnik · Hrast</span></button></li>
-          <li class="m-rad" data-mat="lak"><button class="m-btn" type="button" data-f="hodnik-led" data-w="2048" data-h="2048"><span class="m-foto"><img src="assets/img/hodnik-led-800.jpg" srcset="assets/img/hodnik-led-800.jpg 800w, assets/img/hodnik-led-1600.jpg 1600w" sizes="(min-width: 960px) 30vw, (min-width: 600px) 46vw, 92vw" width="2048" height="2048" loading="lazy" decoding="async" alt="Hodnik sa belim ugradnim ormarima i LED trakom"></span><span class="label">Hodnik · Beli mat</span></button></li>
-          <li class="m-rad" data-mat="lak"><button class="m-btn" type="button" data-f="stan-ns-hodnik" data-w="2048" data-h="2047"><span class="m-foto"><img src="assets/img/stan-ns-hodnik-800.jpg" srcset="assets/img/stan-ns-hodnik-800.jpg 800w, assets/img/stan-ns-hodnik-1600.jpg 1600w" sizes="(min-width: 960px) 30vw, (min-width: 600px) 46vw, 92vw" width="2048" height="2047" loading="lazy" decoding="async" alt="Hodnik sa belim ormarima do plafona"></span><span class="label">Hodnik · Beli mat</span></button></li>
-          <li class="m-rad" data-mat="krem"><button class="m-btn" type="button" data-f="hodnik-umetnost" data-w="2048" data-h="2048"><span class="m-foto"><img src="assets/img/hodnik-umetnost-800.jpg" srcset="assets/img/hodnik-umetnost-800.jpg 800w, assets/img/hodnik-umetnost-1600.jpg 1600w" sizes="(min-width: 960px) 30vw, (min-width: 600px) 46vw, 92vw" width="2048" height="2048" loading="lazy" decoding="async" alt="Hodnik u krem tonu sa slikom na zidu"></span><span class="label">Hodnik · Krem</span></button></li>
-          <li class="m-rad" data-mat="krem"><button class="m-btn" type="button" data-f="stan-ns-hodnik-ogledalo" data-w="2048" data-h="2047"><span class="m-foto"><img src="assets/img/stan-ns-hodnik-ogledalo-800.jpg" srcset="assets/img/stan-ns-hodnik-ogledalo-800.jpg 800w, assets/img/stan-ns-hodnik-ogledalo-1600.jpg 1600w" sizes="(min-width: 960px) 30vw, (min-width: 600px) 46vw, 92vw" width="2048" height="2047" loading="lazy" decoding="async" alt="Ogledalo sa pozadinskim svetlom u hodniku"></span><span class="label">Hodnik · Krem</span></button></li>
-        </ul>
-      </section>
-      <section class="m-grupa" id="decije" data-pr="decije" aria-labelledby="h-decije">
-        <h2 id="h-decije">Dečije sobe</h2>
-        <ul class="masonry">
-          <li class="m-rad" data-mat="lak"><button class="m-btn" type="button" data-f="stan-ns-decija-zirafa" data-w="2048" data-h="2047"><span class="m-foto"><img src="assets/img/stan-ns-decija-zirafa-800.jpg" srcset="assets/img/stan-ns-decija-zirafa-800.jpg 800w, assets/img/stan-ns-decija-zirafa-1600.jpg 1600w" sizes="(min-width: 960px) 30vw, (min-width: 600px) 46vw, 92vw" width="2048" height="2047" loading="lazy" decoding="async" alt="Dečija soba sa krevetom u belom ormaru i tapetom sa žirafom"></span><span class="label">Dečija · Beli mat</span></button></li>
-          <li class="m-rad" data-mat="lak"><button class="m-btn" type="button" data-f="stan-ns-decija-krevet" data-w="2048" data-h="2047"><span class="m-foto"><img src="assets/img/stan-ns-decija-krevet-800.jpg" srcset="assets/img/stan-ns-decija-krevet-800.jpg 800w, assets/img/stan-ns-decija-krevet-1600.jpg 1600w" sizes="(min-width: 960px) 30vw, (min-width: 600px) 46vw, 92vw" width="2048" height="2047" loading="lazy" decoding="async" alt="Krevet na sprat sa merdevinama i policama"></span><span class="label">Dečija · Beli mat</span></button></li>
-          <li class="m-rad" data-mat="lak"><button class="m-btn" type="button" data-f="stan-ns-decija-plakar" data-w="2048" data-h="2048"><span class="m-foto"><img src="assets/img/stan-ns-decija-plakar-800.jpg" srcset="assets/img/stan-ns-decija-plakar-800.jpg 800w, assets/img/stan-ns-decija-plakar-1600.jpg 1600w" sizes="(min-width: 960px) 30vw, (min-width: 600px) 46vw, 92vw" width="2048" height="2048" loading="lazy" decoding="async" alt="Plakar u dečijoj sobi sa policama i fiokama"></span><span class="label">Dečija · Beli mat</span></button></li>
-          <li class="m-rad" data-mat="lak"><button class="m-btn" type="button" data-f="stan-ns-decija-sto" data-w="2048" data-h="2047"><span class="m-foto"><img src="assets/img/stan-ns-decija-sto-800.jpg" srcset="assets/img/stan-ns-decija-sto-800.jpg 800w, assets/img/stan-ns-decija-sto-1600.jpg 1600w" sizes="(min-width: 960px) 30vw, (min-width: 600px) 46vw, 92vw" width="2048" height="2047" loading="lazy" decoding="async" alt="Radni sto i police u dečijoj sobi"></span><span class="label">Dečija · Beli mat</span></button></li>
-        </ul>
-      </section>
-      <p class="m-prazno" hidden>Nemamo još fotografiju za ovu kombinaciju. Pozovite <a class="num" href="tel:+381631105456">063 110 54 56</a>.</p>
+      <p class="f-stanje label" aria-live="polite"></p>
     </div>
   </section>
 
-  <section class="sec studije" data-ton="krem" aria-labelledby="h-studije">
-    <div class="wrap">
-      <h2 id="h-studije">Dva stana od početka do kraja</h2>
-
-      <a class="studija grid" href="projekat-novi-sad.html">
-        <span class="s-foto s-glavna"><img src="assets/img/stan-ns-kuhinja-1600.jpg" srcset="assets/img/stan-ns-kuhinja-800.jpg 800w, assets/img/stan-ns-kuhinja-1600.jpg 1600w" sizes="(min-width: 960px) 56vw, 92vw" width="2048" height="2047" loading="lazy" decoding="async" alt="Kuhinja u stanu u Novom Sadu sa visokim elementima u svetlom drvetu" style="view-transition-name: projekat-ns"></span>
-        <span class="s-tekst">
-          <h3 class="s-naslov">Kompletan stan u Novom Sadu</h3>
-          <span class="s-opis">Kuhinja, dnevna, spavaća i dečija soba, hodnik i kupatilo. Sve po meri, iz jedne radionice.</span>
-          <span class="link">Pogledajte stan soba po soba</span>
-        </span>
-      </a>
-
-      <div class="studija grid">
-        <button class="s-foto s-glavna s-pula" type="button" data-i="0" aria-label="Otvori fotografije stana u Puli"><img src="assets/img/pula-dnevna-1-1600.jpg" srcset="assets/img/pula-dnevna-1-800.jpg 800w, assets/img/pula-dnevna-1-1600.jpg 1600w" sizes="(min-width: 960px) 40vw, 92vw" width="2048" height="2048" loading="lazy" decoding="async" alt="Dnevna soba u stanu u Puli sa drvenom zidnom oblogom i tamnom TV komodom"></button>
-        <span class="s-male">
-          <button class="s-foto s-pula" type="button" data-i="1" aria-label="Otvori fotografiju: dnevna soba, drugi ugao"><img src="assets/img/pula-dnevna-2-800.jpg" srcset="assets/img/pula-dnevna-2-800.jpg 800w, assets/img/pula-dnevna-2-1600.jpg 1600w" sizes="(min-width: 960px) 16vw, 45vw" width="1639" height="2048" loading="lazy" decoding="async" alt="Dnevna soba u stanu u Puli, pogled na TV zid"></button>
-          <button class="s-foto s-pula" type="button" data-i="2" aria-label="Otvori fotografiju: kuhinja sa šankom"><img src="assets/img/pula-kuhinja-sank-800.jpg" srcset="assets/img/pula-kuhinja-sank-800.jpg 800w, assets/img/pula-kuhinja-sank-1600.jpg 1600w" sizes="(min-width: 960px) 16vw, 45vw" width="1639" height="2048" loading="lazy" decoding="async" alt="Kuhinja sa šankom i barskim stolicama u stanu u Puli"></button>
-        </span>
-        <span class="s-tekst">
-          <h3 class="s-naslov">Stan u Puli</h3>
-          <span class="s-opis">Dnevna soba sa zidnom oblogom i kuhinja sa šankom, Pula, Hrvatska.</span>
-          <button class="link s-otvori" type="button">Pogledajte fotografije</button>
-        </span>
+  <section class="sec povrsina r-projekat" id="novi-sad" aria-labelledby="h-ns">
+    <div class="wrap grid">
+      <div class="r-tekst">
+        <h2 id="h-ns">Kompletan stan u Novom Sadu</h2>
+        <p>Kuhinja, dnevna soba, spavaće i dečija soba, hodnik i kupatilo, sve po meri iz naše radionice. Na snimcima je obilazak završenog stana i poslednja faza montaže.</p>
       </div>
+      <div class="r-snimci">
+        <figure class="video" data-naslov="Obilazak stana u Novom Sadu">
+          <video muted loop playsinline preload="none" poster="assets/video/stan-ns-obilazak-poster.jpg" width="576" height="1026" data-od="0" data-do="33.5">
+            <source src="assets/video/stan-ns-obilazak.mp4" type="video/mp4">
+          </video>
+        </figure>
+        <figure class="video" data-naslov="Završna faza stana u Novom Sadu">
+          <video muted loop playsinline preload="none" poster="assets/video/stan-ns-zavrsna-faza-poster.jpg" width="576" height="1024" data-od="0" data-do="27.5">
+            <source src="assets/video/stan-ns-zavrsna-faza.mp4" type="video/mp4">
+          </video>
+        </figure>
+      </div>
+      <ul class="galerija" data-galerija>
+        <li data-kat="kuhinje"><a href="assets/img/stan-ns-kuhinja-1600.jpg" data-lb data-otkrij><img src="assets/img/stan-ns-kuhinja-800.jpg" width="2048" height="2047" loading="lazy" decoding="async" alt="Kuhinja sa visokim elementima u svetlom drvetu i ugradnim rernama"></a></li>
+        <li data-kat="kuhinje"><a href="assets/img/stan-ns-kuhinja-mermer-1600.jpg" data-lb data-otkrij><img src="assets/img/stan-ns-kuhinja-mermer-800.jpg" width="2048" height="2047" loading="lazy" decoding="async" alt="Fioka sa podelom za escajg ispod mermerne radne ploče"></a></li>
+        <li data-kat="kuhinje"><a href="assets/img/stan-ns-fioka-detalj-1600.jpg" data-lb data-otkrij><img src="assets/img/stan-ns-fioka-detalj-800.jpg" width="2048" height="2047" loading="lazy" decoding="async" alt="Izvučena fioka u svetlom drvetu ispod bele radne ploče"></a></li>
+        <li data-kat="sobe"><a href="assets/img/stan-ns-dnevna-1600.jpg" data-lb data-otkrij><img src="assets/img/stan-ns-dnevna-800.jpg" width="2048" height="2048" loading="lazy" decoding="async" alt="Dnevna soba sa TV komodom u svetlom drvetu i visokim tamnim ormarom"></a></li>
+        <li data-kat="sobe"><a href="assets/img/stan-ns-spavaca-2-1600.jpg" data-lb data-otkrij><img src="assets/img/stan-ns-spavaca-2-800.jpg" width="2048" height="2047" loading="lazy" decoding="async" alt="Spavaća soba sa zidnim panelom i LED trakom iza kreveta"></a></li>
+        <li data-kat="sobe"><a href="assets/img/stan-ns-spavaca-1-1600.jpg" data-lb data-otkrij><img src="assets/img/stan-ns-spavaca-1-800.jpg" width="2048" height="2048" loading="lazy" decoding="async" alt="Spavaća soba sa tamnim ormarom i drvenim panelom"></a></li>
+        <li data-kat="sobe"><a href="assets/img/stan-ns-decija-krevet-1600.jpg" data-lb data-otkrij><img src="assets/img/stan-ns-decija-krevet-800.jpg" width="2048" height="2047" loading="lazy" decoding="async" alt="Krevet na sprat sa merdevinama i policama u dečijoj sobi"></a></li>
+        <li data-kat="sobe"><a href="assets/img/stan-ns-decija-sto-1600.jpg" data-lb data-otkrij><img src="assets/img/stan-ns-decija-sto-800.jpg" width="2048" height="2047" loading="lazy" decoding="async" alt="Radni sto i police u dečijoj sobi"></a></li>
+        <li data-kat="plakari"><a href="assets/img/stan-ns-decija-plakar-1600.jpg" data-lb data-otkrij><img src="assets/img/stan-ns-decija-plakar-800.jpg" width="2048" height="2048" loading="lazy" decoding="async" alt="Plakar u dečijoj sobi sa policama i fiokama"></a></li>
+        <li data-kat="hodnici"><a href="assets/img/stan-ns-hodnik-1600.jpg" data-lb data-otkrij><img src="assets/img/stan-ns-hodnik-800.jpg" width="2048" height="2047" loading="lazy" decoding="async" alt="Hodnik sa belim ugradnim ormarima do plafona i LED trakom"></a></li>
+        <li data-kat="hodnici"><a href="assets/img/stan-ns-hodnik-ogledalo-1600.jpg" data-lb data-otkrij><img src="assets/img/stan-ns-hodnik-ogledalo-800.jpg" width="2048" height="2047" loading="lazy" decoding="async" alt="Ogledalo sa pozadinskim svetlom u hodniku"></a></li>
+      </ul>
     </div>
   </section>
 
-  <section class="sec poziv-mali" data-ton="antracit" aria-labelledby="h-poziv">
-    <div class="wrap">
-      <h2 id="h-poziv">Pošaljite nam mere i fotografiju prostora.</h2>
-      <div class="poziv-akcije">
-        <a class="btn" href="kontakt.html">Pošaljite upit<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
-        <a class="tel label num" href="tel:+381631105456">063 110 54 56</a>
+  <section class="sec r-projekat" id="pula" aria-labelledby="h-pula">
+    <div class="wrap grid">
+      <div class="r-tekst">
+        <h2 id="h-pula">Stan u Puli</h2>
+        <p>Dnevna soba sa zidnom oblogom u drvetu i kuhinja sa šankom, Pula, Hrvatska.</p>
+      </div>
+      <ul class="galerija" data-galerija>
+        <li data-kat="sobe"><a href="assets/img/pula-dnevna-1-1600.jpg" data-lb data-otkrij><img src="assets/img/pula-dnevna-1-800.jpg" width="2048" height="2048" loading="lazy" decoding="async" alt="Dnevna soba u stanu u Puli sa drvenom zidnom oblogom i tamnom TV komodom"></a></li>
+        <li data-kat="sobe"><a href="assets/img/pula-dnevna-2-1600.jpg" data-lb data-otkrij><img src="assets/img/pula-dnevna-2-800.jpg" width="1639" height="2048" loading="lazy" decoding="async" alt="Dnevna soba u stanu u Puli, pogled na TV zid"></a></li>
+        <li data-kat="kuhinje"><a href="assets/img/pula-kuhinja-sank-1600.jpg" data-lb data-otkrij><img src="assets/img/pula-kuhinja-sank-800.jpg" width="1639" height="2048" loading="lazy" decoding="async" alt="Kuhinja sa šankom i barskim stolicama u stanu u Puli"></a></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="sec povrsina r-projekat" id="ostali" aria-labelledby="h-ostali">
+    <div class="wrap grid">
+      <div class="r-tekst">
+        <h2 id="h-ostali">Ostali radovi</h2>
+        <p>Kuhinje, detalji i sobe iz drugih stanova i kuća.</p>
+      </div>
+      <div class="r-snimci jedan">
+        <figure class="video" data-naslov="Kupatilo sa tuš kabinom" data-kat="kupatila">
+          <video muted loop playsinline preload="none" poster="assets/video/kupatilo-tus-poster.jpg" width="576" height="1024" data-od="7" data-do="16.2">
+            <source src="assets/video/kupatilo-tus.mp4" type="video/mp4">
+          </video>
+        </figure>
+      </div>
+      <ul class="galerija" data-galerija>
+        <li data-kat="kuhinje"><a href="assets/img/kuhinja-bela-ostrvo-2-1600.jpg" data-lb data-otkrij><img src="assets/img/kuhinja-bela-ostrvo-2-800.jpg" width="1660" height="2048" loading="lazy" decoding="async" alt="Bela kuhinja sa ostrvom i radnom pločom uz prozor"></a></li>
+        <li data-kat="kuhinje"><a href="assets/img/kuhinja-bela-ostrvo-3-1600.jpg" data-lb data-otkrij><img src="assets/img/kuhinja-bela-ostrvo-3-800.jpg" width="1660" height="2048" loading="lazy" decoding="async" alt="Beli frontovi bez ručki u kuhinji sa ostrvom"></a></li>
+        <li data-kat="kuhinje"><a href="assets/img/kuhinja-led-3-1600.jpg" data-lb data-otkrij><img src="assets/img/kuhinja-led-3-800.jpg" width="1638" height="2048" loading="lazy" decoding="async" alt="Kuhinja sa kamenim ostrvom i LED trakama na plafonu"></a></li>
+        <li data-kat="kuhinje"><a href="assets/img/kuhinja-krem-1-1600.jpg" data-lb data-otkrij><img src="assets/img/kuhinja-krem-1-800.jpg" width="2048" height="2048" loading="lazy" decoding="async" alt="Kuhinja sa svetlom kamenom radnom pločom i rernom ispod"></a></li>
+        <li data-kat="kuhinje"><a href="assets/img/kuhinja-krem-2-1600.jpg" data-lb data-otkrij><img src="assets/img/kuhinja-krem-2-800.jpg" width="2048" height="2048" loading="lazy" decoding="async" alt="Kuhinja sa visokim elementima i drvenim donjim delom"></a></li>
+        <li data-kat="kuhinje"><a href="assets/img/kuhinja-orah-l-1600.jpg" data-lb data-otkrij><img src="assets/img/kuhinja-orah-l-800.jpg" width="1638" height="2048" loading="lazy" decoding="async" alt="Kuhinja u obliku slova L u krem tonu"></a></li>
+        <li data-kat="kuhinje"><a href="assets/img/kuhinja-siva-lamele-1600.jpg" data-lb data-otkrij><img src="assets/img/kuhinja-siva-lamele-800.jpg" width="2048" height="2048" loading="lazy" decoding="async" alt="Mala kuhinja u sivom tonu sa lamelama"></a></li>
+        <li data-kat="kuhinje"><a href="assets/img/kuhinja-staklena-pregrada-2-1600.jpg" data-lb data-otkrij><img src="assets/img/kuhinja-staklena-pregrada-2-800.jpg" width="2048" height="2048" loading="lazy" decoding="async" alt="Visoki elementi u drvetu iza staklene pregrade sa crnim ramom"></a></li>
+        <li data-kat="kuhinje"><a href="assets/img/kuhinja-bela-beton-2-1600.jpg" data-lb data-otkrij><img src="assets/img/kuhinja-bela-beton-2-800.jpg" width="2048" height="2047" loading="lazy" decoding="async" alt="Bela kuhinja u obliku slova L sa drvenom radnom pločom"></a></li>
+        <li data-kat="kuhinje"><a href="assets/img/kuhinja-kamen-rerna-1600.jpg" data-lb data-otkrij><img src="assets/img/kuhinja-kamen-rerna-800.jpg" width="2048" height="2048" loading="lazy" decoding="async" alt="Visoki beli element sa ugradnom rernom"></a></li>
+        <li data-kat="kuhinje"><a href="assets/img/kuhinja-kamen-ostrvo-2-1600.jpg" data-lb data-otkrij><img src="assets/img/kuhinja-kamen-ostrvo-2-800.jpg" width="2048" height="2048" loading="lazy" decoding="async" alt="Kuhinjsko ostrvo obloženo kamenom"></a></li>
+        <li data-kat="kuhinje"><a href="assets/img/kuhinja-mala-detalj-1600.jpg" data-lb data-otkrij><img src="assets/img/kuhinja-mala-detalj-800.jpg" width="2048" height="2048" loading="lazy" decoding="async" alt="Detalj male kuhinje sa lamelama i policom"></a></li>
+        <li data-kat="kuhinje"><a href="assets/img/vitrina-led-1600.jpg" data-lb data-otkrij><img src="assets/img/vitrina-led-800.jpg" width="1660" height="2048" loading="lazy" decoding="async" alt="Bela kuhinja sa vitrinom osvetljenom LED trakom"></a></li>
+        <li data-kat="kuhinje"><a href="assets/img/hodnik-kuhinja-1600.jpg" data-lb data-otkrij><img src="assets/img/hodnik-kuhinja-800.jpg" width="1638" height="2048" loading="lazy" decoding="async" alt="Bela kuhinja sa crnim gornjim delom, pogled iz hodnika"></a></li>
+        <li data-kat="kuhinje"><a href="assets/img/detalj-sank-1600.jpg" data-lb data-otkrij><img src="assets/img/detalj-sank-800.jpg" width="1638" height="2048" loading="lazy" decoding="async" alt="Detalj šanka sa kamenom oblogom"></a></li>
+        <li data-kat="kuhinje"><a href="assets/img/detalj-lamele-1600.jpg" data-lb data-otkrij><img src="assets/img/detalj-lamele-800.jpg" width="2048" height="2048" loading="lazy" decoding="async" alt="Detalj tamnih lamela na šanku"></a></li>
+        <li data-kat="kuhinje"><a href="assets/img/detalj-lamele-stolica-1600.jpg" data-lb data-otkrij><img src="assets/img/detalj-lamele-stolica-800.jpg" width="1638" height="2048" loading="lazy" decoding="async" alt="Barska stolica uz šank sa lamelama"></a></li>
+        <li data-kat="sobe"><a href="assets/img/dnevna-tv-orah-1600.jpg" data-lb data-otkrij><img src="assets/img/dnevna-tv-orah-800.jpg" width="2048" height="2048" loading="lazy" decoding="async" alt="Beli TV zid sa drvenom komodom i LED trakom"></a></li>
+        <li data-kat="sobe"><a href="assets/img/mali-stan-zidni-krevet-1600.jpg" data-lb data-otkrij><img src="assets/img/mali-stan-zidni-krevet-800.jpg" width="1639" height="2048" loading="lazy" decoding="async" alt="Mali stan sa zidnim krevetom u ormaru pored kuhinje"></a></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="sec r-prazno" hidden>
+    <div class="wrap"><p>Nemamo još fotografiju za ovu vrstu nameštaja. Pozovite <a class="num" href="tel:+381631105456">063 110 54 56</a>.</p></div>
+  </section>
+
+  <section class="sec povrsina u-poziv" aria-labelledby="h-poziv">
+    <div class="wrap grid">
+      <h2 id="h-poziv">Imate meru ili skicu? Pošaljite nam je.</h2>
+      <div class="u-akcije">
+        <a class="btn" href="kontakt.html">Zakažite merenje</a>
+        <a class="tel num" href="tel:+381631105456">063 110 54 56</a>
       </div>
     </div>
   </section>
 </main>
 
-<footer class="sec ftr" data-ton="antracit">
+<footer class="futer">
   <div class="wrap grid">
-    <div class="f-brand">
-      <img src="assets/img/logo/ceo-zlatni.png" width="560" height="822" alt="Moj Ambijent" loading="lazy">
-      <p>Nameštaj i enterijer po meri, iz radionice u Novom Sadu od 2000. godine.</p>
+    <div class="f-marka">
+      <img src="assets/img/logo/ceo-svetli.png" width="400" height="587" alt="Moj Ambijent" loading="lazy">
+      <p>Nameštaj i enterijer po meri iz radionice u Novom Sadu.</p>
     </div>
-    <nav class="f-col" aria-labelledby="f-radovi">
-      <h2 id="f-radovi">Radovi</h2>
+    <nav class="f-kol" aria-labelledby="f-usluge">
+      <h2 id="f-usluge">Usluge</h2>
       <ul>
-        <li><a href="radovi.html#kuhinje">Kuhinje</a></li>
-        <li><a href="radovi.html#plakari">Plakari</a></li>
-        <li><a href="radovi.html#spavace">Spavaće sobe</a></li>
-        <li><a href="projekat-novi-sad.html">Stan u Novom Sadu</a></li>
+        <li><a href="kuhinje.html">Kuhinje</a></li>
+        <li><a href="plakari.html">Plakari i hodnici</a></li>
+        <li><a href="sobe.html">Sobe</a></li>
+        <li><a href="kupatila.html">Kupatila</a></li>
       </ul>
     </nav>
-    <div class="f-col f-kontakt">
-      <h2>Kontakt</h2>
-      <address>
-        Janka Čmelika 109, 21000 Novi Sad<br>
-        <a class="num" href="tel:+381631105456">063 110 54 56</a><br>
-        <a href="mailto:info@mojambijent.com">info@mojambijent.com</a><br>
-        Pon–pet 8–20h, izložbeni prostor uz dogovor
-      </address>
-    </div>
-    <nav class="f-col" aria-labelledby="f-pravila">
-      <h2 id="f-pravila">Pravila</h2>
+    <nav class="f-kol" aria-labelledby="f-firma">
+      <h2 id="f-firma">Firma</h2>
       <ul>
-        <li><a href="privatnost.html">Privatnost</a></li>
-        <li><a href="uslovi.html">Uslovi</a></li>
+        <li><a href="radovi.html">Radovi</a></li>
+        <li><a href="o-nama.html">O nama</a></li>
+        <li><a href="kontakt.html">Kontakt</a></li>
         <li><a href="https://www.instagram.com/moj_ambijent/" rel="noopener">Instagram</a></li>
         <li><a href="https://www.tiktok.com/@moj.ambijent" rel="noopener">TikTok</a></li>
       </ul>
     </nav>
+    <div class="f-kol siroka">
+      <h2>Kontakt</h2>
+      <address>
+        <a class="num" href="tel:+381631105456">063 110 54 56</a><br>
+        <a href="mailto:info@mojambijent.com">info@mojambijent.com</a><br>
+        Janka Čmelika 109, 21000 Novi Sad<br>
+        Pon–pet 8–20h
+      </address>
+    </div>
   </div>
-  <div class="wrap"><p class="f-copy">© Moj Ambijent, Novi Sad · PIB 109124518</p></div>
+  <div class="wrap">
+    <div class="f-dno">
+      <span>© Moj Ambijent, Novi Sad · PIB <span class="num">109124518</span></span>
+      <nav aria-label="Pravila"><a href="privatnost.html">Privatnost</a><a href="uslovi.html">Uslovi</a></nav>
+    </div>
+  </div>
 </footer>
 
-<nav class="tabbar" data-ton="lak" aria-label="Meni">
+<nav class="traka" aria-label="Meni">
   <a class="tab" href="index.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8"/><path d="M3 10a2 2 0 0 1 .709-1.528l7-5.999a2 2 0 0 1 2.582 0l7 5.999A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>Početna</a>
-  <a class="tab" href="radovi.html" aria-current="page"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="7" height="7" x="3" y="3" rx="1"/><rect width="7" height="7" x="14" y="3" rx="1"/><rect width="7" height="7" x="14" y="14" rx="1"/><rect width="7" height="7" x="3" y="14" rx="1"/></svg>Radovi</a>
-  <a class="tab" href="kako-radimo.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21.3 15.3a2.4 2.4 0 0 1 0 3.4l-2.6 2.6a2.4 2.4 0 0 1-3.4 0L2.7 8.7a2.41 2.41 0 0 1 0-3.4l2.6-2.6a2.41 2.41 0 0 1 3.4 0Z"/><path d="m14.5 12.5 2-2"/><path d="m11.5 9.5 2-2"/><path d="m8.5 6.5 2-2"/><path d="m17.5 15.5 2-2"/></svg>Kako</a>
+  <button class="tab tab-usluge" type="button" aria-expanded="false" aria-controls="fioka-usluge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="7" height="7" x="3" y="3" rx="1"/><rect width="7" height="7" x="14" y="3" rx="1"/><rect width="7" height="7" x="14" y="14" rx="1"/><rect width="7" height="7" x="3" y="14" rx="1"/></svg>Usluge</button>
+  <a class="tab" href="radovi.html" aria-current="page"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 22H4a2 2 0 0 1-2-2V6"/><path d="m22 13-1.296-1.296a2.41 2.41 0 0 0-3.408 0L11 18"/><circle cx="12" cy="8" r="2"/><rect width="16" height="16" x="6" y="2" rx="2"/></svg>Radovi</a>
   <a class="tab" href="o-nama.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>O nama</a>
   <a class="tab" href="kontakt.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg>Kontakt</a>
   <span class="tab-ind" aria-hidden="true"></span>
 </nav>
-<a class="fab" href="tel:+381631105456" aria-label="Pozovite 063 110 54 56"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg></a>
+<div class="fioka-sloj" hidden></div>
+<div class="fioka" id="fioka-usluge" tabindex="-1" role="dialog" aria-modal="true" aria-labelledby="h-fioka" hidden>
+  <span class="fioka-rucka" aria-hidden="true"></span>
+  <h2 id="h-fioka">Usluge</h2>
+  <ul>
+    <li><a href="kuhinje.html"><img src="assets/img/fioka-kuhinje.jpg" width="240" height="424" loading="lazy" alt="">Kuhinje<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg></a></li>
+    <li><a href="plakari.html"><img src="assets/img/fioka-plakari.jpg" width="240" height="427" loading="lazy" alt="">Plakari i hodnici<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg></a></li>
+    <li><a href="sobe.html"><img src="assets/img/fioka-sobe.jpg" width="240" height="428" loading="lazy" alt="">Sobe<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg></a></li>
+    <li><a href="kupatila.html"><img src="assets/img/fioka-kupatila.jpg" width="240" height="427" loading="lazy" alt="">Kupatila<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg></a></li>
+  </ul>
+</div>
+<a class="poziv-dugme" href="tel:+381631105456" aria-label="Pozovite 063 110 54 56"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg></a>
 
 <script src="assets/js/site.js" defer></script>
 <script src="assets/js/lightbox.js" defer></script>

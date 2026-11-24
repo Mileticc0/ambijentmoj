@@ -1,11 +1,9 @@
-# Interni fajlovi agencije i alati za rad, ne idu u repozitorijum sajta
+# Alati i interni fajlovi
+tools/node_modules/
+tools/kadrovi/
 .claude/
-.taste-skill/
 CLAUDE.md
 PROMPT.md
 screenshots/
-
-# Sistem
 Thumbs.db
 desktop.ini
-.DS_Store

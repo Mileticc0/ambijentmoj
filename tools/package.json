@@ -1,0 +1,10 @@
+{
+  "name": "mojambijent-alati",
+  "private": true,
+  "description": "Alati za pripremu slika i proveru sajta (nisu deo sajta, sajt nema build korak)",
+  "type": "module",
+  "devDependencies": {
+    "playwright-core": "^1.65.1",
+    "sharp": "^0.35.5"
+  }
+}

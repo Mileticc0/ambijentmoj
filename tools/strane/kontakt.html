@@ -1,15 +1,14 @@
-<!-- meni: kontakt.html | ton: lak -->
+<!-- meni: kontakt.html -->
 <!doctype html>
 <html lang="sr-Latn">
 <head>
 {{GLAVA}}
-<title>Kontakt i besplatno merenje · Moj Ambijent, nameštaj po meri Novi Sad</title>
-<meta name="description" content="Zakažite besplatno merenje u Novom Sadu. Pošaljite mere i fotografiju prostora ili pozovite 063 110 54 56 (i Viber). Janka Čmelika 109, Novi Sad.">
-<meta name="theme-color" content="#F3F0EB">
+<title>Kontakt i zakazivanje merenja · Moj Ambijent, Novi Sad</title>
+<meta name="description" content="Zakažite merenje za nameštaj po meri u Novom Sadu. Pošaljite mere i fotografiju prostora ili pozovite 063 110 54 56 (i Viber). Janka Čmelika 109, Novi Sad.">
 <link rel="canonical" href="https://mojambijent.com/kontakt.html">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Kontakt · Moj Ambijent">
-<meta property="og:description" content="Pošaljite nam mere i fotografiju prostora.">
+<meta property="og:description" content="Pošaljite nam mere ili skicu prostora.">
 <meta property="og:image" content="https://mojambijent.com/assets/img/logo/og-1200.jpg">
 <link rel="stylesheet" href="assets/css/kontakt.css">
 </head>
@@ -19,17 +18,12 @@
 {{HEADER}}
 
 <main id="sadrzaj">
-  <section class="sec kontakt" data-ton="lak" aria-labelledby="h-kontakt">
+  <section class="k-strana" aria-labelledby="h-kontakt">
     <div class="wrap grid">
-      <div class="k-levo">
+      <div class="k-forma-kol">
         <h1 id="h-kontakt">Zakažite merenje</h1>
-        <p class="k-uvod">Tri kratka koraka. Javljamo se da dogovorimo merenje, besplatno u Novom Sadu.</p>
-
-        <ol class="kt" aria-label="Koraci forme">
-          <li class="kt-stavka" data-k="1" aria-current="step"><span class="kt-pl"><span></span></span><span class="label">1 · Šta vam treba</span></li>
-          <li class="kt-stavka" data-k="2"><span class="kt-pl"><span></span></span><span class="label">2 · Gde i kada</span></li>
-          <li class="kt-stavka" data-k="3"><span class="kt-pl"><span></span></span><span class="label">3 · Kontakt</span></li>
-        </ol>
+        <p class="k-uvod">Dva kratka koraka. Javljamo se da dogovorimo merenje.</p>
+        <p class="k-korak label" aria-live="polite">Korak <span class="num">1</span> od 2 · Šta vam treba</p>
 
         <form class="forma" action="https://api.web3forms.com/submit" method="POST" enctype="multipart/form-data" novalidate>
           <input type="hidden" name="access_key" value="OVDE_KLJUC">
@@ -38,56 +32,21 @@
           <input type="checkbox" name="botcheck" class="vh" tabindex="-1" autocomplete="off" aria-hidden="true">
 
           <fieldset class="korak" data-k="1">
-            <legend class="vh">Korak 1 od 3: Šta vam treba</legend>
-            <div class="polje" id="p-prostorije">
-              <span class="p-naslov" id="l-prostorije">Prostorije</span>
-              <div class="cipovi" role="group" aria-labelledby="l-prostorije" aria-describedby="g-prostorije">
-                <label class="cip"><input type="checkbox" name="prostorije" value="Kuhinja"><span>Kuhinja</span></label>
-                <label class="cip"><input type="checkbox" name="prostorije" value="Plakar / ormar"><span>Plakar / ormar</span></label>
-                <label class="cip"><input type="checkbox" name="prostorije" value="Spavaća soba"><span>Spavaća soba</span></label>
-                <label class="cip"><input type="checkbox" name="prostorije" value="Zidni krevet"><span>Zidni krevet</span></label>
-                <label class="cip"><input type="checkbox" name="prostorije" value="Dečija soba"><span>Dečija soba</span></label>
-                <label class="cip"><input type="checkbox" name="prostorije" value="Dnevna / TV zid"><span>Dnevna / TV zid</span></label>
-                <label class="cip"><input type="checkbox" name="prostorije" value="Hodnik"><span>Hodnik</span></label>
-                <label class="cip"><input type="checkbox" name="prostorije" value="Kupatilo"><span>Kupatilo</span></label>
-                <label class="cip"><input type="checkbox" name="prostorije" value="Kancelarija"><span>Kancelarija</span></label>
-                <label class="cip"><input type="checkbox" name="prostorije" value="Stepenište"><span>Stepenište</span></label>
+            <legend class="vh">Korak 1 od 2: Šta vam treba</legend>
+            <div class="polje" id="p-kategorije">
+              <span class="p-naslov" id="l-kategorije">Šta vam treba?</span>
+              <div class="cipovi" role="group" aria-labelledby="l-kategorije" aria-describedby="g-kategorije">
+                <label class="cip"><input type="checkbox" name="kategorije" value="Kuhinja"><span>Kuhinja</span></label>
+                <label class="cip"><input type="checkbox" name="kategorije" value="Plakar ili ormar"><span>Plakar ili ormar</span></label>
+                <label class="cip"><input type="checkbox" name="kategorije" value="Hodnik"><span>Hodnik</span></label>
+                <label class="cip"><input type="checkbox" name="kategorije" value="Dnevna soba"><span>Dnevna soba</span></label>
+                <label class="cip"><input type="checkbox" name="kategorije" value="Spavaća soba"><span>Spavaća soba</span></label>
+                <label class="cip"><input type="checkbox" name="kategorije" value="Dečija soba"><span>Dečija soba</span></label>
+                <label class="cip"><input type="checkbox" name="kategorije" value="Zidni krevet"><span>Zidni krevet</span></label>
+                <label class="cip"><input type="checkbox" name="kategorije" value="Kupatilo"><span>Kupatilo</span></label>
+                <label class="cip"><input type="checkbox" name="kategorije" value="Nešto drugo"><span>Nešto drugo</span></label>
               </div>
-              <p class="greska" id="g-prostorije" hidden>Izaberite bar jednu prostoriju.</p>
-            </div>
-            <div class="polje">
-              <span class="p-naslov" id="l-materijal">Materijal koji vam se dopada <span class="tiho">(nije obavezno)</span></span>
-              <div class="pl-izbor" role="radiogroup" aria-labelledby="l-materijal">
-                <label class="pl" style="--t: var(--orah)"><input type="radio" name="materijal" value="Orah"><span class="pl-k"></span><span class="label">Orah</span></label>
-                <label class="pl" style="--t: var(--hrast)"><input type="radio" name="materijal" value="Hrast"><span class="pl-k"></span><span class="label">Hrast</span></label>
-                <label class="pl" style="--t: var(--lak)"><input type="radio" name="materijal" value="Beli mat"><span class="pl-k"></span><span class="label">Beli mat</span></label>
-                <label class="pl" style="--t: var(--krem)"><input type="radio" name="materijal" value="Krem"><span class="pl-k"></span><span class="label">Krem</span></label>
-                <label class="pl" style="--t: var(--kamen)"><input type="radio" name="materijal" value="Kamen"><span class="pl-k"></span><span class="label">Kamen</span></label>
-                <label class="pl" style="--t: var(--antracit)"><input type="radio" name="materijal" value="Antracit"><span class="pl-k"></span><span class="label">Antracit</span></label>
-                <label class="pl pl-ne"><input type="radio" name="materijal" value="Još ne znam" checked><span class="pl-k"></span><span class="label">Još ne znam</span></label>
-              </div>
-            </div>
-            <div class="akcije"><button class="btn dalje" type="button">Dalje<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></button></div>
-          </fieldset>
-
-          <fieldset class="korak" data-k="2" hidden>
-            <legend class="vh">Korak 2 od 3: Gde i kada</legend>
-            <div class="polje">
-              <span class="p-naslov" id="l-grad">Grad</span>
-              <div class="cipovi" role="radiogroup" aria-labelledby="l-grad">
-                <label class="cip"><input type="radio" name="grad" value="Novi Sad" checked><span>Novi Sad</span></label>
-                <label class="cip"><input type="radio" name="grad" value="Drugo mesto"><span>Drugo mesto</span></label>
-              </div>
-            </div>
-            <div class="polje" id="p-mesto" hidden>
-              <label class="p-naslov" for="mesto">Mesto</label>
-              <input class="unos" id="mesto" name="mesto" type="text" autocomplete="address-level2" maxlength="80" aria-describedby="g-mesto">
-              <p class="greska" id="g-mesto" hidden>Upišite mesto.</p>
-            </div>
-            <div class="polje">
-              <label class="p-naslov" for="adresa">Adresa ili deo grada</label>
-              <input class="unos" id="adresa" name="adresa" type="text" autocomplete="street-address" maxlength="160" required aria-describedby="g-adresa">
-              <p class="greska" id="g-adresa" hidden>Upišite adresu ili bar deo grada.</p>
+              <p class="greska" id="g-kategorije" hidden>Izaberite bar jednu stavku.</p>
             </div>
             <div class="polje">
               <span class="p-naslov" id="l-mere">Okvirne mere u cm <span class="tiho">(nije obavezno)</span></span>
@@ -98,17 +57,17 @@
               </div>
               <p class="greska" id="g-mere" hidden>Mere upišite u centimetrima, od 1 do 2000.</p>
             </div>
-            <div class="polje polje-red">
-              <label><span class="p-naslov">Poželjan datum merenja <span class="tiho">(nije obavezno)</span></span><input class="unos num" id="datum" name="datum" type="date"></label>
-              <label><span class="p-naslov">Deo dana</span>
-                <select class="unos" name="deo_dana"><option value="">Svejedno</option><option>Pre podne</option><option>Posle podne</option></select>
-              </label>
+            <div class="polje">
+              <span class="p-naslov" id="l-slika">Fotografija ili skica prostora <span class="tiho">(nije obavezno, do 10 MB)</span></span>
+              <label class="fajl"><input id="slika" name="attachment" type="file" accept="image/*" aria-labelledby="l-slika" aria-describedby="g-slika"><span class="link">Izaberite fotografiju</span></label>
+              <div class="pregled" hidden><span class="pregled-ime"></span><button class="link ukloni" type="button">Ukloni</button></div>
+              <p class="greska" id="g-slika" hidden>Fotografija je veća od 10 MB. Izaberite manju ili je pošaljite na Viber.</p>
             </div>
-            <div class="akcije"><button class="link nazad" type="button">Nazad</button><button class="btn dalje" type="button">Dalje<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></button></div>
+            <div class="akcije"><button class="btn dalje" type="button">Dalje</button></div>
           </fieldset>
 
-          <fieldset class="korak" data-k="3" hidden>
-            <legend class="vh">Korak 3 od 3: Kontakt</legend>
+          <fieldset class="korak" data-k="2" hidden>
+            <legend class="vh">Korak 2 od 2: Vaši podaci</legend>
             <div class="polje">
               <label class="p-naslov" for="ime">Ime i prezime</label>
               <input class="unos" id="ime" name="ime" type="text" autocomplete="name" maxlength="120" required aria-describedby="g-ime">
@@ -125,68 +84,37 @@
               <textarea class="unos" id="poruka" name="poruka" rows="5" maxlength="2000" aria-describedby="brojac"></textarea>
               <p class="brojac label num" id="brojac" aria-live="polite">0 / 2000</p>
             </div>
-            <div class="polje">
-              <span class="p-naslov" id="l-slika">Fotografija prostora <span class="tiho">(nije obavezno, do 10 MB)</span></span>
-              <label class="fajl"><input id="slika" name="attachment" type="file" accept="image/*" aria-labelledby="l-slika" aria-describedby="g-slika"><span class="link">Izaberite fotografiju</span></label>
-              <div class="pregled" hidden><img alt="Pregled izabrane fotografije"><span class="pregled-ime label"></span><button class="link ukloni" type="button">Ukloni</button></div>
-              <p class="greska" id="g-slika" hidden>Fotografija je veća od 10 MB. Izaberite manju ili je pošaljite na Viber.</p>
-            </div>
             <p class="napomena tiho">Podatke koristimo samo da vam odgovorimo. Više u delu <a href="privatnost.html">Privatnost</a>.</p>
-            <div class="akcije"><button class="link nazad" type="button">Nazad</button><button class="btn posalji" type="submit"><span class="posalji-tekst">Pošalji upit</span><span class="spin" aria-hidden="true"></span></button></div>
+            <div class="akcije"><button class="link nazad" type="button">Nazad</button><button class="btn posalji" type="submit"><span class="posalji-tekst">Pošaljite upit</span><span class="spin" aria-hidden="true"></span></button></div>
             <p class="greska greska-slanja" role="alert" hidden>Slanje nije uspelo. Pokušajte ponovo ili pozovite <a class="num" href="tel:+381631105456">063 110 54 56</a>.</p>
           </fieldset>
 
           <div class="hvala" hidden tabindex="-1">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
-            <p class="h">Hvala. Javljamo se da dogovorimo merenje.</p>
+            <p>Hvala. Javljamo se da dogovorimo merenje.</p>
           </div>
         </form>
       </div>
 
-      <div class="k-desno" aria-hidden="true">
-        <div class="k-slike">
-          <img class="on" data-mat="" src="assets/img/kuhinja-krem-1-800.jpg" srcset="assets/img/kuhinja-krem-1-800.jpg 800w, assets/img/kuhinja-krem-1-1600.jpg 1600w" sizes="40vw" width="2048" height="2048" alt="">
-          <img data-mat="Orah" loading="lazy" decoding="async" src="assets/img/kuhinja-orah-lampe-2-800.jpg" srcset="assets/img/kuhinja-orah-lampe-2-800.jpg 800w, assets/img/kuhinja-orah-lampe-2-1600.jpg 1600w" sizes="40vw" width="2048" height="2048" alt="">
-          <img data-mat="Hrast" loading="lazy" decoding="async" src="assets/img/kuhinja-led-1-800.jpg" srcset="assets/img/kuhinja-led-1-800.jpg 800w, assets/img/kuhinja-led-1-1600.jpg 1600w" sizes="40vw" width="1639" height="2048" alt="">
-          <img data-mat="Beli mat" loading="lazy" decoding="async" src="assets/img/kuhinja-bela-ostrvo-1-800.jpg" srcset="assets/img/kuhinja-bela-ostrvo-1-800.jpg 800w, assets/img/kuhinja-bela-ostrvo-1-1600.jpg 1600w" sizes="40vw" width="1660" height="2048" alt="">
-          <img data-mat="Krem" loading="lazy" decoding="async" src="assets/img/kuhinja-orah-l-800.jpg" srcset="assets/img/kuhinja-orah-l-800.jpg 800w, assets/img/kuhinja-orah-l-1600.jpg 1600w" sizes="40vw" width="1638" height="2048" alt="">
-          <img data-mat="Kamen" loading="lazy" decoding="async" src="assets/img/kuhinja-led-2-800.jpg" srcset="assets/img/kuhinja-led-2-800.jpg 800w, assets/img/kuhinja-led-2-1600.jpg 1600w" sizes="40vw" width="1639" height="2048" alt="">
-          <img data-mat="Antracit" loading="lazy" decoding="async" src="assets/img/dnevna-crna-tv-800.jpg" srcset="assets/img/dnevna-crna-tv-800.jpg 800w, assets/img/dnevna-crna-tv-1600.jpg 1600w" sizes="40vw" width="2048" height="2048" alt="">
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="sec podaci" data-ton="kamen" aria-labelledby="h-podaci">
-    <div class="wrap grid">
-      <h2 id="h-podaci">Ili nas pozovite</h2>
-      <ul class="pd-lista">
-        <li>
-          <span class="pd-ik" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg></span>
-          <span class="pd-tekst"><span class="label tiho">Telefon i Viber</span><a class="pd-glavno num" href="tel:+381631105456">063 110 54 56</a></span>
-          <span class="pd-akcije"><button class="link kopiraj" type="button" data-tekst="+381 63 110 54 56"><span class="kop-t">Kopiraj</span></button><a class="link" href="viber://chat?number=%2B381631105456">Viber</a></span>
-        </li>
-        <li>
-          <span class="pd-ik" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg></span>
-          <span class="pd-tekst"><span class="label tiho">Email</span><a class="pd-glavno" href="mailto:info@mojambijent.com">info@mojambijent.com</a></span>
-        </li>
-        <li>
-          <span class="pd-ik" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg></span>
-          <span class="pd-tekst"><span class="label tiho">Izložbeni prostor, uz dogovor</span><a class="pd-glavno" href="https://www.google.com/maps/search/?api=1&amp;query=Janka+%C4%8Cmelika+109%2C+21000+Novi+Sad" rel="noopener">Janka Čmelika 109, 21000 Novi Sad</a></span>
-        </li>
-        <li>
-          <span class="pd-ik" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></span>
-          <span class="pd-tekst"><span class="label tiho">Radno vreme</span><span class="pd-glavno">Ponedeljak do petak, 8 do 20h</span></span>
-        </li>
-      </ul>
+      <aside class="k-podaci" aria-labelledby="h-podaci">
+        <h2 id="h-podaci">Ili nas pozovite</h2>
+        <ul class="kontakt-lista">
+          <li><span class="label">Telefon</span><a class="num" href="tel:+381631105456">063 110 54 56</a><button class="link kopiraj" type="button" data-kopiraj="+381 63 110 54 56">Kopiraj</button></li>
+          <li><span class="label">Viber</span><a class="num" href="viber://chat?number=%2B381631105456">+381 63 110 54 56</a></li>
+          <li><span class="label">Email</span><a href="mailto:info@mojambijent.com">info@mojambijent.com</a></li>
+          <li><span class="label">Adresa</span><a href="https://www.google.com/maps/search/?api=1&amp;query=Janka+%C4%8Cmelika+109%2C+21000+Novi+Sad" rel="noopener">Janka Čmelika 109, 21000 Novi Sad</a></li>
+          <li><span class="label">Radno vreme</span><span class="vrednost">Pon–pet 8–20h, izložbeni prostor uz dogovor</span></li>
+        </ul>
+      </aside>
     </div>
   </section>
 </main>
 
-{{FOOTER}}
+{{FUTER}}
 
-{{TABBAR}}
-{{FAB}}
+{{TRAKA}}
+{{FIOKA}}
+{{POZIV}}
 
 <script src="assets/js/site.js" defer></script>
 <script src="assets/js/kontakt.js" defer></script>

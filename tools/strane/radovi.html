@@ -1,16 +1,16 @@
-<!-- meni: radovi.html | ton: lak -->
+<!-- meni: radovi.html -->
 <!doctype html>
 <html lang="sr-Latn">
 <head>
 {{GLAVA}}
-<title>Radovi: kuhinje, plakari i nameštaj po meri Novi Sad · Moj Ambijent</title>
-<meta name="description" content="Kuhinje po meri, američki plakari, zidni kreveti, dnevne sobe, kupatila i hodnici iz radionice Moj Ambijent u Novom Sadu. Filtrirajte po prostoriji i materijalu.">
-<meta name="theme-color" content="#F3F0EB">
+<title>Radovi: nameštaj po meri Novi Sad · Moj Ambijent</title>
+<meta name="description" content="Radovi radionice Moj Ambijent: kompletan stan u Novom Sadu, stan u Puli, kuhinje, plakari, sobe i kupatila po meri. Fotografije i snimci sa terena.">
 <link rel="canonical" href="https://mojambijent.com/radovi.html">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Radovi · Moj Ambijent, Novi Sad">
 <meta property="og:description" content="Sve što vidite izrađeno je po meri za jedan konkretan prostor.">
-<meta property="og:image" content="https://mojambijent.com/assets/img/kuhinja-led-1-1600.jpg">
+<meta property="og:image" content="https://mojambijent.com/assets/img/stan-ns-kuhinja-1600.jpg">
+<link rel="stylesheet" href="assets/css/usluga.css">
 <link rel="stylesheet" href="assets/css/radovi.css">
 </head>
 <body>
@@ -19,89 +19,115 @@
 {{HEADER}}
 
 <main id="sadrzaj">
-  <section class="sec galerija" data-ton="lak" data-paint="page" aria-labelledby="h-radovi">
-    <div class="wrap grid uvod">
+  <section class="r-uvod" aria-labelledby="h-radovi">
+    <div class="wrap grid">
       <h1 id="h-radovi">Radovi</h1>
       <p>Sve što vidite izrađeno je po meri za jedan konkretan prostor.</p>
-    </div>
-
-    <div class="wrap filteri" aria-label="Filteri">
-      <div class="f-red" role="group" aria-labelledby="f-pr">
-        <span class="f-ime label" id="f-pr">Prostorija</span>
-        <div class="f-opcije">
-          <button class="f-dugme label" type="button" data-pr="" aria-pressed="true">Sve</button>
-          <button class="f-dugme label" type="button" data-pr="kuhinje" aria-pressed="false">Kuhinje</button>
-          <button class="f-dugme label" type="button" data-pr="plakari" aria-pressed="false">Plakari</button>
-          <button class="f-dugme label" type="button" data-pr="spavace" aria-pressed="false">Spavaće</button>
-          <button class="f-dugme label" type="button" data-pr="dnevne" aria-pressed="false">Dnevne</button>
-          <button class="f-dugme label" type="button" data-pr="kupatila" aria-pressed="false">Kupatila</button>
-          <button class="f-dugme label" type="button" data-pr="hodnici" aria-pressed="false">Hodnici</button>
-          <button class="f-dugme label" type="button" data-pr="decije" aria-pressed="false">Dečije</button>
-        </div>
+      <div class="filter" role="group" aria-label="Prikaži radove">
+        <button class="f-dugme" type="button" data-kat="" aria-pressed="true">Sve</button>
+        <button class="f-dugme" type="button" data-kat="kuhinje" aria-pressed="false">Kuhinje</button>
+        <button class="f-dugme" type="button" data-kat="plakari" aria-pressed="false">Plakari</button>
+        <button class="f-dugme" type="button" data-kat="sobe" aria-pressed="false">Sobe</button>
+        <button class="f-dugme" type="button" data-kat="kupatila" aria-pressed="false">Kupatila</button>
+        <button class="f-dugme" type="button" data-kat="hodnici" aria-pressed="false">Hodnici</button>
       </div>
-      <div class="f-red" role="group" aria-labelledby="f-mat">
-        <span class="f-ime label" id="f-mat">Materijal</span>
-        <div class="f-uzorci">
-          <button class="f-uz" type="button" data-mat="orah" aria-pressed="false" style="--t: var(--orah)"><span class="plocica" aria-hidden="true"></span><span class="label">Orah</span></button>
-          <button class="f-uz" type="button" data-mat="hrast" aria-pressed="false" style="--t: var(--hrast)"><span class="plocica" aria-hidden="true"></span><span class="label">Hrast</span></button>
-          <button class="f-uz" type="button" data-mat="lak" aria-pressed="false" style="--t: var(--lak)"><span class="plocica" aria-hidden="true"></span><span class="label">Beli mat</span></button>
-          <button class="f-uz" type="button" data-mat="krem" aria-pressed="false" style="--t: var(--krem)"><span class="plocica" aria-hidden="true"></span><span class="label">Krem</span></button>
-          <button class="f-uz" type="button" data-mat="kamen" aria-pressed="false" style="--t: var(--kamen)"><span class="plocica" aria-hidden="true"></span><span class="label">Kamen</span></button>
-          <button class="f-uz" type="button" data-mat="antracit" aria-pressed="false" style="--t: var(--antracit)"><span class="plocica" aria-hidden="true"></span><span class="label">Antracit</span></button>
-        </div>
-      </div>
-      <p class="f-stanje label" aria-live="polite">Svi radovi</p>
-    </div>
-
-    <div class="wrap m-grupe">
-{{GALERIJA}}
-      <p class="m-prazno" hidden>Nemamo još fotografiju za ovu kombinaciju. Pozovite <a class="num" href="tel:+381631105456">063 110 54 56</a>.</p>
+      <p class="f-stanje label" aria-live="polite"></p>
     </div>
   </section>
 
-  <section class="sec studije" data-ton="krem" aria-labelledby="h-studije">
-    <div class="wrap">
-      <h2 id="h-studije">Dva stana od početka do kraja</h2>
-
-      <a class="studija grid" href="projekat-novi-sad.html">
-        <span class="s-foto s-glavna"><img src="assets/img/stan-ns-kuhinja-1600.jpg" srcset="assets/img/stan-ns-kuhinja-800.jpg 800w, assets/img/stan-ns-kuhinja-1600.jpg 1600w" sizes="(min-width: 960px) 56vw, 92vw" width="2048" height="2047" loading="lazy" decoding="async" alt="Kuhinja u stanu u Novom Sadu sa visokim elementima u svetlom drvetu" style="view-transition-name: projekat-ns"></span>
-        <span class="s-tekst">
-          <h3 class="s-naslov">Kompletan stan u Novom Sadu</h3>
-          <span class="s-opis">Kuhinja, dnevna, spavaća i dečija soba, hodnik i kupatilo. Sve po meri, iz jedne radionice.</span>
-          <span class="link">Pogledajte stan soba po soba</span>
-        </span>
-      </a>
-
-      <div class="studija grid">
-        <button class="s-foto s-glavna s-pula" type="button" data-i="0" aria-label="Otvori fotografije stana u Puli"><img src="assets/img/pula-dnevna-1-1600.jpg" srcset="assets/img/pula-dnevna-1-800.jpg 800w, assets/img/pula-dnevna-1-1600.jpg 1600w" sizes="(min-width: 960px) 40vw, 92vw" width="2048" height="2048" loading="lazy" decoding="async" alt="Dnevna soba u stanu u Puli sa drvenom zidnom oblogom i tamnom TV komodom"></button>
-        <span class="s-male">
-          <button class="s-foto s-pula" type="button" data-i="1" aria-label="Otvori fotografiju: dnevna soba, drugi ugao"><img src="assets/img/pula-dnevna-2-800.jpg" srcset="assets/img/pula-dnevna-2-800.jpg 800w, assets/img/pula-dnevna-2-1600.jpg 1600w" sizes="(min-width: 960px) 16vw, 45vw" width="1639" height="2048" loading="lazy" decoding="async" alt="Dnevna soba u stanu u Puli, pogled na TV zid"></button>
-          <button class="s-foto s-pula" type="button" data-i="2" aria-label="Otvori fotografiju: kuhinja sa šankom"><img src="assets/img/pula-kuhinja-sank-800.jpg" srcset="assets/img/pula-kuhinja-sank-800.jpg 800w, assets/img/pula-kuhinja-sank-1600.jpg 1600w" sizes="(min-width: 960px) 16vw, 45vw" width="1639" height="2048" loading="lazy" decoding="async" alt="Kuhinja sa šankom i barskim stolicama u stanu u Puli"></button>
-        </span>
-        <span class="s-tekst">
-          <h3 class="s-naslov">Stan u Puli</h3>
-          <span class="s-opis">Dnevna soba sa zidnom oblogom i kuhinja sa šankom, Pula, Hrvatska.</span>
-          <button class="link s-otvori" type="button">Pogledajte fotografije</button>
-        </span>
+  <section class="sec povrsina r-projekat" id="novi-sad" aria-labelledby="h-ns">
+    <div class="wrap grid">
+      <div class="r-tekst">
+        <h2 id="h-ns">Kompletan stan u Novom Sadu</h2>
+        <p>Kuhinja, dnevna soba, spavaće i dečija soba, hodnik i kupatilo, sve po meri iz naše radionice. Na snimcima je obilazak završenog stana i poslednja faza montaže.</p>
       </div>
+      <div class="r-snimci">
+        {{VIDEO:stan-ns-obilazak|Obilazak stana u Novom Sadu|0|33.5}}
+        {{VIDEO:stan-ns-zavrsna-faza|Završna faza stana u Novom Sadu|0|27.5}}
+      </div>
+      <ul class="galerija" data-galerija>
+        {{FOTO:stan-ns-kuhinja|Kuhinja sa visokim elementima u svetlom drvetu i ugradnim rernama|kuhinje}}
+        {{FOTO:stan-ns-kuhinja-mermer|Fioka sa podelom za escajg ispod mermerne radne ploče|kuhinje}}
+        {{FOTO:stan-ns-fioka-detalj|Izvučena fioka u svetlom drvetu ispod bele radne ploče|kuhinje}}
+        {{FOTO:stan-ns-dnevna|Dnevna soba sa TV komodom u svetlom drvetu i visokim tamnim ormarom|sobe}}
+        {{FOTO:stan-ns-spavaca-2|Spavaća soba sa zidnim panelom i LED trakom iza kreveta|sobe}}
+        {{FOTO:stan-ns-spavaca-1|Spavaća soba sa tamnim ormarom i drvenim panelom|sobe}}
+        {{FOTO:stan-ns-decija-krevet|Krevet na sprat sa merdevinama i policama u dečijoj sobi|sobe}}
+        {{FOTO:stan-ns-decija-sto|Radni sto i police u dečijoj sobi|sobe}}
+        {{FOTO:stan-ns-decija-plakar|Plakar u dečijoj sobi sa policama i fiokama|plakari}}
+        {{FOTO:stan-ns-hodnik|Hodnik sa belim ugradnim ormarima do plafona i LED trakom|hodnici}}
+        {{FOTO:stan-ns-hodnik-ogledalo|Ogledalo sa pozadinskim svetlom u hodniku|hodnici}}
+      </ul>
     </div>
   </section>
 
-  <section class="sec poziv-mali" data-ton="antracit" aria-labelledby="h-poziv">
-    <div class="wrap">
-      <h2 id="h-poziv">Pošaljite nam mere i fotografiju prostora.</h2>
-      <div class="poziv-akcije">
-        <a class="btn" href="kontakt.html">Pošaljite upit<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
-        <a class="tel label num" href="tel:+381631105456">063 110 54 56</a>
+  <section class="sec r-projekat" id="pula" aria-labelledby="h-pula">
+    <div class="wrap grid">
+      <div class="r-tekst">
+        <h2 id="h-pula">Stan u Puli</h2>
+        <p>Dnevna soba sa zidnom oblogom u drvetu i kuhinja sa šankom, Pula, Hrvatska.</p>
+      </div>
+      <ul class="galerija" data-galerija>
+        {{FOTO:pula-dnevna-1|Dnevna soba u stanu u Puli sa drvenom zidnom oblogom i tamnom TV komodom|sobe}}
+        {{FOTO:pula-dnevna-2|Dnevna soba u stanu u Puli, pogled na TV zid|sobe}}
+        {{FOTO:pula-kuhinja-sank|Kuhinja sa šankom i barskim stolicama u stanu u Puli|kuhinje}}
+      </ul>
+    </div>
+  </section>
+
+  <section class="sec povrsina r-projekat" id="ostali" aria-labelledby="h-ostali">
+    <div class="wrap grid">
+      <div class="r-tekst">
+        <h2 id="h-ostali">Ostali radovi</h2>
+        <p>Kuhinje, detalji i sobe iz drugih stanova i kuća.</p>
+      </div>
+      <div class="r-snimci jedan">
+        {{VIDEO:kupatilo-tus|Kupatilo sa tuš kabinom|7|16.2||kupatila}}
+      </div>
+      <ul class="galerija" data-galerija>
+        {{FOTO:kuhinja-bela-ostrvo-2|Bela kuhinja sa ostrvom i radnom pločom uz prozor|kuhinje}}
+        {{FOTO:kuhinja-bela-ostrvo-3|Beli frontovi bez ručki u kuhinji sa ostrvom|kuhinje}}
+        {{FOTO:kuhinja-led-3|Kuhinja sa kamenim ostrvom i LED trakama na plafonu|kuhinje}}
+        {{FOTO:kuhinja-krem-1|Kuhinja sa svetlom kamenom radnom pločom i rernom ispod|kuhinje}}
+        {{FOTO:kuhinja-krem-2|Kuhinja sa visokim elementima i drvenim donjim delom|kuhinje}}
+        {{FOTO:kuhinja-orah-l|Kuhinja u obliku slova L u krem tonu|kuhinje}}
+        {{FOTO:kuhinja-siva-lamele|Mala kuhinja u sivom tonu sa lamelama|kuhinje}}
+        {{FOTO:kuhinja-staklena-pregrada-2|Visoki elementi u drvetu iza staklene pregrade sa crnim ramom|kuhinje}}
+        {{FOTO:kuhinja-bela-beton-2|Bela kuhinja u obliku slova L sa drvenom radnom pločom|kuhinje}}
+        {{FOTO:kuhinja-kamen-rerna|Visoki beli element sa ugradnom rernom|kuhinje}}
+        {{FOTO:kuhinja-kamen-ostrvo-2|Kuhinjsko ostrvo obloženo kamenom|kuhinje}}
+        {{FOTO:kuhinja-mala-detalj|Detalj male kuhinje sa lamelama i policom|kuhinje}}
+        {{FOTO:vitrina-led|Bela kuhinja sa vitrinom osvetljenom LED trakom|kuhinje}}
+        {{FOTO:hodnik-kuhinja|Bela kuhinja sa crnim gornjim delom, pogled iz hodnika|kuhinje}}
+        {{FOTO:detalj-sank|Detalj šanka sa kamenom oblogom|kuhinje}}
+        {{FOTO:detalj-lamele|Detalj tamnih lamela na šanku|kuhinje}}
+        {{FOTO:detalj-lamele-stolica|Barska stolica uz šank sa lamelama|kuhinje}}
+        {{FOTO:dnevna-tv-orah|Beli TV zid sa drvenom komodom i LED trakom|sobe}}
+        {{FOTO:mali-stan-zidni-krevet|Mali stan sa zidnim krevetom u ormaru pored kuhinje|sobe}}
+      </ul>
+    </div>
+  </section>
+
+  <section class="sec r-prazno" hidden>
+    <div class="wrap"><p>Nemamo još fotografiju za ovu vrstu nameštaja. Pozovite <a class="num" href="tel:+381631105456">063 110 54 56</a>.</p></div>
+  </section>
+
+  <section class="sec povrsina u-poziv" aria-labelledby="h-poziv">
+    <div class="wrap grid">
+      <h2 id="h-poziv">Imate meru ili skicu? Pošaljite nam je.</h2>
+      <div class="u-akcije">
+        <a class="btn" href="kontakt.html">Zakažite merenje</a>
+        <a class="tel num" href="tel:+381631105456">063 110 54 56</a>
       </div>
     </div>
   </section>
 </main>
 
-{{FOOTER}}
+{{FUTER}}
 
-{{TABBAR}}
-{{FAB}}
+{{TRAKA}}
+{{FIOKA}}
+{{POZIV}}
 
 <script src="assets/js/site.js" defer></script>
 <script src="assets/js/lightbox.js" defer></script>
