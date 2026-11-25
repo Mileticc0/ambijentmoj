@@ -71,11 +71,10 @@ Sličice su kadrovi iz videa (assets/img/fioka-*.jpg), ne fotografije, da se nij
 ## o-nama.html
 | Sekcija | Fotografije / video |
 |---|---|
-| Dobro došli u Moj Ambijent | kuhinja-montaza |
-| Od 2015. godine | kuhinja-staklena-pregrada-2 |
+|  | kuhinja-staklena-pregrada-2 |
 | Vi imate ideju? Odlično! | detalj-lamele |
 
 ## Provera
-- Fotografija: 87, iskorišćeno: 87, neiskorišćenih: nema
+- Fotografija: 87, iskorišćeno: 86, neiskorišćenih: kuhinja-montaza
 - Ponavljanja fotografija: nema
 - Videa: 16, ponavljanja: nema
