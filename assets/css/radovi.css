@@ -23,7 +23,7 @@
 @media (prefers-reduced-motion: reduce) { .f-dugme::after { transition: none; } }
 
 .r-projekat[hidden], .r-prazno[hidden], .galerija li[hidden], .video[hidden] { display: none; }
-.r-projekat { scroll-margin-top: var(--hdr); }
+/* skok na projekat: razmak za header daje scroll-padding-top na html */
 .r-tekst { grid-column: 1 / span 5; align-self: end; }
 .r-tekst p { margin-top: 20px; color: var(--tekst-2); }
 .r-snimci { grid-column: 7 / -1; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--gap); }

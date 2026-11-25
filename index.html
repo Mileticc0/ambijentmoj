@@ -53,8 +53,8 @@
   </a>
   <nav class="meni label" aria-label="Glavni meni">
     <ul>
-      <li class="meni-usluge">
-        <button class="meni-dugme" type="button" aria-expanded="false" aria-controls="padajuci-usluge">Usluge<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button>
+      <li class="meni-pod">
+        <button class="meni-dugme" type="button" data-meni="usluge" aria-expanded="false" aria-controls="padajuci-usluge">Usluge<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button>
         <div class="padajuci" id="padajuci-usluge" hidden>
           <ul>
             <li><a href="kuhinje.html"><img src="assets/img/fioka-kuhinje.jpg" width="240" height="424" loading="lazy" alt=""><span><span class="p-ime">Kuhinje</span><span class="p-opis">Ugaone, sa ostrvom ili šankom, male kuhinje</span></span></a></li>
@@ -65,7 +65,19 @@
           </ul>
         </div>
       </li>
-      <li><a href="radovi.html">Radovi</a></li>
+      <li class="meni-pod">
+        <button class="meni-dugme" type="button" data-meni="radovi" aria-expanded="false" aria-controls="padajuci-radovi">Radovi<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button>
+        <div class="padajuci padajuci-tekst" id="padajuci-radovi" hidden>
+          <ul>
+            <li><a href="radovi.html"><span><span class="p-ime">Svi radovi</span><span class="p-opis">Sve fotografije, sa filterom po vrsti nameštaja</span></span></a></li>
+            <li><a href="radovi.html#novi-sad"><span><span class="p-ime">Kompletan stan u Novom Sadu</span><span class="p-opis">Kuhinja, sobe, hodnik i kupatilo</span></span></a></li>
+            <li><a href="radovi.html#bela-kuhinja-ostrvo"><span><span class="p-ime">Bela kuhinja sa ostrvom</span><span class="p-opis">Fotografije i obilazak kuhinje</span></span></a></li>
+            <li><a href="radovi.html#mali-stan-34m2"><span><span class="p-ime">Mali stan 34&nbsp;m²</span><span class="p-opis">Plakar, kuhinja u niši, TV zid</span></span></a></li>
+            <li><a href="radovi.html#pula"><span><span class="p-ime">Stan u Puli</span><span class="p-opis">Dnevna soba i kuhinja sa šankom</span></span></a></li>
+            <li><a href="radovi.html#ostali"><span><span class="p-ime">Ostali radovi</span><span class="p-opis">Kuhinje, detalji i sobe</span></span></a></li>
+          </ul>
+        </div>
+      </li>
       <li><a href="o-nama.html">O nama</a></li>
       <li><a href="kontakt.html">Kontakt</a></li>
     </ul>
@@ -270,7 +282,7 @@
     <ul class="mm-lista">
       <li><a href="index.html" aria-current="page">Početna</a></li>
       <li>
-        <button class="mm-usluge" type="button" aria-expanded="false" aria-controls="mm-podlista">Usluge<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button>
+        <button class="mm-pod" type="button" data-meni="usluge" aria-expanded="false" aria-controls="mm-podlista">Usluge<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button>
         <ul class="mm-podlista" id="mm-podlista" hidden>
           <li><a href="kuhinje.html">Kuhinje</a></li>
           <li><a href="plakari.html">Plakari i hodnici</a></li>
@@ -279,7 +291,17 @@
           <li><a href="kupatila.html">Kupatila</a></li>
         </ul>
       </li>
-      <li><a href="radovi.html">Radovi</a></li>
+      <li>
+        <button class="mm-pod" type="button" data-meni="radovi" aria-expanded="false" aria-controls="mm-podlista-radovi">Radovi<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button>
+        <ul class="mm-podlista" id="mm-podlista-radovi" hidden>
+          <li><a href="radovi.html">Svi radovi</a></li>
+          <li><a href="radovi.html#novi-sad">Kompletan stan u Novom Sadu</a></li>
+          <li><a href="radovi.html#bela-kuhinja-ostrvo">Bela kuhinja sa ostrvom</a></li>
+          <li><a href="radovi.html#mali-stan-34m2">Mali stan 34&nbsp;m²</a></li>
+          <li><a href="radovi.html#pula">Stan u Puli</a></li>
+          <li><a href="radovi.html#ostali">Ostali radovi</a></li>
+        </ul>
+      </li>
       <li><a href="o-nama.html">O nama</a></li>
       <li><a href="kontakt.html">Kontakt</a></li>
     </ul>

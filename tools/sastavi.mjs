@@ -52,10 +52,12 @@ for (const f of fs.readdirSync(dir).filter((f) => f.endsWith('.html'))) {
   if (meni !== '-') {
     h = h.replace(`<a href="${meni}">`, `<a href="${meni}" aria-current="page">`);
     mm = mm.replace(`<a href="${meni}">`, `<a href="${meni}" aria-current="page">`);
+    // Radovi: aktivna je stavka „Radovi“ (padajući meni)
+    if (meni === 'radovi.html') { h = h.replace('data-meni="radovi"', 'data-meni="radovi" data-aktivna'); mm = mm.replace('data-meni="radovi"', 'data-meni="radovi" data-aktivna'); }
     // stranice usluga: „Usluge“ je aktivna stavka u meniju
     if (['kuhinje.html', 'plakari.html', 'sobe.html', 'zidni-krevet.html', 'kupatila.html'].includes(meni)) {
-      h = h.replace('class="meni-dugme"', 'class="meni-dugme" data-aktivna');
-      mm = mm.replace('class="mm-usluge"', 'class="mm-usluge" data-aktivna');
+      h = h.replace('data-meni="usluge"', 'data-meni="usluge" data-aktivna');
+      mm = mm.replace('data-meni="usluge"', 'data-meni="usluge" data-aktivna');
     }
   }
   s = s.replace(/{{FOTO:([^}]+)}}/g, (_, a) => foto(...a.split('|')))

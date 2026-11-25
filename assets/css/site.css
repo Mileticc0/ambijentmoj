@@ -133,7 +133,7 @@ p { max-width: 60ch; text-wrap: pretty; }
 @media (max-width: 359px) { .marka span { display: none; } }
 
 /* ---------- Padajući meni „Usluge ▾“ (desktop) ---------- */
-.meni-usluge { position: relative; }
+.meni-pod { position: relative; }
 .meni-dugme { display: inline-flex; align-items: center; gap: 6px; min-height: 44px; font: inherit; letter-spacing: inherit; text-transform: inherit; }
 .meni-dugme svg { width: 14px; height: 14px; transition: transform 200ms var(--ease-out); }
 .meni-dugme[aria-expanded="true"] svg { transform: rotate(180deg); }
@@ -147,6 +147,8 @@ p { max-width: 60ch; text-wrap: pretty; }
 .padajuci::before { content: ""; position: absolute; left: 0; right: 0; top: -12px; height: 12px; } /* most za miš između dugmeta i menija */
 .padajuci.otv { opacity: 1; transform: none; }
 .meni .padajuci ul { display: block; }
+.padajuci-tekst { width: 340px; }
+.padajuci-tekst a { min-height: 56px; padding: 8px 12px; }
 .padajuci[hidden] { display: none; }
 .padajuci a { display: flex; align-items: center; gap: 14px; padding: 8px; min-height: 64px; border-radius: 2px; text-decoration: none; text-transform: none; letter-spacing: 0; }
 .padajuci a > span { min-width: 0; }
@@ -183,10 +185,10 @@ p { max-width: 60ch; text-wrap: pretty; }
   }
   .mob-meni.otv { opacity: 1; transform: none; }
   .mm-lista > li { border-bottom: 1px solid var(--linija); }
-  .mm-lista a, .mm-usluge { display: flex; align-items: center; justify-content: space-between; width: 100%; min-height: 64px; text-decoration: none; font-family: var(--f-naslov); font-size: 30px; line-height: 1.1; text-align: left; }
-  .mm-lista a[aria-current="page"], .mm-usluge[data-aktivna] { color: var(--orah); }
-  .mm-usluge svg { width: 22px; height: 22px; color: var(--tekst-2); transition: transform 200ms var(--ease-out); }
-  .mm-usluge[aria-expanded="true"] svg { transform: rotate(180deg); }
+  .mm-lista a, .mm-pod { display: flex; align-items: center; justify-content: space-between; width: 100%; min-height: 64px; text-decoration: none; font-family: var(--f-naslov); font-size: 30px; line-height: 1.1; text-align: left; }
+  .mm-lista a[aria-current="page"], .mm-pod[data-aktivna] { color: var(--orah); }
+  .mm-pod svg { width: 22px; height: 22px; color: var(--tekst-2); transition: transform 200ms var(--ease-out); }
+  .mm-pod[aria-expanded="true"] svg { transform: rotate(180deg); }
   .mm-podlista { padding: 0 0 12px 16px; }
   .mm-podlista[hidden] { display: none; }
   .mm-podlista a { min-height: 48px; font-family: var(--f-tekst); font-size: 18px; font-weight: 500; }
@@ -327,7 +329,7 @@ p { max-width: 60ch; text-wrap: pretty; }
 .tekst-strana { padding-top: calc(var(--hdr) + clamp(32px, 5vw, 72px)); padding-bottom: var(--sec-y); }
 .tekst-strana .wrap > * { max-width: 68ch; }
 .tekst-strana h1 { margin-bottom: 20px; }
-.tekst-strana h2 { font-size: clamp(28px, 2.6vw, 36px); margin: 48px 0 12px; scroll-margin-top: calc(var(--hdr) + 16px); }
+.tekst-strana h2 { font-size: clamp(28px, 2.6vw, 36px); margin: 48px 0 12px; }
 .tekst-strana p { color: var(--tekst-2); }
 .tekst-strana p + p { margin-top: 12px; }
 .tekst-strana a { color: var(--tekst); text-underline-offset: 4px; }

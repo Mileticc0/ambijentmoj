@@ -77,15 +77,17 @@
     window.addEventListener('resize', function () { pomeri(aktivan, true); });
   }
 
-  /* ---------- Padajući meni „Usluge ▾“: hover (miš), klik i Enter; Esc i klik van zatvaraju.
-     opacity + translateY(-4px) → 0, 160 ms ease-out ---------- */
-  var uDugme = document.querySelector('.meni-dugme');
-  var uMeni = document.getElementById('padajuci-usluge');
-  if (uDugme && uMeni) {
+  /* ---------- Padajući meniji „Usluge ▾“ i „Radovi ▾“: hover (miš), klik i Enter; Esc i klik van zatvaraju.
+     opacity + translateY(-4px) → 0, 160 ms ease-out. Otvoren je najviše jedan. ---------- */
+  var padajuci = [];
+  [].forEach.call(document.querySelectorAll('.meni-dugme'), function (uDugme) {
+    var uMeni = document.getElementById(uDugme.getAttribute('aria-controls'));
+    if (!uMeni) return;
     var uZatvT = 0, uOtvoren = false;
     var uOtvori = function () {
       clearTimeout(uZatvT);
       if (uOtvoren) return;
+      padajuci.forEach(function (z) { z(false); }); // drugi padajući se zatvara
       uOtvoren = true;
       uMeni.hidden = false; uMeni.offsetHeight; uMeni.classList.add('otv');
       uDugme.setAttribute('aria-expanded', 'true');
@@ -99,16 +101,23 @@
       if (vratiFokus) uDugme.focus();
     };
     var uLi = uDugme.parentNode, hoverT = 0;
-    uLi.addEventListener('pointerenter', function (e) { if (e.pointerType === 'mouse') { clearTimeout(hoverT); uOtvori(); } });
-    uLi.addEventListener('pointerleave', function (e) { if (e.pointerType === 'mouse') hoverT = setTimeout(function () { uZatvori(false); }, 180); });
-    uDugme.addEventListener('click', function () { uOtvoren ? uZatvori(false) : uOtvori(); });
+    var poHoveru = false;
+    uLi.addEventListener('pointerenter', function (e) { if (e.pointerType === 'mouse') { clearTimeout(hoverT); if (!uOtvoren) { uOtvori(); poHoveru = true; } } });
+    uLi.addEventListener('pointerleave', function (e) { if (e.pointerType === 'mouse') hoverT = setTimeout(function () { poHoveru = false; uZatvori(false); }, 180); });
+    // klik posle otvaranja prelaskom miša ne sme da zatvori meni koji je korisnik upravo video da se otvara
+    uDugme.addEventListener('click', function () {
+      if (uOtvoren && poHoveru) { poHoveru = false; return; }
+      poHoveru = false;
+      uOtvoren ? uZatvori(false) : uOtvori();
+    });
     uDugme.addEventListener('keydown', function (e) {
       if (e.key === 'ArrowDown') { e.preventDefault(); uOtvori(); var p = uMeni.querySelector('a'); if (p) p.focus(); }
     });
     uLi.addEventListener('keydown', function (e) { if (e.key === 'Escape' && uOtvoren) { e.preventDefault(); uZatvori(true); } });
     uLi.addEventListener('focusout', function (e) { if (!uLi.contains(e.relatedTarget)) uZatvori(false); });
     document.addEventListener('click', function (e) { if (uOtvoren && !uLi.contains(e.target)) uZatvori(false); });
-  }
+    padajuci.push(uZatvori);
+  });
 
   /* ---------- Telefon: 3 crte → meni preko celog ekrana. X, Esc ili klik na link zatvaraju;
      stranica ispod ne skroluje; fokus ostaje u meniju i vraća se na dugme ---------- */
@@ -145,12 +154,13 @@
         f[(a + (e.shiftKey ? -1 : 1) + f.length) % f.length].focus();
       }
     });
-    var mmU = mMeni.querySelector('.mm-usluge'), mmP = document.getElementById('mm-podlista');
-    if (mmU && mmP) {
-      // na stranici usluge podlista je otvorena odmah
+    // podliste „Usluge“ i „Radovi“; na stranici iz te grupe podlista je otvorena odmah
+    [].forEach.call(mMeni.querySelectorAll('.mm-pod'), function (mmU) {
+      var mmP = document.getElementById(mmU.getAttribute('aria-controls'));
+      if (!mmP) return;
       if (mmU.hasAttribute('data-aktivna')) { mmP.hidden = false; mmU.setAttribute('aria-expanded', 'true'); }
       mmU.addEventListener('click', function () { var o = mmU.getAttribute('aria-expanded') !== 'true'; mmU.setAttribute('aria-expanded', String(o)); mmP.hidden = !o; });
-    }
+    });
     telefon.addEventListener('change', function () { if (!telefon.matches) mZatvori(false); });
   }
 
