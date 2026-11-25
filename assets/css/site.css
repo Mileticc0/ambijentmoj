@@ -1,4 +1,6 @@
 /* Moj Ambijent v5 · zajednički stil: svetlo, elegantno, svedeno */
+/* <picture> (WebP) ne menja raspored: slika se ponaša kao da je direktno u roditelju */
+picture { display: contents; }
 
 :root {
   --pozadina: #FAF8F5;

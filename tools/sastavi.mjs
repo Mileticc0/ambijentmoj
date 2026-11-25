@@ -42,6 +42,47 @@ const video = (ime, naslov, od, doo, klasa, kat, zvuk) => { const [w, h] = VDIM[
             <source src="assets/video/${ime}.mp4" type="video/mp4">
           </video>
         </figure>`; };
+// SEO: og:url / site_name / locale, twitter kartica, noindex za pravne strane, podaci za Google (putanja + usluga)
+const SAJT = 'https://mojambijent.com/';
+const IME = { 'kuhinje.html': 'Kuhinje', 'plakari.html': 'Plakari', 'sobe.html': 'Sobe', 'kupatila.html': 'Kupatila', 'zidni-krevet.html': 'Zidni krevet', 'radovi.html': 'Radovi', 'o-nama.html': 'O nama', 'kontakt.html': 'Kontakt', 'privatnost.html': 'Privatnost', 'uslovi.html': 'Uslovi' };
+const USLUGA = { 'kuhinje.html': 'Kuhinje po meri', 'plakari.html': 'Plakari po meri', 'sobe.html': 'Nameštaj za sobe po meri', 'kupatila.html': 'Nameštaj za kupatila po meri', 'zidni-krevet.html': 'Zidni krevet po meri' };
+const PRAVNE = ['privatnost.html', 'uslovi.html'];
+const ld = (o) => '<script type="application/ld+json">' + JSON.stringify(o) + '</script>';
+function seo(f, s) {
+  const url = SAJT + f;
+  const opis = (/<meta name="description" content="([^"]*)"/.exec(s) || [])[1] || '';
+  const slika = (/<meta property="og:image" content="([^"]*)"/.exec(s) || [])[1];
+  let dod = PRAVNE.includes(f) ? '\n<meta name="robots" content="noindex, follow">' : '';
+  dod += `\n<meta property="og:url" content="${url}">\n<meta property="og:site_name" content="Moj Ambijent">\n<meta property="og:locale" content="sr_RS">\n<meta name="twitter:card" content="summary_large_image">`;
+  if (!slika && !PRAVNE.includes(f)) dod += `\n<meta property="og:image" content="${SAJT}assets/img/logo/og-1200.jpg">`;
+  const podaci = [{ '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Početna', item: SAJT },
+    { '@type': 'ListItem', position: 2, name: IME[f] || f, item: url }] }];
+  if (USLUGA[f]) podaci.push({ '@context': 'https://schema.org', '@type': 'Service', name: USLUGA[f], serviceType: USLUGA[f], description: opis, url,
+    ...(slika ? { image: slika } : {}), provider: { '@id': SAJT + '#firma' }, areaServed: [{ '@type': 'City', name: 'Novi Sad' }, { '@type': 'Country', name: 'Srbija' }] });
+  dod += '\n' + podaci.map(ld).join('\n');
+  return s.replace(/(<link rel="canonical"[^>]*>)/, (m) => m + dod);
+}
+
+// Česta pitanja -> FAQPage za Google (pitanja čiji odgovor još čeka podatak od klijenta, [ ... ], se preskaču)
+const cist = (t) => t.replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim();
+function faq(s) {
+  if (s.includes('"FAQPage"')) return s;
+  const par = [...s.matchAll(/class="pitanje-dugme"[^>]*>([\s\S]*?)<span class="znak-plus"[\s\S]*?class="odgovor"[^>]*>([\s\S]*?)<\/div><\/div><\/div>/g)]
+    .map((m) => [cist(m[1]), cist(m[2])]).filter(([, o]) => o && !o.includes('['));
+  if (!par.length) return s;
+  return s.replace('</head>', ld({ '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: par.map(([q, a]) => ({ '@type': 'Question', name: q, acceptedAnswer: { '@type': 'Answer', text: a } })) }) + '\n</head>');
+}
+
+// WebP: svaka fotografija iz assets/img ide u <picture> sa WebP izvorom (JPG ostaje rezerva). Ne dira već umotane.
+function webp(html) {
+  return html.replace(/(?<!<source type="image\/webp"[^>]*>)(<img\b[^>]*?\bsrc="(assets\/img\/[^"]+)\.jpg"[^>]*>)/g, (m, img, baza) => {
+    if (!fs.existsSync(path.join(koren, baza + '.webp'))) return m;
+    const ss = /\bsrcset="([^"]+)"/.exec(img), sz = /\bsizes="([^"]+)"/.exec(img);
+    return `<picture><source type="image/webp" srcset="${ss ? ss[1].replace(/\.jpg/g, '.webp') : baza + '.webp'}"${sz ? ` sizes="${sz[1]}"` : ''}>${img}</picture>`;
+  });
+}
+
 const dir = path.join(koren, 'tools', 'strane');
 for (const f of fs.readdirSync(dir).filter((f) => f.endsWith('.html'))) {
   let s = fs.readFileSync(path.join(dir, f), 'utf8');
@@ -64,6 +105,10 @@ for (const f of fs.readdirSync(dir).filter((f) => f.endsWith('.html'))) {
        .replace(/{{SLIKA:([^}]+)}}/g, (_, a) => slika(...a.split('|')))
        .replace(/{{VIDEO:([^}]+)}}/g, (_, a) => video(...a.split('|')));
   s = s.replace('{{GLAVA}}', glava).replace('{{HEADER}}', h).replace('{{FUTER}}', futer).replace(/\n?\{\{TRAKA\}\}/, '').replace('{{FIOKA}}', mm).replace('{{POZIV}}', poziv).replace('{{KORACI}}', koraci);
+  s = webp(faq(seo(f, s)));
   fs.writeFileSync(path.join(koren, f), s);
   console.log(f);
 }
+
+// i Početna (izvor zajedničkih delova) dobija WebP
+fs.writeFileSync(path.join(koren, 'index.html'), webp(faq(fs.readFileSync(path.join(koren, 'index.html'), 'utf8'))));
