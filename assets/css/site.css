@@ -273,9 +273,12 @@ p { max-width: 60ch; text-wrap: pretty; }
 .f-kol a { display: inline-flex; align-items: center; min-height: 44px; text-decoration: none; }
 .f-kol address { color: var(--na-orahu-2); line-height: 1.8; }
 .f-kol address a { color: var(--na-orahu); min-height: 0; }
-.f-dno { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px 32px; margin-top: 64px; padding-top: 24px; border-top: 1px solid rgba(243, 238, 231, 0.16); color: var(--na-orahu-2); font-size: 15px; }
+.f-dno { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px 32px; margin-top: 64px; padding-top: 24px; border-top: 1px solid rgba(243, 238, 231, 0.16); color: var(--na-orahu-2); font-size: 15px; }
 .f-dno nav { display: flex; gap: 24px; }
 .f-dno a { text-decoration: none; min-height: 44px; display: inline-flex; align-items: center; }
+.f-dno nav { flex-wrap: wrap; align-items: center; column-gap: 24px; row-gap: 0; }
+.f-izrada a { color: var(--na-orahu); text-decoration: underline; text-decoration-color: rgba(243, 238, 231, 0.3); text-underline-offset: 4px; transition: text-decoration-color 160ms var(--ease-out); }
+@media (hover: hover) and (pointer: fine) { .f-izrada a:hover { text-decoration-color: currentColor; } }
 .futer :focus-visible { outline-color: var(--na-orahu); }
 @media (hover: hover) and (pointer: fine) { .futer a:hover { text-decoration: underline; text-underline-offset: 5px; } }
 @media (max-width: 959px) {
