@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="assets/css/site.css">
 <script>document.documentElement.classList.add('js')</script>
 <title>Kupatila po meri Novi Sad · Moj Ambijent</title>
-<meta name="description" content="Kupatila po meri iz radionice u Novom Sadu: elementi ispod lavaboa, ogledala, ormarići oko veš mašine i police. 3D projekat pre izrade, 5 godina garancije.">
+<meta name="description" content="Kupatila po meri iz radionice u Novom Sadu: elementi ispod lavaboa, ogledala, ormarići oko veš mašine i police. 3D projekat pre izrade, garancija 2–5 godina.">
 <link rel="canonical" href="https://mojambijent.com/kupatila.html">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Kupatila po meri · Moj Ambijent">
@@ -30,18 +30,27 @@
   </a>
   <nav class="meni label" aria-label="Glavni meni">
     <ul>
-      <li><a href="kuhinje.html">Kuhinje</a></li>
-      <li><a href="plakari.html">Plakari</a></li>
-      <li><a href="sobe.html">Sobe</a></li>
-      <li><a href="zidni-krevet.html">Zidni krevet</a></li>
-      <li><a href="kupatila.html" aria-current="page">Kupatila</a></li>
+      <li class="meni-usluge">
+        <button class="meni-dugme" data-aktivna type="button" aria-expanded="false" aria-controls="padajuci-usluge">Usluge<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button>
+        <div class="padajuci" id="padajuci-usluge" hidden>
+          <ul>
+            <li><a href="kuhinje.html"><img src="assets/img/fioka-kuhinje.jpg" width="240" height="424" loading="lazy" alt=""><span><span class="p-ime">Kuhinje</span><span class="p-opis">Ugaone, sa ostrvom ili šankom, male kuhinje</span></span></a></li>
+            <li><a href="plakari.html"><img src="assets/img/fioka-plakari.jpg" width="240" height="427" loading="lazy" alt=""><span><span class="p-ime">Plakari i hodnici</span><span class="p-opis">Američki plakari, ormari do plafona, hodnici</span></span></a></li>
+            <li><a href="sobe.html"><img src="assets/img/fioka-sobe.jpg" width="240" height="428" loading="lazy" alt=""><span><span class="p-ime">Sobe</span><span class="p-opis">Dnevne, spavaće i dečije sobe, komadni nameštaj</span></span></a></li>
+            <li><a href="zidni-krevet.html"><img src="assets/img/fioka-zidni-krevet.jpg" width="240" height="427" loading="lazy" alt=""><span><span class="p-ime">Zidni krevet</span><span class="p-opis">Danju plakar, noću bračni krevet</span></span></a></li>
+            <li><a href="kupatila.html" aria-current="page"><img src="assets/img/fioka-kupatila.jpg" width="240" height="427" loading="lazy" alt=""><span><span class="p-ime">Kupatila</span><span class="p-opis">Elementi ispod lavaboa, ogledala, police</span></span></a></li>
+          </ul>
+        </div>
+      </li>
       <li><a href="radovi.html">Radovi</a></li>
       <li><a href="o-nama.html">O nama</a></li>
+      <li><a href="kontakt.html">Kontakt</a></li>
     </ul>
     <span class="meni-ind" aria-hidden="true"></span>
   </nav>
   <a class="hdr-tel label num" href="tel:+381631105456">063 110 54 56</a>
   <a class="btn" href="kontakt.html">Zakažite merenje</a>
+  <button class="meni-mob-dugme" type="button" aria-expanded="false" aria-controls="mob-meni" aria-label="Otvori meni"><span class="crte" aria-hidden="true"><span></span><span></span><span></span></span></button>
 </header>
 
 <main id="sadrzaj">
@@ -49,7 +58,7 @@
     <div class="wrap grid">
       <div class="u-hero-tekst">
         <h1 id="h-kupatila">Kupatila po meri</h1>
-        <p>Elementi ispod lavaboa, ogledala i police oko veš mašine, prema merama vašeg kupatila. Pre izrade dobijate 3D projekat, a na nameštaj 5&nbsp;godina garancije.</p>
+        <p>Elementi ispod lavaboa, ogledala i police oko veš mašine, prema merama vašeg kupatila. Pre izrade dobijate 3D projekat, a garancija je od 2 do 5&nbsp;godina.</p>
         <div class="u-akcije">
           <a class="btn" href="kontakt.html">Zakažite merenje</a>
           <a class="tel num" href="tel:+381631105456">063 110 54 56</a>
@@ -119,7 +128,7 @@
         <div class="pitanje"><h3><button class="pitanje-dugme" type="button" aria-expanded="false" aria-controls="o2" id="q2">Koliko traje izrada?<span class="znak-plus" aria-hidden="true"></span></button></h3>
           <div class="odgovor" id="o2" role="region" aria-labelledby="q2"><div><p>[OKVIRNI ROK IZRADE]</p></div></div></div>
         <div class="pitanje"><h3><button class="pitanje-dugme" type="button" aria-expanded="false" aria-controls="o4" id="q4">Kolika je garancija?<span class="znak-plus" aria-hidden="true"></span></button></h3>
-          <div class="odgovor" id="o4" role="region" aria-labelledby="q4"><div><p>5&nbsp;godina. [USLOVI GARANCIJE]</p></div></div></div>
+          <div class="odgovor" id="o4" role="region" aria-labelledby="q4"><div><p>Od 2 do 5&nbsp;godina, u zavisnosti od elementa. [USLOVI GARANCIJE]</p></div></div></div>
       </div>
     </div>
   </section>
@@ -139,10 +148,26 @@
   <div class="wrap grid">
     <div class="f-marka">
       <img src="assets/img/logo/ceo-svetli.png" width="400" height="587" alt="Moj Ambijent" loading="lazy">
-      <p>Nameštaj i enterijer po meri iz radionice u Novom Sadu.</p>
+      <p>Vi maštajte. Mi pravimo po meri.</p>
+    </div>
+    <div class="f-kol f-podaci">
+      <h2>Kontakt informacije</h2>
+      <dl>
+        <div><dt>Preduzetnik</dt><dd>Aleksandar Major</dd></div>
+        <div><dt>Adresa</dt><dd><a href="https://www.google.com/maps/search/?api=1&amp;query=%C5%BDarka+Jovi%C4%87a+31%2C+Ka%C4%87" rel="noopener">Žarka Jovića 31, Kać</a></dd></div>
+        <div><dt>Telefon</dt><dd><a class="num" href="tel:+381631105456">063 110 54 56</a></dd></div>
+        <div><dt>E-mail</dt><dd><a href="mailto:mojambijent@gmail.com">mojambijent@gmail.com</a></dd></div>
+        <div><dt>Matični broj</dt><dd class="num">63946737</dd></div>
+        <div><dt>PIB</dt><dd class="num">109124518</dd></div>
+      </dl>
+      <ul class="f-mreze">
+        <li><a href="https://www.instagram.com/moj_ambijent/" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg></a></li>
+        <!-- Facebook: [LINK OD KLIJENTA], ikonica se prikazuje kad link stigne -->
+        <li><a href="https://www.tiktok.com/@moj.ambijent" rel="noopener">TikTok</a></li>
+      </ul>
     </div>
     <nav class="f-kol" aria-labelledby="f-usluge">
-      <h2 id="f-usluge">Usluge</h2>
+      <h2 id="f-usluge">Nameštaj po meri</h2>
       <ul>
         <li><a href="kuhinje.html">Kuhinje</a></li>
         <li><a href="plakari.html">Plakari i hodnici</a></li>
@@ -157,47 +182,40 @@
         <li><a href="radovi.html">Radovi</a></li>
         <li><a href="o-nama.html">O nama</a></li>
         <li><a href="kontakt.html">Kontakt</a></li>
-        <li><a href="https://www.instagram.com/moj_ambijent/" rel="noopener">Instagram</a></li>
-        <li><a href="https://www.tiktok.com/@moj.ambijent" rel="noopener">TikTok</a></li>
       </ul>
     </nav>
-    <div class="f-kol siroka">
-      <h2>Kontakt</h2>
-      <address>
-        <a class="num" href="tel:+381631105456">063 110 54 56</a><br>
-        <a href="mailto:info@mojambijent.com">info@mojambijent.com</a><br>
-        Janka Čmelika 109, 21000 Novi Sad<br>
-        Pon–pet 8–20h
-      </address>
-    </div>
   </div>
   <div class="wrap">
     <div class="f-dno">
-      <span>© Moj Ambijent, Novi Sad · PIB <span class="num">109124518</span></span>
+      <span>© Moj Ambijent, Kać, Novi Sad</span>
       <nav aria-label="Pravila"><a href="privatnost.html">Privatnost</a><a href="uslovi.html">Uslovi</a></nav>
     </div>
   </div>
 </footer>
 
-<nav class="traka" aria-label="Meni">
-  <a class="tab" href="index.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8"/><path d="M3 10a2 2 0 0 1 .709-1.528l7-5.999a2 2 0 0 1 2.582 0l7 5.999A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>Početna</a>
-  <button class="tab tab-usluge" data-aktivna type="button" aria-expanded="false" aria-controls="fioka-usluge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="7" height="7" x="3" y="3" rx="1"/><rect width="7" height="7" x="14" y="3" rx="1"/><rect width="7" height="7" x="14" y="14" rx="1"/><rect width="7" height="7" x="3" y="14" rx="1"/></svg>Usluge</button>
-  <a class="tab" href="radovi.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 22H4a2 2 0 0 1-2-2V6"/><path d="m22 13-1.296-1.296a2.41 2.41 0 0 0-3.408 0L11 18"/><circle cx="12" cy="8" r="2"/><rect width="16" height="16" x="6" y="2" rx="2"/></svg>Radovi</a>
-  <a class="tab" href="o-nama.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>O nama</a>
-  <a class="tab" href="kontakt.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg>Kontakt</a>
-  <span class="tab-ind" aria-hidden="true"></span>
-</nav>
-<div class="fioka-sloj" hidden></div>
-<div class="fioka" id="fioka-usluge" tabindex="-1" role="dialog" aria-modal="true" aria-labelledby="h-fioka" hidden>
-  <span class="fioka-rucka" aria-hidden="true"></span>
-  <h2 id="h-fioka">Usluge</h2>
-  <ul>
-    <li><a href="kuhinje.html"><img src="assets/img/fioka-kuhinje.jpg" width="240" height="424" loading="lazy" alt="">Kuhinje<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg></a></li>
-    <li><a href="plakari.html"><img src="assets/img/fioka-plakari.jpg" width="240" height="427" loading="lazy" alt="">Plakari i hodnici<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg></a></li>
-    <li><a href="sobe.html"><img src="assets/img/fioka-sobe.jpg" width="240" height="428" loading="lazy" alt="">Sobe<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg></a></li>
-    <li><a href="zidni-krevet.html"><img src="assets/img/fioka-zidni-krevet.jpg" width="240" height="427" loading="lazy" alt="">Zidni krevet<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg></a></li>
-    <li><a href="kupatila.html" aria-current="page"><img src="assets/img/fioka-kupatila.jpg" width="240" height="427" loading="lazy" alt="">Kupatila<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg></a></li>
-  </ul>
+<div class="mob-meni" id="mob-meni" role="dialog" aria-modal="true" aria-label="Meni" hidden>
+  <nav aria-label="Meni na telefonu">
+    <ul class="mm-lista">
+      <li><a href="index.html">Početna</a></li>
+      <li>
+        <button class="mm-usluge" data-aktivna type="button" aria-expanded="false" aria-controls="mm-podlista">Usluge<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button>
+        <ul class="mm-podlista" id="mm-podlista" hidden>
+          <li><a href="kuhinje.html">Kuhinje</a></li>
+          <li><a href="plakari.html">Plakari i hodnici</a></li>
+          <li><a href="sobe.html">Sobe</a></li>
+          <li><a href="zidni-krevet.html">Zidni krevet</a></li>
+          <li><a href="kupatila.html" aria-current="page">Kupatila</a></li>
+        </ul>
+      </li>
+      <li><a href="radovi.html">Radovi</a></li>
+      <li><a href="o-nama.html">O nama</a></li>
+      <li><a href="kontakt.html">Kontakt</a></li>
+    </ul>
+  </nav>
+  <div class="mm-dno">
+    <a class="mm-tel num" href="tel:+381631105456">063 110 54 56</a>
+    <a class="btn" href="kontakt.html">Zakažite merenje</a>
+  </div>
 </div>
 <a class="poziv-dugme" href="tel:+381631105456" aria-label="Pozovite 063 110 54 56"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg></a>
 

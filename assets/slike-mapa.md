@@ -15,14 +15,14 @@ Sličice su kadrovi iz videa (assets/img/fioka-*.jpg), ne fotografije, da se nij
 | Nameštaj po meri za vaš dom | kuhinja-led-2 |
 | Šta pravimo po meri | kuhinja-orah-lampe-1, hodnik-led, spavaca-miran-san, kupatilo-orah |
 | Kompletan stan u Novom Sadu | video stan-ns-pre-posle.mp4 |
-| Moj Ambijent, Novi Sad. 10 godina iskustva. | hodnik-klupa |
+| Od 2015. pravimo nameštaj po meri. | hodnik-klupa |
 
 ## kuhinje.html
 | Sekcija | Fotografije / video |
 |---|---|
 | Kuhinje po meri | video kuhinja-siva-kamen-obilazak.mp4 |
 | Naše kuhinje | kuhinja-bela-ostrvo-1, kuhinja-led-1, kuhinja-orah-lampe-2, kuhinja-krem-3, kuhinja-moderna-orah, kuhinja-staklena-pregrada-1, kuhinja-mala, kuhinja-led-barske-stolice, kuhinja-bela-beton |
-| Kuhinje iz bliza | kuhinja-krem-1, svetla-kuhinja-sank-kamen-1, svetla-kuhinja-sank-kamen-2, svetla-kuhinja-sank-kamen-3, svetla-kuhinja-sank-kamen-4, svetla-kuhinja-sank-kamen-5, svetla-kuhinja-sank-kamen-6 |
+| Kuhinje iz bliza | kuhinja-krem-1, svetla-kuhinja-sank-kamen-1, svetla-kuhinja-sank-kamen-2, svetla-kuhinja-sank-kamen-3, svetla-kuhinja-sank-kamen-4, svetla-kuhinja-sank-kamen-5, svetla-kuhinja-sank-kamen-6, bela-kuhinja-ostrvo-1 |
 | Kuhinje iz bliza | video klasicna-kuhinja-vitrine-reel.mp4 (isečak 0–35 s) |
 | Kuhinje iz bliza | video klizna-vrata-kuhinja.mp4 (isečak 0–12.4 s) |
 
@@ -62,16 +62,18 @@ Sličice su kadrovi iz videa (assets/img/fioka-*.jpg), ne fotografije, da se nij
 | Kompletan stan u Novom Sadu | video stan-ns-obilazak.mp4 (isečak 0–33.5 s) |
 | Kompletan stan u Novom Sadu | video stan-ns-zavrsna-faza.mp4 (isečak 0–27.5 s) |
 | Stan u Puli | pula-dnevna-1, pula-dnevna-2, pula-kuhinja-sank |
-| Bela kuhinja sa ostrvom | bela-kuhinja-ostrvo-1, bela-kuhinja-ostrvo-2, bela-kuhinja-ostrvo-3, bela-kuhinja-ostrvo-4, bela-kuhinja-ostrvo-5, bela-kuhinja-ostrvo-6, bela-kuhinja-ostrvo-7 |
+| Bela kuhinja sa ostrvom | bela-kuhinja-ostrvo-2, bela-kuhinja-ostrvo-3, bela-kuhinja-ostrvo-4, bela-kuhinja-ostrvo-5, bela-kuhinja-ostrvo-6, bela-kuhinja-ostrvo-7 |
 | Bela kuhinja sa ostrvom | video bela-kuhinja-ostrvo-obilazak.mp4 |
 | Mali stan 34 m² | mali-stan-34m2-ulaz-kuhinja, mali-stan-34m2-kuhinja, mali-stan-34m2-tv-zid, mali-stan-34m2-toaletni-sto-plakar |
-| Ostali radovi | kuhinja-bela-ostrvo-2, kuhinja-bela-ostrvo-3, kuhinja-led-3, kuhinja-krem-2, kuhinja-orah-l, kuhinja-siva-lamele, kuhinja-staklena-pregrada-2, kuhinja-bela-beton-2, kuhinja-kamen-rerna, kuhinja-kamen-ostrvo-2, kuhinja-mala-detalj, vitrina-led, hodnik-kuhinja, detalj-sank, detalj-lamele, detalj-lamele-stolica, dnevna-tv-orah |
+| Ostali radovi | kuhinja-bela-ostrvo-2, kuhinja-bela-ostrvo-3, kuhinja-led-3, kuhinja-krem-2, kuhinja-orah-l, kuhinja-siva-lamele, detalj-sank, kuhinja-bela-beton-2, kuhinja-kamen-rerna, kuhinja-kamen-ostrvo-2, kuhinja-mala-detalj, vitrina-led, hodnik-kuhinja, detalj-lamele-stolica, dnevna-tv-orah |
 | Ostali radovi | video kupatilo-tus.mp4 (isečak 0–16.2 s) |
 
 ## o-nama.html
 | Sekcija | Fotografije / video |
 |---|---|
-| Radionica u Novom Sadu | kuhinja-montaza |
+| Dobro došli u Moj Ambijent | kuhinja-montaza |
+| Od 2015. godine | kuhinja-staklena-pregrada-2 |
+| Vi imate ideju? Odlično! | detalj-lamele |
 
 ## Provera
 - Fotografija: 87, iskorišćeno: 87, neiskorišćenih: nema

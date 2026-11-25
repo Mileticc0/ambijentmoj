@@ -25,6 +25,7 @@
     stanje.textContent = IME[kat] + ' · ' + ukupno + ' ' + radova(ukupno);
     dugmad.forEach(function (b) { b.setAttribute('aria-pressed', String(b.dataset.kat === kat)); });
     if (window.MA && MA.videoIzbor) MA.videoIzbor();
+    if (window.MA && MA.osveziTacke) MA.osveziTacke();
   }
   dugmad.forEach(function (b) { b.addEventListener('click', function () { primeni(b.dataset.kat); }); });
   primeni('');

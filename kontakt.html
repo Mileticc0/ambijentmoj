@@ -11,13 +11,14 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500&family=Hanken+Grotesk:wght@400;500&display=swap">
 <link rel="stylesheet" href="assets/css/site.css">
 <script>document.documentElement.classList.add('js')</script>
-<title>Kontakt i zakazivanje merenja · Moj Ambijent, Novi Sad</title>
-<meta name="description" content="Zakažite merenje za nameštaj po meri u Novom Sadu. Pošaljite mere i fotografiju prostora ili pozovite 063 110 54 56 (i Viber). Janka Čmelika 109, Novi Sad.">
+<title>Zakažite merenje · Kontakt · Moj Ambijent, nameštaj po meri Novi Sad</title>
+<meta name="description" content="Zakažite merenje za nameštaj po meri: 063 110 54 56 (i Viber), mojambijent@gmail.com. Žarka Jovića 31, Kać, Novi Sad. Pošaljite skicu ili projekat i dobijte ponudu.">
 <link rel="canonical" href="https://mojambijent.com/kontakt.html">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Kontakt · Moj Ambijent">
-<meta property="og:description" content="Pošaljite nam mere ili skicu prostora.">
+<meta property="og:title" content="Zakažite merenje · Moj Ambijent">
+<meta property="og:description" content="063 110 54 56 · mojambijent@gmail.com · Žarka Jovića 31, Kać">
 <meta property="og:image" content="https://mojambijent.com/assets/img/logo/og-1200.jpg">
+<link rel="stylesheet" href="assets/css/pocetna.css">
 <link rel="stylesheet" href="assets/css/kontakt.css">
 </head>
 <body>
@@ -30,109 +31,111 @@
   </a>
   <nav class="meni label" aria-label="Glavni meni">
     <ul>
-      <li><a href="kuhinje.html">Kuhinje</a></li>
-      <li><a href="plakari.html">Plakari</a></li>
-      <li><a href="sobe.html">Sobe</a></li>
-      <li><a href="zidni-krevet.html">Zidni krevet</a></li>
-      <li><a href="kupatila.html">Kupatila</a></li>
+      <li class="meni-usluge">
+        <button class="meni-dugme" type="button" aria-expanded="false" aria-controls="padajuci-usluge">Usluge<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button>
+        <div class="padajuci" id="padajuci-usluge" hidden>
+          <ul>
+            <li><a href="kuhinje.html"><img src="assets/img/fioka-kuhinje.jpg" width="240" height="424" loading="lazy" alt=""><span><span class="p-ime">Kuhinje</span><span class="p-opis">Ugaone, sa ostrvom ili šankom, male kuhinje</span></span></a></li>
+            <li><a href="plakari.html"><img src="assets/img/fioka-plakari.jpg" width="240" height="427" loading="lazy" alt=""><span><span class="p-ime">Plakari i hodnici</span><span class="p-opis">Američki plakari, ormari do plafona, hodnici</span></span></a></li>
+            <li><a href="sobe.html"><img src="assets/img/fioka-sobe.jpg" width="240" height="428" loading="lazy" alt=""><span><span class="p-ime">Sobe</span><span class="p-opis">Dnevne, spavaće i dečije sobe, komadni nameštaj</span></span></a></li>
+            <li><a href="zidni-krevet.html"><img src="assets/img/fioka-zidni-krevet.jpg" width="240" height="427" loading="lazy" alt=""><span><span class="p-ime">Zidni krevet</span><span class="p-opis">Danju plakar, noću bračni krevet</span></span></a></li>
+            <li><a href="kupatila.html"><img src="assets/img/fioka-kupatila.jpg" width="240" height="427" loading="lazy" alt=""><span><span class="p-ime">Kupatila</span><span class="p-opis">Elementi ispod lavaboa, ogledala, police</span></span></a></li>
+          </ul>
+        </div>
+      </li>
       <li><a href="radovi.html">Radovi</a></li>
       <li><a href="o-nama.html">O nama</a></li>
+      <li><a href="kontakt.html" aria-current="page">Kontakt</a></li>
     </ul>
     <span class="meni-ind" aria-hidden="true"></span>
   </nav>
   <a class="hdr-tel label num" href="tel:+381631105456">063 110 54 56</a>
   <a class="btn" href="kontakt.html">Zakažite merenje</a>
+  <button class="meni-mob-dugme" type="button" aria-expanded="false" aria-controls="mob-meni" aria-label="Otvori meni"><span class="crte" aria-hidden="true"><span></span><span></span><span></span></span></button>
 </header>
 
 <main id="sadrzaj">
-  <section class="k-strana" aria-labelledby="h-kontakt">
+  <section class="k-vrh" data-hero aria-labelledby="h-kontakt">
+    <div class="wrap">
+      <h1 id="h-kontakt">Zakažite merenje</h1>
+      <!-- POTVRDITI: besplatno merenje -->
+      <p class="k-uvod">Pozovite nas ili pošaljite email. Merenje je besplatno u Novom Sadu.</p>
+      <!-- /POTVRDITI -->
+      <ul class="k-glavno">
+        <li>
+          <span class="label">Telefon i Viber</span>
+          <a class="k-veliko num" href="tel:+381631105456">063 110 54 56</a>
+          <button class="link kopiraj" type="button" data-kopiraj="+381 63 110 54 56">Kopiraj</button>
+        </li>
+        <li>
+          <span class="label">E-mail</span>
+          <a class="k-veliko" href="mailto:mojambijent@gmail.com">mojambijent@gmail.com</a>
+          <button class="link kopiraj" type="button" data-kopiraj="mojambijent@gmail.com">Kopiraj</button>
+        </li>
+      </ul>
+      <dl class="k-sitno">
+        <div><dt class="label">Adresa</dt><dd><a href="https://www.google.com/maps/search/?api=1&amp;query=%C5%BDarka+Jovi%C4%87a+31%2C+Ka%C4%87" rel="noopener">Žarka Jovića 31, 21241 Kać</a></dd></div>
+        <div><dt class="label">Radno vreme</dt><dd>Ponedeljak do petak, 8 do 20h</dd></div>
+        <div><dt class="label">Izložbeni prostor</dt><dd>Uz dogovor</dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <section class="sec povrsina" aria-labelledby="h-kako">
     <div class="wrap grid">
-      <div class="k-forma-kol">
-        <h1 id="h-kontakt">Zakažite merenje</h1>
-        <p class="k-uvod">Dva kratka koraka. Javljamo se da dogovorimo merenje.</p>
-        <p class="k-korak label" aria-live="polite">Korak <span class="num">1</span> od 2 · Šta vam treba</p>
+      <div class="uvod-sekcije"><h2 id="h-kako">Kako do ponude</h2></div>
+      <ol class="koraci">
+        <li class="korak"><span class="korak-br" aria-hidden="true">01</span><h3>Pošaljite projekat</h3><p>Pošaljite nam skicu, mere ili fotografiju prostora, ili nas pozovite.</p></li>
+        <li class="korak"><span class="korak-br" aria-hidden="true">02</span><h3>Arhitekta</h3><p>Arhitekta razrađuje vaš projekat i priprema 3D prikaz sa rasporedom i materijalima.</p></li>
+        <li class="korak"><span class="korak-br" aria-hidden="true">03</span><h3>Sastanak</h3><p>Zajedno prolazimo kroz projekat i dogovaramo detalje i materijale.</p></li>
+        <li class="korak"><span class="korak-br" aria-hidden="true">04</span><h3>Ponuda i rokovi</h3><p>Dobijate ponudu sa cenom i rokom izrade.</p></li>
+        <li class="korak"><span class="korak-br" aria-hidden="true">05</span><h3>Ugovaranje posla</h3><p>Ugovaramo posao i uplaćujete avans.</p></li>
+        <li class="korak"><span class="korak-br" aria-hidden="true">06</span><h3>Realizacija</h3><p>Izrada u našoj radionici, isporuka i montaža. Po završetku posla uplaćujete ostatak.</p></li>
+      </ol>
+    </div>
+  </section>
 
-        <form class="forma" action="https://api.web3forms.com/submit" method="POST" enctype="multipart/form-data" novalidate>
-          <input type="hidden" name="access_key" value="OVDE_KLJUC">
-          <input type="hidden" name="subject" value="Upit sa sajta: merenje">
-          <input type="hidden" name="from_name" value="mojambijent.com">
-          <input type="checkbox" name="botcheck" class="vh" tabindex="-1" autocomplete="off" aria-hidden="true">
-
-          <fieldset class="korak" data-k="1">
-            <legend class="vh">Korak 1 od 2: Šta vam treba</legend>
-            <div class="polje" id="p-kategorije">
-              <span class="p-naslov" id="l-kategorije">Šta vam treba?</span>
-              <div class="cipovi" role="group" aria-labelledby="l-kategorije" aria-describedby="g-kategorije">
-                <label class="cip"><input type="checkbox" name="kategorije" value="Kuhinja"><span>Kuhinja</span></label>
-                <label class="cip"><input type="checkbox" name="kategorije" value="Plakar ili ormar"><span>Plakar ili ormar</span></label>
-                <label class="cip"><input type="checkbox" name="kategorije" value="Hodnik"><span>Hodnik</span></label>
-                <label class="cip"><input type="checkbox" name="kategorije" value="Dnevna soba"><span>Dnevna soba</span></label>
-                <label class="cip"><input type="checkbox" name="kategorije" value="Spavaća soba"><span>Spavaća soba</span></label>
-                <label class="cip"><input type="checkbox" name="kategorije" value="Dečija soba"><span>Dečija soba</span></label>
-                <label class="cip"><input type="checkbox" name="kategorije" value="Zidni krevet"><span>Zidni krevet</span></label>
-                <label class="cip"><input type="checkbox" name="kategorije" value="Kupatilo"><span>Kupatilo</span></label>
-                <label class="cip"><input type="checkbox" name="kategorije" value="Nešto drugo"><span>Nešto drugo</span></label>
-              </div>
-              <p class="greska" id="g-kategorije" hidden>Izaberite bar jednu stavku.</p>
-            </div>
-            <div class="polje">
-              <span class="p-naslov" id="l-mere">Okvirne mere u cm <span class="tiho">(nije obavezno)</span></span>
-              <div class="mere" role="group" aria-labelledby="l-mere">
-                <label><span class="label">Širina</span><input class="unos num" name="sirina" type="text" inputmode="numeric" pattern="[0-9]*" maxlength="5" data-mera aria-describedby="g-mere"></label>
-                <label><span class="label">Visina</span><input class="unos num" name="visina" type="text" inputmode="numeric" pattern="[0-9]*" maxlength="5" data-mera aria-describedby="g-mere"></label>
-                <label><span class="label">Dubina</span><input class="unos num" name="dubina" type="text" inputmode="numeric" pattern="[0-9]*" maxlength="5" data-mera aria-describedby="g-mere"></label>
-              </div>
-              <p class="greska" id="g-mere" hidden>Mere upišite u centimetrima, od 1 do 2000.</p>
-            </div>
-            <div class="polje">
-              <span class="p-naslov" id="l-slika">Fotografija ili skica prostora <span class="tiho">(nije obavezno, do 10 MB)</span></span>
-              <label class="fajl"><input id="slika" name="attachment" type="file" accept="image/*" aria-labelledby="l-slika" aria-describedby="g-slika"><span class="link">Izaberite fotografiju</span></label>
-              <div class="pregled" hidden><span class="pregled-ime"></span><button class="link ukloni" type="button">Ukloni</button></div>
-              <p class="greska" id="g-slika" hidden>Fotografija je veća od 10 MB. Izaberite manju ili je pošaljite na Viber.</p>
-            </div>
-            <div class="akcije"><button class="btn dalje" type="button">Dalje</button></div>
-          </fieldset>
-
-          <fieldset class="korak" data-k="2" hidden>
-            <legend class="vh">Korak 2 od 2: Vaši podaci</legend>
-            <div class="polje">
-              <label class="p-naslov" for="ime">Ime i prezime</label>
-              <input class="unos" id="ime" name="ime" type="text" autocomplete="name" maxlength="120" required aria-describedby="g-ime">
-              <p class="greska" id="g-ime" hidden>Upišite ime.</p>
-            </div>
-            <div class="polje polje-red">
-              <label><span class="p-naslov">Telefon</span><input class="unos num" id="telefon" name="telefon" type="tel" autocomplete="tel" inputmode="tel" maxlength="30" required aria-describedby="g-telefon"></label>
-              <label><span class="p-naslov">Email <span class="tiho">(nije obavezno)</span></span><input class="unos" id="email" name="email" type="email" autocomplete="email" maxlength="160" aria-describedby="g-email"></label>
-              <p class="greska" id="g-telefon" hidden>Upišite broj telefona, na primer 063 123 45 67.</p>
-              <p class="greska" id="g-email" hidden>Email adresa nije ispravna.</p>
-            </div>
-            <div class="polje">
-              <label class="p-naslov" for="poruka">Poruka <span class="tiho">(nije obavezno)</span></label>
-              <textarea class="unos" id="poruka" name="poruka" rows="5" maxlength="2000" aria-describedby="brojac"></textarea>
-              <p class="brojac label num" id="brojac" aria-live="polite">0 / 2000</p>
-            </div>
-            <p class="napomena tiho">Podatke koristimo samo da vam odgovorimo. Više u delu <a href="privatnost.html">Privatnost</a>.</p>
-            <div class="akcije"><button class="link nazad" type="button">Nazad</button><button class="btn posalji" type="submit"><span class="posalji-tekst">Pošaljite upit</span><span class="spin" aria-hidden="true"></span></button></div>
-            <p class="greska greska-slanja" role="alert" hidden>Slanje nije uspelo. Pokušajte ponovo ili pozovite <a class="num" href="tel:+381631105456">063 110 54 56</a>.</p>
-          </fieldset>
-
-          <div class="hvala" hidden tabindex="-1">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
-            <p>Hvala. Javljamo se da dogovorimo merenje.</p>
-          </div>
-        </form>
+  <section class="sec k-forma-sek" aria-labelledby="h-forma">
+    <div class="wrap grid">
+      <div class="k-forma-uvod">
+        <h2 id="h-forma">Pošaljite upit</h2>
+        <p>Napišite šta vam treba i priložite projekat ili skicu ako je imate. Javljamo se da dogovorimo merenje.</p>
       </div>
-
-      <aside class="k-podaci" aria-labelledby="h-podaci">
-        <h2 id="h-podaci">Ili nas pozovite</h2>
-        <ul class="kontakt-lista">
-          <li><span class="label">Telefon</span><a class="num" href="tel:+381631105456">063 110 54 56</a><button class="link kopiraj" type="button" data-kopiraj="+381 63 110 54 56">Kopiraj</button></li>
-          <li><span class="label">Viber</span><a class="num" href="viber://chat?number=%2B381631105456">+381 63 110 54 56</a></li>
-          <li><span class="label">Email</span><a href="mailto:info@mojambijent.com">info@mojambijent.com</a></li>
-          <li><span class="label">Adresa</span><a href="https://www.google.com/maps/search/?api=1&amp;query=Janka+%C4%8Cmelika+109%2C+21000+Novi+Sad" rel="noopener">Janka Čmelika 109, 21000 Novi Sad</a></li>
-          <li><span class="label">Radno vreme</span><span class="vrednost">Pon–pet 8–20h, izložbeni prostor uz dogovor</span></li>
-        </ul>
-      </aside>
+      <form class="forma" action="https://api.web3forms.com/submit" method="POST" enctype="multipart/form-data" novalidate>
+        <input type="hidden" name="access_key" value="OVDE_KLJUC">
+        <input type="hidden" name="subject" value="Upit sa sajta: merenje">
+        <input type="hidden" name="from_name" value="mojambijent.com">
+        <input type="checkbox" name="botcheck" class="vh" tabindex="-1" autocomplete="off" aria-hidden="true">
+        <div class="polje">
+          <label class="p-naslov" for="ime">Ime i prezime</label>
+          <input class="unos" id="ime" name="ime" type="text" autocomplete="name" maxlength="120" required aria-describedby="g-ime">
+          <p class="greska" id="g-ime" hidden>Upišite ime.</p>
+        </div>
+        <div class="polje polje-red">
+          <label><span class="p-naslov">Telefon</span><input class="unos num" id="telefon" name="telefon" type="tel" autocomplete="tel" inputmode="tel" maxlength="30" required aria-describedby="g-telefon"></label>
+          <label><span class="p-naslov">Email <span class="tiho">(nije obavezno)</span></span><input class="unos" id="email" name="email" type="email" autocomplete="email" maxlength="160" aria-describedby="g-email"></label>
+          <p class="greska" id="g-telefon" hidden>Upišite broj telefona, na primer 063 123 45 67.</p>
+          <p class="greska" id="g-email" hidden>Email adresa nije ispravna.</p>
+        </div>
+        <div class="polje">
+          <label class="p-naslov" for="poruka">Poruka</label>
+          <textarea class="unos" id="poruka" name="poruka" rows="5" maxlength="2000" aria-describedby="brojac"></textarea>
+          <p class="brojac label num" id="brojac" aria-live="polite">0 / 2000</p>
+        </div>
+        <div class="polje">
+          <span class="p-naslov" id="l-prilog">Prilog projekta <span class="tiho">(nije obavezno, do 10 MB)</span></span>
+          <label class="fajl"><input id="prilog" name="attachment" type="file" accept="image/*,application/pdf" aria-labelledby="l-prilog" aria-describedby="g-prilog"><span class="link">Izaberite fajl</span></label>
+          <div class="pregled" hidden><span class="pregled-ime"></span><button class="link ukloni" type="button">Ukloni</button></div>
+          <p class="greska" id="g-prilog" hidden>Fajl je veći od 10 MB. Pošaljite manji ili ga pošaljite na mojambijent@gmail.com.</p>
+        </div>
+        <p class="napomena tiho">Podatke koristimo samo da vam odgovorimo. Više u delu <a href="privatnost.html">Privatnost</a>.</p>
+        <div class="akcije"><button class="btn posalji" type="submit"><span class="posalji-tekst">Pošaljite upit</span><span class="spin" aria-hidden="true"></span></button></div>
+        <p class="greska greska-slanja" role="alert" hidden>Slanje nije uspelo. Pokušajte ponovo ili pozovite <a class="num" href="tel:+381631105456">063 110 54 56</a>.</p>
+        <div class="hvala" hidden tabindex="-1">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
+          <p>Hvala. Javljamo se da dogovorimo merenje.</p>
+        </div>
+      </form>
     </div>
   </section>
 </main>
@@ -141,10 +144,26 @@
   <div class="wrap grid">
     <div class="f-marka">
       <img src="assets/img/logo/ceo-svetli.png" width="400" height="587" alt="Moj Ambijent" loading="lazy">
-      <p>Nameštaj i enterijer po meri iz radionice u Novom Sadu.</p>
+      <p>Vi maštajte. Mi pravimo po meri.</p>
+    </div>
+    <div class="f-kol f-podaci">
+      <h2>Kontakt informacije</h2>
+      <dl>
+        <div><dt>Preduzetnik</dt><dd>Aleksandar Major</dd></div>
+        <div><dt>Adresa</dt><dd><a href="https://www.google.com/maps/search/?api=1&amp;query=%C5%BDarka+Jovi%C4%87a+31%2C+Ka%C4%87" rel="noopener">Žarka Jovića 31, Kać</a></dd></div>
+        <div><dt>Telefon</dt><dd><a class="num" href="tel:+381631105456">063 110 54 56</a></dd></div>
+        <div><dt>E-mail</dt><dd><a href="mailto:mojambijent@gmail.com">mojambijent@gmail.com</a></dd></div>
+        <div><dt>Matični broj</dt><dd class="num">63946737</dd></div>
+        <div><dt>PIB</dt><dd class="num">109124518</dd></div>
+      </dl>
+      <ul class="f-mreze">
+        <li><a href="https://www.instagram.com/moj_ambijent/" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg></a></li>
+        <!-- Facebook: [LINK OD KLIJENTA], ikonica se prikazuje kad link stigne -->
+        <li><a href="https://www.tiktok.com/@moj.ambijent" rel="noopener">TikTok</a></li>
+      </ul>
     </div>
     <nav class="f-kol" aria-labelledby="f-usluge">
-      <h2 id="f-usluge">Usluge</h2>
+      <h2 id="f-usluge">Nameštaj po meri</h2>
       <ul>
         <li><a href="kuhinje.html">Kuhinje</a></li>
         <li><a href="plakari.html">Plakari i hodnici</a></li>
@@ -159,47 +178,40 @@
         <li><a href="radovi.html">Radovi</a></li>
         <li><a href="o-nama.html">O nama</a></li>
         <li><a href="kontakt.html">Kontakt</a></li>
-        <li><a href="https://www.instagram.com/moj_ambijent/" rel="noopener">Instagram</a></li>
-        <li><a href="https://www.tiktok.com/@moj.ambijent" rel="noopener">TikTok</a></li>
       </ul>
     </nav>
-    <div class="f-kol siroka">
-      <h2>Kontakt</h2>
-      <address>
-        <a class="num" href="tel:+381631105456">063 110 54 56</a><br>
-        <a href="mailto:info@mojambijent.com">info@mojambijent.com</a><br>
-        Janka Čmelika 109, 21000 Novi Sad<br>
-        Pon–pet 8–20h
-      </address>
-    </div>
   </div>
   <div class="wrap">
     <div class="f-dno">
-      <span>© Moj Ambijent, Novi Sad · PIB <span class="num">109124518</span></span>
+      <span>© Moj Ambijent, Kać, Novi Sad</span>
       <nav aria-label="Pravila"><a href="privatnost.html">Privatnost</a><a href="uslovi.html">Uslovi</a></nav>
     </div>
   </div>
 </footer>
 
-<nav class="traka" aria-label="Meni">
-  <a class="tab" href="index.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8"/><path d="M3 10a2 2 0 0 1 .709-1.528l7-5.999a2 2 0 0 1 2.582 0l7 5.999A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>Početna</a>
-  <button class="tab tab-usluge" type="button" aria-expanded="false" aria-controls="fioka-usluge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="7" height="7" x="3" y="3" rx="1"/><rect width="7" height="7" x="14" y="3" rx="1"/><rect width="7" height="7" x="14" y="14" rx="1"/><rect width="7" height="7" x="3" y="14" rx="1"/></svg>Usluge</button>
-  <a class="tab" href="radovi.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 22H4a2 2 0 0 1-2-2V6"/><path d="m22 13-1.296-1.296a2.41 2.41 0 0 0-3.408 0L11 18"/><circle cx="12" cy="8" r="2"/><rect width="16" height="16" x="6" y="2" rx="2"/></svg>Radovi</a>
-  <a class="tab" href="o-nama.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>O nama</a>
-  <a class="tab" href="kontakt.html" aria-current="page"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg>Kontakt</a>
-  <span class="tab-ind" aria-hidden="true"></span>
-</nav>
-<div class="fioka-sloj" hidden></div>
-<div class="fioka" id="fioka-usluge" tabindex="-1" role="dialog" aria-modal="true" aria-labelledby="h-fioka" hidden>
-  <span class="fioka-rucka" aria-hidden="true"></span>
-  <h2 id="h-fioka">Usluge</h2>
-  <ul>
-    <li><a href="kuhinje.html"><img src="assets/img/fioka-kuhinje.jpg" width="240" height="424" loading="lazy" alt="">Kuhinje<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg></a></li>
-    <li><a href="plakari.html"><img src="assets/img/fioka-plakari.jpg" width="240" height="427" loading="lazy" alt="">Plakari i hodnici<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg></a></li>
-    <li><a href="sobe.html"><img src="assets/img/fioka-sobe.jpg" width="240" height="428" loading="lazy" alt="">Sobe<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg></a></li>
-    <li><a href="zidni-krevet.html"><img src="assets/img/fioka-zidni-krevet.jpg" width="240" height="427" loading="lazy" alt="">Zidni krevet<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg></a></li>
-    <li><a href="kupatila.html"><img src="assets/img/fioka-kupatila.jpg" width="240" height="427" loading="lazy" alt="">Kupatila<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg></a></li>
-  </ul>
+<div class="mob-meni" id="mob-meni" role="dialog" aria-modal="true" aria-label="Meni" hidden>
+  <nav aria-label="Meni na telefonu">
+    <ul class="mm-lista">
+      <li><a href="index.html">Početna</a></li>
+      <li>
+        <button class="mm-usluge" type="button" aria-expanded="false" aria-controls="mm-podlista">Usluge<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button>
+        <ul class="mm-podlista" id="mm-podlista" hidden>
+          <li><a href="kuhinje.html">Kuhinje</a></li>
+          <li><a href="plakari.html">Plakari i hodnici</a></li>
+          <li><a href="sobe.html">Sobe</a></li>
+          <li><a href="zidni-krevet.html">Zidni krevet</a></li>
+          <li><a href="kupatila.html">Kupatila</a></li>
+        </ul>
+      </li>
+      <li><a href="radovi.html">Radovi</a></li>
+      <li><a href="o-nama.html">O nama</a></li>
+      <li><a href="kontakt.html" aria-current="page">Kontakt</a></li>
+    </ul>
+  </nav>
+  <div class="mm-dno">
+    <a class="mm-tel num" href="tel:+381631105456">063 110 54 56</a>
+    <a class="btn" href="kontakt.html">Zakažite merenje</a>
+  </div>
 </div>
 <a class="poziv-dugme" href="tel:+381631105456" aria-label="Pozovite 063 110 54 56"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg></a>
 

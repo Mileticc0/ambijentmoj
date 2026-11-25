@@ -1,4 +1,4 @@
-// Ubacuje ISTI header, futer, donju traku, fioku i dugme za poziv iz index.html u stranice iz tools/strane/.
+// Ubacuje ISTI header (sa padajućim menijem), futer, meni za telefon i dugme za poziv iz index.html u stranice iz tools/strane/.
 // Rezultat su obični statični HTML fajlovi u korenu (sajt nema build korak; ovo je samo alat za kopiranje).
 // Oznaka u izvoru:  <!-- meni: kuhinje.html -->   (ili "-" ako nijedna stavka nije aktivna)
 // node tools/sastavi.mjs
@@ -11,9 +11,11 @@ const idx = fs.readFileSync(path.join(koren, 'index.html'), 'utf8');
 const iseci = (a, b) => { const i = idx.indexOf(a); return idx.slice(i, idx.indexOf(b, i) + b.length); };
 const header = iseci('<header class="hdr">', '</header>');
 const futer = iseci('<footer class="futer">', '</footer>');
-const traka = iseci('<nav class="traka"', '</nav>').replace(' aria-current="page"', '');
-const fioka = iseci('<div class="fioka-sloj"', '</div>\n<a class="poziv-dugme"').replace('\n<a class="poziv-dugme"', '');
+// meni za telefon (preko celog ekrana). Stari izvori imaju {{TRAKA}} i {{FIOKA}}: traka više ne postoji, na mesto fioke ide ovaj meni
+const mobMeni = iseci('<div class="mob-meni"', '</div>\n<a class="poziv-dugme"').replace('\n<a class="poziv-dugme"', '').replace(' aria-current="page"', '');
 const poziv = iseci('<a class="poziv-dugme"', '</a>');
+// koraci „Kako do ponude“: isti svuda (Početna je izvor)
+const koraci = iseci('<ol class="koraci">', '</ol>');
 const glava = `<meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="theme-color" content="#FAF8F5">
@@ -46,18 +48,20 @@ for (const f of fs.readdirSync(dir).filter((f) => f.endsWith('.html'))) {
   const m = /<!-- meni: (\S+) -->\r?\n/.exec(s);
   const meni = m ? m[1] : '-';
   s = s.replace(/<!-- meni: \S+ -->\r?\n/, '');
-  let h = header, t = traka, fi = fioka;
+  let h = header, mm = mobMeni;
   if (meni !== '-') {
     h = h.replace(`<a href="${meni}">`, `<a href="${meni}" aria-current="page">`);
-    t = t.replace(`<a class="tab" href="${meni}">`, `<a class="tab" href="${meni}" aria-current="page">`);
-    fi = fi.replace(`<a href="${meni}">`, `<a href="${meni}" aria-current="page">`);
-    // stranice usluga: u donjoj traci je aktivna stavka „Usluge“
-    if (['kuhinje.html', 'plakari.html', 'sobe.html', 'zidni-krevet.html', 'kupatila.html'].includes(meni)) t = t.replace('class="tab tab-usluge"', 'class="tab tab-usluge" data-aktivna');
+    mm = mm.replace(`<a href="${meni}">`, `<a href="${meni}" aria-current="page">`);
+    // stranice usluga: „Usluge“ je aktivna stavka u meniju
+    if (['kuhinje.html', 'plakari.html', 'sobe.html', 'zidni-krevet.html', 'kupatila.html'].includes(meni)) {
+      h = h.replace('class="meni-dugme"', 'class="meni-dugme" data-aktivna');
+      mm = mm.replace('class="mm-usluge"', 'class="mm-usluge" data-aktivna');
+    }
   }
   s = s.replace(/{{FOTO:([^}]+)}}/g, (_, a) => foto(...a.split('|')))
        .replace(/{{SLIKA:([^}]+)}}/g, (_, a) => slika(...a.split('|')))
        .replace(/{{VIDEO:([^}]+)}}/g, (_, a) => video(...a.split('|')));
-  s = s.replace('{{GLAVA}}', glava).replace('{{HEADER}}', h).replace('{{FUTER}}', futer).replace('{{TRAKA}}', t).replace('{{FIOKA}}', fi).replace('{{POZIV}}', poziv);
+  s = s.replace('{{GLAVA}}', glava).replace('{{HEADER}}', h).replace('{{FUTER}}', futer).replace(/\n?\{\{TRAKA\}\}/, '').replace('{{FIOKA}}', mm).replace('{{POZIV}}', poziv).replace('{{KORACI}}', koraci);
   fs.writeFileSync(path.join(koren, f), s);
   console.log(f);
 }

@@ -65,7 +65,7 @@
 }
 
 /* 5. Kako radimo */
-.koraci { grid-column: 1 / -1; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: var(--gap); counter-reset: k; }
+.koraci { grid-column: 1 / -1; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 48px var(--gap); counter-reset: k; }
 .korak { position: relative; border-top: 1px solid var(--linija); padding-top: 20px; }
 .korak::before { content: ""; position: absolute; left: 0; top: -1px; width: 32px; height: 1px; background: var(--zlato); } /* zlato samo kao detalj */
 .korak-br { display: block; color: var(--tekst-2); font-weight: 500; font-size: 13px; letter-spacing: 0.08em; font-variant-numeric: tabular-nums; }

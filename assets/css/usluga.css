@@ -96,3 +96,27 @@
 .izdvojen-zidni h2 { font-size: clamp(30px, 3vw, 44px); }
 .sta p .link { min-height: 0; margin-left: 6px; text-decoration-color: currentColor; color: var(--tekst); }
 @media (max-width: 959px) { .izdvojen-tekst, .izdvojen-zidni { grid-column: 1 / -1; } .izdvojen-zidni { border-left: 0; padding-left: 0; border-top: 1px solid var(--linija); padding-top: 32px; } }
+
+/* Telefon: galerije se listaju prevlačenjem prsta (scroll-snap), tačkice ispod pokazuju gde ste */
+.tacke { display: none; }
+@media (max-width: 959px) {
+  .galerija {
+    display: flex; gap: 8px; overflow-x: auto; scroll-snap-type: x mandatory; scroll-padding-inline: var(--edge);
+    margin-inline: calc(-1 * var(--edge)); padding-inline: var(--edge);
+    overscroll-behavior-x: contain; scrollbar-width: none; -webkit-overflow-scrolling: touch;
+  }
+  .galerija::-webkit-scrollbar { display: none; }
+  .galerija > li { flex: 0 0 82%; scroll-snap-align: start; }
+  .galerija > li[hidden] { display: none; }
+  .tacke { grid-column: 1 / -1; display: flex; justify-content: center; flex-wrap: wrap; gap: 6px; margin-top: 16px; }
+  .tacke span { width: 6px; height: 6px; border-radius: 50%; background: color-mix(in srgb, var(--tekst-2) 30%, transparent); transition: transform 200ms var(--ease-out); }
+  .tacke span.on { background: var(--tekst-2); transform: scale(1.35); }
+}
+@media (prefers-reduced-motion: reduce) { .tacke span { transition: none; } }
+
+/* Kuhinje: tekst o kuhinjama po meri */
+.o-kuhinjama h2 { grid-column: 1 / span 5; }
+.tekst-kolona { grid-column: 7 / -1; }
+.tekst-kolona p { color: var(--tekst-2); font-size: 18px; }
+.tekst-kolona p + p { margin-top: 16px; }
+@media (max-width: 959px) { .o-kuhinjama h2, .tekst-kolona { grid-column: 1 / -1; } .tekst-kolona { margin-top: 24px; } .tekst-kolona p { font-size: 17px; } }

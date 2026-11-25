@@ -18,7 +18,8 @@
     el.innerHTML = '<div class="lb-sloj"></div><div class="lb-scena"><div class="lb-traka"></div></div>' +
       '<div class="lb-vrh"><span class="lb-brojac label num" aria-live="polite"></span><button class="lb-btn lb-x" type="button" aria-label="Zatvori">' + svg(IK.x) + '</button></div>' +
       '<button class="lb-btn lb-l" type="button" aria-label="Prethodna fotografija">' + svg(IK.l) + '</button>' +
-      '<button class="lb-btn lb-d" type="button" aria-label="Sledeća fotografija">' + svg(IK.d) + '</button>';
+      '<button class="lb-btn lb-d" type="button" aria-label="Sledeća fotografija">' + svg(IK.d) + '</button>' +
+      '<div class="lb-tacke" aria-hidden="true"></div>';
     document.body.appendChild(el);
     sloj = el.querySelector('.lb-sloj'); traka = el.querySelector('.lb-traka'); brojac = el.querySelector('.lb-brojac');
     btnL = el.querySelector('.lb-l'); btnD = el.querySelector('.lb-d');
@@ -49,6 +50,7 @@
   function osvezi() {
     brojac.textContent = dva(i + 1) + ' / ' + dva(stavke.length);
     btnL.disabled = i === 0; btnD.disabled = i === stavke.length - 1;
+    [].forEach.call(el.querySelectorAll('.lb-tacke span'), function (t, n) { t.classList.toggle('on', n === i); });
     [i - 1, i, i + 1].forEach(function (n) { var s = traka.children[n]; if (s) { var img = s.querySelector('img'); if (!img.src) img.src = img.dataset.src; } });
   }
   function idi(n) {
@@ -103,6 +105,7 @@
     traka.innerHTML = lista.map(function (s) {
       return '<figure class="lb-slajd"><img data-src="' + s.src + '" width="' + s.w + '" height="' + s.h + '" alt="' + s.alt.replace(/"/g, '&quot;') + '" decoding="async" draggable="false"></figure>';
     }).join('');
+    el.querySelector('.lb-tacke').innerHTML = stavke.length > 1 ? stavke.map(function () { return '<span></span>'; }).join('') : '';
     el.hidden = false; otvoren = true;
     document.documentElement.style.overflow = 'hidden';
     meri(); osvezi(); postavi(0, 0, true);

@@ -1,4 +1,4 @@
-/* Moj Ambijent v5 · zajednički JS: header, donja traka, fioka „Usluge“, dugme za poziv,
+/* Moj Ambijent v5 · zajednički JS: header, padajući meni „Usluge“, meni na telefonu, dugme za poziv,
    otkrivanje fotografija, česta pitanja, videi i video lightbox. Jedan pasivni scroll listener + rAF. */
 (function () {
   'use strict';
@@ -9,8 +9,7 @@
   var EASE_OUT = 'cubic-bezier(0.23, 1, 0.32, 1)';
 
   var hdr = document.querySelector('.hdr');
-  var traka = document.querySelector('.traka');
-  var pozivDugme = document.querySelector('.poziv-dugme');
+    var pozivDugme = document.querySelector('.poziv-dugme');
   var hero = document.querySelector('[data-hero]');
 
   /* ---------- Dugme za poziv nikad ne prekriva tekst ---------- */
@@ -23,7 +22,7 @@
       var els = document.elementsFromPoint(tacke[i][0], tacke[i][1]);
       for (var j = 0; j < els.length; j++) {
         var el = els[j];
-        if (el === pozivDugme || pozivDugme.contains(el) || el.closest('.traka')) continue;
+        if (el === pozivDugme || pozivDugme.contains(el)) continue;
         if (TEKST.test(el.tagName) && el.textContent.trim()) return true;
         if (/^(IMG|VIDEO|SECTION|MAIN|BODY|FOOTER)$/.test(el.tagName)) break;
       }
@@ -51,11 +50,12 @@
   window.addEventListener('scroll', MA.tick, { passive: true });
   window.addEventListener('resize', MA.tick, { passive: true });
 
-  /* ---------- Desktop meni: tanka linija klizi (transform, 240 ms) ---------- */
+  /* ---------- Desktop meni: tanka linija klizi (transform, 240 ms), samo prve stavke ---------- */
   var meni = document.querySelector('.meni');
   if (meni) {
     var ind = meni.querySelector('.meni-ind');
-    var aktivan = meni.querySelector('a[aria-current="page"]');
+    var vrh = [].slice.call(meni.querySelectorAll(':scope > ul > li > a, .meni-dugme'));
+    var aktivan = meni.querySelector(':scope > ul > li > a[aria-current="page"], .meni-dugme[data-aktivna]');
     var pomeri = function (a, bez) {
       if (bez) ind.style.transition = 'none';
       if (!a) { ind.style.opacity = '0'; }
@@ -66,7 +66,7 @@
       }
       if (bez) { ind.offsetWidth; ind.style.transition = ''; }
     };
-    [].forEach.call(meni.querySelectorAll('a'), function (a) {
+    vrh.forEach(function (a) {
       a.addEventListener('pointerenter', function (e) { if (e.pointerType === 'mouse') pomeri(a); });
       a.addEventListener('focus', function () { pomeri(a); });
     });
@@ -77,101 +77,84 @@
     window.addEventListener('resize', function () { pomeri(aktivan, true); });
   }
 
-  /* ---------- Donja traka: oznaka aktivne stavke ---------- */
-  if (traka) {
-    var tInd = traka.querySelector('.tab-ind');
-    var trenutni = traka.querySelector('[aria-current="page"], [data-aktivna]');
-    var stavi = function (t, bez) {
-      if (!t) { tInd.style.opacity = '0'; return; }
-      var br = traka.getBoundingClientRect(), r = t.getBoundingClientRect();
-      if (bez) tInd.style.transition = 'none';
-      tInd.style.opacity = '1';
-      tInd.style.transform = 'translateX(' + (r.left - br.left + r.width / 2 - 10) + 'px)';
-      if (bez) { tInd.offsetWidth; tInd.style.transition = ''; }
+  /* ---------- Padajući meni „Usluge ▾“: hover (miš), klik i Enter; Esc i klik van zatvaraju.
+     opacity + translateY(-4px) → 0, 160 ms ease-out ---------- */
+  var uDugme = document.querySelector('.meni-dugme');
+  var uMeni = document.getElementById('padajuci-usluge');
+  if (uDugme && uMeni) {
+    var uZatvT = 0, uOtvoren = false;
+    var uOtvori = function () {
+      clearTimeout(uZatvT);
+      if (uOtvoren) return;
+      uOtvoren = true;
+      uMeni.hidden = false; uMeni.offsetHeight; uMeni.classList.add('otv');
+      uDugme.setAttribute('aria-expanded', 'true');
     };
-    stavi(trenutni, true);
-    window.addEventListener('resize', function () { stavi(trenutni, true); });
-    window.addEventListener('pageshow', function () { stavi(trenutni, true); });
-    [].forEach.call(traka.querySelectorAll('a.tab'), function (t) { t.addEventListener('click', function () { stavi(t); }); });
+    var uZatvori = function (vratiFokus) {
+      if (!uOtvoren) return;
+      uOtvoren = false;
+      uMeni.classList.remove('otv');
+      uDugme.setAttribute('aria-expanded', 'false');
+      uZatvT = setTimeout(function () { uMeni.hidden = true; }, reduced.matches ? 0 : 170);
+      if (vratiFokus) uDugme.focus();
+    };
+    var uLi = uDugme.parentNode, hoverT = 0;
+    uLi.addEventListener('pointerenter', function (e) { if (e.pointerType === 'mouse') { clearTimeout(hoverT); uOtvori(); } });
+    uLi.addEventListener('pointerleave', function (e) { if (e.pointerType === 'mouse') hoverT = setTimeout(function () { uZatvori(false); }, 180); });
+    uDugme.addEventListener('click', function () { uOtvoren ? uZatvori(false) : uOtvori(); });
+    uDugme.addEventListener('keydown', function (e) {
+      if (e.key === 'ArrowDown') { e.preventDefault(); uOtvori(); var p = uMeni.querySelector('a'); if (p) p.focus(); }
+    });
+    uLi.addEventListener('keydown', function (e) { if (e.key === 'Escape' && uOtvoren) { e.preventDefault(); uZatvori(true); } });
+    uLi.addEventListener('focusout', function (e) { if (!uLi.contains(e.relatedTarget)) uZatvori(false); });
+    document.addEventListener('click', function (e) { if (uOtvoren && !uLi.contains(e.target)) uZatvori(false); });
   }
 
-  /* ---------- Fioka „Usluge“ (bottom sheet): povlačenje na dole, Esc, klik van ---------- */
-  var fioka = document.querySelector('.fioka');
-  var sloj = document.querySelector('.fioka-sloj');
-  var uslugeBtn = document.querySelector('.tab-usluge');
-  if (fioka && uslugeBtn) {
-    var otvorena = false, zatvaranjeT = 0;
-    var otvori = function () {
-      clearTimeout(zatvaranjeT);
-      fioka.hidden = false; sloj.hidden = false;
-      fioka.style.transform = ''; sloj.style.opacity = '';
-      fioka.offsetHeight;
-      fioka.classList.add('otv'); sloj.classList.add('otv');
-      uslugeBtn.setAttribute('aria-expanded', 'true');
-      otvorena = true;
-      root.style.overflow = 'hidden';
-      fioka.focus({ preventScroll: true }); // fokus na dijalog, ne na prvi link (bez okvira posle dodira)
+  /* ---------- Telefon: 3 crte → meni preko celog ekrana. X, Esc ili klik na link zatvaraju;
+     stranica ispod ne skroluje; fokus ostaje u meniju i vraća se na dugme ---------- */
+  var mDugme = document.querySelector('.meni-mob-dugme');
+  var mMeni = document.getElementById('mob-meni');
+  if (mDugme && mMeni) {
+    var mOtvoren = false, mZatvT = 0;
+    var fokusabilni = function () { return [mDugme].concat([].slice.call(mMeni.querySelectorAll('a, button')).filter(function (el) { return !el.closest('[hidden]'); })); };
+    var mOtvori = function () {
+      clearTimeout(mZatvT);
+      mOtvoren = true;
+      mMeni.hidden = false; mMeni.offsetHeight; mMeni.classList.add('otv');
+      mDugme.setAttribute('aria-expanded', 'true'); mDugme.setAttribute('aria-label', 'Zatvori meni');
+      root.classList.add('meni-otvoren');
+      var prvi = mMeni.querySelector('a, button'); if (prvi) prvi.focus({ preventScroll: true });
     };
-    var zatvori = function (vrati) {
-      if (!otvorena) return;
-      otvorena = false;
-      fioka.style.transform = ''; sloj.style.opacity = '';
-      fioka.classList.remove('otv'); sloj.classList.remove('otv');
-      uslugeBtn.setAttribute('aria-expanded', 'false');
-      root.style.overflow = '';
-      zatvaranjeT = setTimeout(function () { fioka.hidden = true; sloj.hidden = true; }, reduced.matches ? 0 : 500);
-      if (vrati !== false) uslugeBtn.focus({ preventScroll: true });
+    var mZatvori = function (vratiFokus) {
+      if (!mOtvoren) return;
+      mOtvoren = false;
+      mMeni.classList.remove('otv');
+      mDugme.setAttribute('aria-expanded', 'false'); mDugme.setAttribute('aria-label', 'Otvori meni');
+      root.classList.remove('meni-otvoren');
+      mZatvT = setTimeout(function () { mMeni.hidden = true; }, reduced.matches ? 0 : 200);
+      if (vratiFokus !== false) mDugme.focus({ preventScroll: true });
     };
-    uslugeBtn.addEventListener('click', function () { otvorena ? zatvori() : otvori(); });
-    sloj.addEventListener('click', function () { zatvori(); });
+    mDugme.addEventListener('click', function () { mOtvoren ? mZatvori() : mOtvori(); });
+    mMeni.addEventListener('click', function (e) { if (e.target.closest('a')) mZatvori(false); });
     document.addEventListener('keydown', function (e) {
-      if (!otvorena) return;
-      if (e.key === 'Escape') { e.preventDefault(); zatvori(); }
+      if (!mOtvoren) return;
+      if (e.key === 'Escape') { e.preventDefault(); mZatvori(); }
       if (e.key === 'Tab') {
-        var f = [].slice.call(fioka.querySelectorAll('a'));
-        var a = f.indexOf(document.activeElement);
+        var f = fokusabilni(), a = f.indexOf(document.activeElement);
         e.preventDefault();
         f[(a + (e.shiftKey ? -1 : 1) + f.length) % f.length].focus();
       }
     });
-    // povlačenje: prst vodi fioku 1:1, otpuštanje odlučuje po putu (30 %) ili brzini (> 0,11 px/ms)
-    var pid = null, startY = 0, dy = 0, uzorci = [], visina = 0, pomeranje = false;
-    fioka.addEventListener('pointerdown', function (e) {
-      if (e.button !== 0) return;
-      pid = e.pointerId; startY = e.clientY; dy = 0; pomeranje = false; uzorci = [[e.clientY, e.timeStamp]];
-      visina = fioka.offsetHeight;
-    });
-    fioka.addEventListener('pointermove', function (e) {
-      if (e.pointerId !== pid) return;
-      var d = e.clientY - startY;
-      if (!pomeranje && Math.abs(d) < 6) return;
-      if (!pomeranje) { pomeranje = true; fioka.setPointerCapture(pid); fioka.style.transition = 'none'; sloj.style.transition = 'none'; }
-      dy = d > 0 ? d : -Math.sqrt(-d) * 2; // na gore guma
-      uzorci.push([e.clientY, e.timeStamp]); if (uzorci.length > 5) uzorci.shift();
-      fioka.style.transform = 'translateY(' + dy + 'px)';
-      sloj.style.opacity = String(1 - Math.max(0, dy) / visina);
-    });
-    var pusti = function (e) {
-      if (e.pointerId !== pid) return;
-      pid = null;
-      if (!pomeranje) return;
-      e.preventDefault();
-      var a = uzorci[0], b = uzorci[uzorci.length - 1];
-      var v = (b[0] - a[0]) / Math.max(1, b[1] - a[1]);
-      fioka.style.transition = ''; sloj.style.transition = '';
-      if (dy > visina * 0.3 || v > 0.11) zatvori(false);
-      else { fioka.style.transform = ''; sloj.style.opacity = ''; }
-      // klik na link posle povlačenja ne sme da navigira
-      var blokiraj = function (ev) { ev.preventDefault(); ev.stopPropagation(); };
-      fioka.addEventListener('click', blokiraj, { capture: true, once: true });
-      setTimeout(function () { fioka.removeEventListener('click', blokiraj, { capture: true }); }, 50);
-    };
-    fioka.addEventListener('pointerup', pusti);
-    fioka.addEventListener('pointercancel', pusti);
-    telefon.addEventListener('change', function () { if (!telefon.matches) zatvori(false); });
+    var mmU = mMeni.querySelector('.mm-usluge'), mmP = document.getElementById('mm-podlista');
+    if (mmU && mmP) {
+      // na stranici usluge podlista je otvorena odmah
+      if (mmU.hasAttribute('data-aktivna')) { mmP.hidden = false; mmU.setAttribute('aria-expanded', 'true'); }
+      mmU.addEventListener('click', function () { var o = mmU.getAttribute('aria-expanded') !== 'true'; mmU.setAttribute('aria-expanded', String(o)); mmP.hidden = !o; });
+    }
+    telefon.addEventListener('change', function () { if (!telefon.matches) mZatvori(false); });
   }
 
-  /* ---------- Tastatura otvorena: traka i dugme se sklanjaju ---------- */
+  /* ---------- Tastatura otvorena: dugme za poziv se sklanja ---------- */
   if (window.visualViewport) {
     var tast = function () {
       var otv = window.visualViewport.height < window.innerHeight * 0.75 && document.activeElement && /^(INPUT|TEXTAREA|SELECT)$/.test(document.activeElement.tagName);
@@ -189,6 +172,28 @@
     }, { threshold: 0.2 });
     zaOtkriti.forEach(function (el) { io.observe(el); });
   } else zaOtkriti.forEach(function (el) { el.classList.add('in'); });
+
+  /* ---------- Galerije na telefonu: prevlačenje prstom + tačkice ispod ---------- */
+  var galerije = [].slice.call(document.querySelectorAll('.galerija'));
+  function tackeZa(g) {
+    var t = g.nextElementSibling && g.nextElementSibling.classList.contains('tacke') ? g.nextElementSibling : null;
+    if (!t) { t = document.createElement('div'); t.className = 'tacke'; t.setAttribute('aria-hidden', 'true'); g.after(t); }
+    var stavke = [].slice.call(g.children).filter(function (li) { return li.tagName === 'LI' && !li.hidden; });
+    t.innerHTML = stavke.length > 1 ? stavke.map(function () { return '<span></span>'; }).join('') : '';
+    var oznaci = function () {
+      var x = g.scrollLeft, n = 0, d = Infinity;
+      stavke.forEach(function (li, i) { var r = Math.abs(li.offsetLeft - g.firstElementChild.offsetLeft - x); if (r < d) { d = r; n = i; } });
+      if (x >= g.scrollWidth - g.clientWidth - 2) n = stavke.length - 1;
+      [].forEach.call(t.children, function (s, i) { s.classList.toggle('on', i === n); });
+    };
+    g._oznaci = oznaci; oznaci();
+  }
+  galerije.forEach(function (g) {
+    tackeZa(g);
+    var ceka = 0;
+    g.addEventListener('scroll', function () { if (!ceka) ceka = requestAnimationFrame(function () { ceka = 0; g._oznaci(); }); }, { passive: true });
+  });
+  MA.osveziTacke = function () { galerije.forEach(function (g) { g.scrollLeft = 0; tackeZa(g); }); };
 
   /* ---------- Česta pitanja ---------- */
   [].forEach.call(document.querySelectorAll('.pitanje-dugme'), function (b) {
@@ -345,7 +350,7 @@
   if (/^(localhost|127\.0\.0\.1)$/.test(location.hostname) && !navigator.webdriver) {
     var ng = /[?&]najgori=1/.test(location.search);
     var sw = document.createElement('div');
-    sw.setAttribute('style', 'position:fixed;left:50%;bottom:calc(var(--bar) + 12px);transform:translateX(-50%);z-index:70;display:flex;gap:2px;padding:3px;background:#ddd;border-radius:999px;font:12px/1 system-ui,sans-serif');
+    sw.setAttribute('style', 'position:fixed;left:50%;bottom:12px;transform:translateX(-50%);z-index:70;display:flex;gap:2px;padding:3px;background:#ddd;border-radius:999px;font:12px/1 system-ui,sans-serif');
     sw.innerHTML = ['Demo', 'Najgori slučaj'].map(function (t, i) {
       return '<a href="' + location.pathname + (i ? '?najgori=1' : '') + '" style="padding:8px 12px;border-radius:999px;text-decoration:none;color:#222;background:' + (((i === 1) === ng) ? '#fff' : 'transparent') + '">' + t + '</a>';
     }).join('');

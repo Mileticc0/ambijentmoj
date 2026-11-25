@@ -1,25 +1,25 @@
-/* O nama */
-.osnivac .grid { align-items: end; }
-.citat { grid-column: 1 / span 7; margin: 0; }
-.citat blockquote { margin: 0; }
-.citat p { font-family: var(--f-naslov); font-weight: 500; font-style: normal; font-size: clamp(56px, 8.4vw, 136px); line-height: 0.95; letter-spacing: -0.015em; max-width: 9ch; }
-.citat p::before { content: "„"; }
-.citat p::after { content: "“"; }
-.citat figcaption { margin-top: 24px; color: var(--tekst-2); }
-.o-bio { grid-column: 9 / -1; padding-bottom: 6px; }
-.o-bio h2 { font-size: clamp(30px, 2.8vw, 40px); }
-.o-bio p { margin-top: 14px; color: var(--tekst-2); }
-.cinjenice { grid-column: 1 / -1; margin-top: clamp(56px, 7vw, 104px); display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--gap); }
-.cinjenice > div { border-top: 1px solid var(--linija); padding-top: 16px; }
-.cinjenice dt { color: var(--tekst-2); }
-.cinjenice dd { margin-top: 8px; font-family: var(--f-naslov); font-weight: 500; font-size: clamp(36px, 4vw, 60px); line-height: 1; font-variant-numeric: lining-nums; }
+/* O nama: tekst klijenta u kratkim blokovima, fotografije detalja između */
+.o-blok .grid { align-items: center; row-gap: 40px; }
+.o-tekst { grid-column: 1 / span 6; }
+.o-tekst h2 { margin-bottom: 20px; }
+.o-tekst p { color: var(--tekst-2); font-size: 18px; }
+.o-tekst p + p { margin-top: 16px; }
+.o-foto { grid-column: 8 / -1; aspect-ratio: 4 / 5; overflow: hidden; border-radius: 2px; margin: 0; }
+.o-foto img { width: 100%; height: 100%; object-fit: cover; }
+.o-obrnuto .o-tekst { grid-column: 7 / -1; grid-row: 1; }
+.o-obrnuto .o-foto { grid-column: 1 / span 5; grid-row: 1; }
+.o-materijali .mat-lista { grid-column: 8 / -1; align-self: center; }
+.o-moguce .o-tekst { grid-column: 2 / span 8; }
+.o-moguce h2 { margin: 32px 0 20px; font-size: clamp(40px, 5vw, 72px); }
+.o-kraj h2 { margin-top: 12px; font-size: clamp(44px, 6vw, 96px); max-width: 14ch; }
+.o-kraj .o-potpis { margin-top: 20px; color: var(--tekst-2); }
+.o-kraj .u-akcije { margin-top: 40px; }
 @media (max-width: 959px) {
-  .citat, .o-bio { grid-column: 1 / -1; }
-  .o-bio { margin-top: 40px; }
-  .cinjenice { grid-template-columns: 1fr; gap: 0; }
-  .cinjenice > div { display: flex; justify-content: space-between; align-items: baseline; gap: 16px; padding-block: 14px; }
-  .cinjenice dd { margin: 0; font-size: 32px; }
+  .o-tekst, .o-foto, .o-obrnuto .o-tekst, .o-obrnuto .o-foto, .o-materijali .mat-lista, .o-moguce .o-tekst { grid-column: 1 / -1; grid-row: auto; }
+  .o-tekst p { font-size: 17px; }
 }
+
+
 
 .salon-uvod { grid-column: 1 / span 5; margin-bottom: 0; }
 .salon-uvod .link { margin-top: 20px; }
