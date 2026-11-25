@@ -3,7 +3,7 @@
 Pravi je `tools/mapa.mjs` iz samih stranica. Svaka fotografija i svaki video su na sajtu tačno jednom.
 
 ## Ne koriste se nigde
-- kuhinja-zelena.jpg (zahtev klijenta)
+- jedna fotografija i jedan video koje je klijent tražio da se uklone (vidi tools/slike.mjs i tools/video-kadrovi.mjs)
 - kuhinja-kamen-ostrvo-1.jpg (gradilište)
 
 ## Fioka „Usluge“ (telefon, ista na svim stranicama)
@@ -22,8 +22,9 @@ Sličice su kadrovi iz videa (assets/img/fioka-*.jpg), ne fotografije, da se nij
 |---|---|
 | Kuhinje po meri | video kuhinja-siva-kamen-obilazak.mp4 |
 | Naše kuhinje | kuhinja-bela-ostrvo-1, kuhinja-led-1, kuhinja-orah-lampe-2, kuhinja-krem-3, kuhinja-moderna-orah, kuhinja-staklena-pregrada-1, kuhinja-mala, kuhinja-led-barske-stolice, kuhinja-bela-beton |
-| Naše kuhinje | video kuhinje-izbor.mp4 (isečak 0–18.6 s) |
-| Naše kuhinje | video klizna-vrata-kuhinja.mp4 (isečak 0–12.4 s) |
+| Kuhinje iz bliza | kuhinja-krem-1, svetla-kuhinja-sank-kamen-1, svetla-kuhinja-sank-kamen-2, svetla-kuhinja-sank-kamen-3, svetla-kuhinja-sank-kamen-4, svetla-kuhinja-sank-kamen-5, svetla-kuhinja-sank-kamen-6 |
+| Kuhinje iz bliza | video klasicna-kuhinja-vitrine-reel.mp4 (isečak 0–35 s) |
+| Kuhinje iz bliza | video klizna-vrata-kuhinja.mp4 (isečak 0–12.4 s) |
 
 ## plakari.html
 | Sekcija | Fotografije / video |
@@ -40,7 +41,12 @@ Sličice su kadrovi iz videa (assets/img/fioka-*.jpg), ne fotografije, da se nij
 | Naše sobe | dnevna-crna-tv, dnevna-tv-mermer, dnevna-tv-zid, dnevna-garnitura, spavaca-led, stan-ns-decija-zirafa |
 | Naše sobe | video spavaca-sto-led.mp4 (isečak 0–7.4 s) |
 | Naše sobe | video decija-soba-od-skice.mp4 (isečak 0–17.8 s) |
-| Zidni krevet za mali stan | zidni-krevet-zatvoren, zidni-krevet-plakar, zidni-krevet-otvoren |
+
+## zidni-krevet.html
+| Sekcija | Fotografije / video |
+|---|---|
+| Zidni krevet po meri | video zidni-krevet-aco-objasnjava-reel.mp4 (isečak 0–10.2 s) |
+| Od plakara do kreveta | zidni-krevet-zatvoren, zidni-krevet-plakar, zidni-krevet-otvoren, zidni-krevet-novi-1, zidni-krevet-novi-2, mali-stan-zidni-krevet |
 
 ## kupatila.html
 | Sekcija | Fotografije / video |
@@ -56,7 +62,10 @@ Sličice su kadrovi iz videa (assets/img/fioka-*.jpg), ne fotografije, da se nij
 | Kompletan stan u Novom Sadu | video stan-ns-obilazak.mp4 (isečak 0–33.5 s) |
 | Kompletan stan u Novom Sadu | video stan-ns-zavrsna-faza.mp4 (isečak 0–27.5 s) |
 | Stan u Puli | pula-dnevna-1, pula-dnevna-2, pula-kuhinja-sank |
-| Ostali radovi | kuhinja-bela-ostrvo-2, kuhinja-bela-ostrvo-3, kuhinja-led-3, kuhinja-krem-1, kuhinja-krem-2, kuhinja-orah-l, kuhinja-siva-lamele, kuhinja-staklena-pregrada-2, kuhinja-bela-beton-2, kuhinja-kamen-rerna, kuhinja-kamen-ostrvo-2, kuhinja-mala-detalj, vitrina-led, hodnik-kuhinja, detalj-sank, detalj-lamele, detalj-lamele-stolica, dnevna-tv-orah, mali-stan-zidni-krevet |
+| Bela kuhinja sa ostrvom | bela-kuhinja-ostrvo-1, bela-kuhinja-ostrvo-2, bela-kuhinja-ostrvo-3, bela-kuhinja-ostrvo-4, bela-kuhinja-ostrvo-5, bela-kuhinja-ostrvo-6, bela-kuhinja-ostrvo-7 |
+| Bela kuhinja sa ostrvom | video bela-kuhinja-ostrvo-obilazak.mp4 |
+| Mali stan 34 m² | mali-stan-34m2-ulaz-kuhinja, mali-stan-34m2-kuhinja, mali-stan-34m2-tv-zid, mali-stan-34m2-toaletni-sto-plakar |
+| Ostali radovi | kuhinja-bela-ostrvo-2, kuhinja-bela-ostrvo-3, kuhinja-led-3, kuhinja-krem-2, kuhinja-orah-l, kuhinja-siva-lamele, kuhinja-staklena-pregrada-2, kuhinja-bela-beton-2, kuhinja-kamen-rerna, kuhinja-kamen-ostrvo-2, kuhinja-mala-detalj, vitrina-led, hodnik-kuhinja, detalj-sank, detalj-lamele, detalj-lamele-stolica, dnevna-tv-orah |
 | Ostali radovi | video kupatilo-tus.mp4 (isečak 0–16.2 s) |
 
 ## o-nama.html
@@ -65,6 +74,6 @@ Sličice su kadrovi iz videa (assets/img/fioka-*.jpg), ne fotografije, da se nij
 | Radionica u Novom Sadu | kuhinja-montaza |
 
 ## Provera
-- Fotografija: 68, iskorišćeno: 68, neiskorišćenih: nema
+- Fotografija: 87, iskorišćeno: 87, neiskorišćenih: nema
 - Ponavljanja fotografija: nema
-- Videa: 14, ponavljanja: nema
+- Videa: 16, ponavljanja: nema

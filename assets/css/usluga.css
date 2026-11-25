@@ -70,3 +70,29 @@
 @media (hover: hover) and (pointer: fine) { .zidni-niz a:hover img { transform: scale(1.03); } }
 @media (max-width: 599px) { .zidni-niz { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; } .zidni-niz .label { font-size: 11px; letter-spacing: 0.04em; } }
 @media (prefers-reduced-motion: reduce) { .zidni-niz img { transition: none; } }
+
+/* Projekti kuhinja: kartice sa jednom slikom ili videom; ostale fotografije projekta su samo u lightboxu */
+.projekti { grid-column: 1 / -1; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: clamp(48px, 6vw, 88px) var(--gap); }
+.projekat-k { min-width: 0; scroll-margin-top: calc(var(--hdr) + 16px); }
+.pk-medij { display: block; overflow: hidden; aspect-ratio: 4 / 5; border-radius: 2px; background: var(--linija); }
+.pk-medij[data-lb] { cursor: zoom-in; }
+.pk-medij img { width: 100%; height: 100%; object-fit: cover; transition: transform 500ms var(--ease-out); }
+.projekat-k .video { max-width: none; aspect-ratio: 4 / 5; }
+.pk-ostale { display: none; }
+.projekat-k h3 { margin-top: 20px; font-size: clamp(26px, 2.4vw, 34px); }
+.projekat-k p { margin-top: 8px; color: var(--tekst-2); }
+.pk-broj { display: block; margin-top: 12px; color: var(--tekst-2); }
+.pk-link { margin-top: 6px; }
+@media (hover: hover) and (pointer: fine) { a.pk-medij:hover img { transform: scale(1.03); } }
+@media (prefers-reduced-motion: reduce) { .pk-medij img { transition: none; } }
+@media (max-width: 599px) { .projekti { grid-template-columns: 1fr; } }
+
+/* Sobe: izdvojeni mali stan + kratak link na Zidni krevet (bez fotografija, one su u Radovima i na stranici Zidni krevet) */
+.izdvojen .grid { row-gap: 48px; }
+.izdvojen-tekst { grid-column: 1 / span 6; }
+.izdvojen-zidni { grid-column: 8 / -1; border-left: 1px solid var(--linija); padding-left: var(--gap); }
+.izdvojen p { margin-top: 16px; color: var(--tekst-2); }
+.izdvojen .link { margin-top: 16px; }
+.izdvojen-zidni h2 { font-size: clamp(30px, 3vw, 44px); }
+.sta p .link { min-height: 0; margin-left: 6px; text-decoration-color: currentColor; color: var(--tekst); }
+@media (max-width: 959px) { .izdvojen-tekst, .izdvojen-zidni { grid-column: 1 / -1; } .izdvojen-zidni { border-left: 0; padding-left: 0; border-top: 1px solid var(--linija); padding-top: 32px; } }

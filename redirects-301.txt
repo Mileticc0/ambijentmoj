@@ -16,7 +16,7 @@
 /spavace-sobe/          /sobe.html             301
 /decije-sobe/           /sobe.html             301
 /dnevne-sobe/           /sobe.html             301
-/zidni-kreveti/         /sobe.html#zidni-krevet 301
+/zidni-kreveti/         /zidni-krevet.html     301
 /kupatila/              /kupatila.html         301
 /usluge/                /index.html            301
 /politika-privatnosti/  /privatnost.html       301

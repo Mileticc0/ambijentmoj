@@ -8,7 +8,7 @@ import { fileURLToPath } from 'node:url';
 const koren = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const izvor = path.resolve(koren, '..', 'mojambijent_slike');
 const cilj = path.join(koren, 'assets', 'img');
-const IZBACI = new Set(['kuhinja-zelena', 'kuhinja-kamen-ostrvo-1']); // zelena: zahtev klijenta; ostrvo-1: gradilište
+const IZBACI = new Set(['kuhinja-zelena', 'kuhinja-kamen-ostrvo-1']); // prva: klijent tražio da se ukloni; ostrvo-1: gradilište
 fs.mkdirSync(path.join(cilj, 'logo'), { recursive: true });
 
 const mapa = {};
@@ -25,6 +25,15 @@ for (const f of fs.readdirSync(izvor).filter((f) => f.endsWith('.jpg'))) {
       .jpeg({ quality: 78, mozjpeg: true, progressive: true })
       .toFile(path.join(cilj, `${ime}-${sir}.jpg`));
   }
+}
+// nove fotografije od klijenta (25. 11.)
+const nove = path.join(izvor, 'nove_od_ace', 'slike');
+if (fs.existsSync(nove)) for (const f of fs.readdirSync(nove).filter((f) => f.endsWith('.jpg'))) {
+  const ime = f.replace(/.jpg$/, '');
+  const meta = await sharp(path.join(nove, f)).rotate().metadata();
+  const w = meta.orientation >= 5 ? meta.height : meta.width, h = meta.orientation >= 5 ? meta.width : meta.height;
+  mapa[ime] = [w, h];
+  for (const sir of [800, 1600]) await sharp(path.join(nove, f)).rotate().resize({ width: Math.min(sir, w) }).jpeg({ quality: 78, mozjpeg: true, progressive: true }).toFile(path.join(cilj, `${ime}-${sir}.jpg`));
 }
 fs.writeFileSync(path.join(cilj, 'manifest.json'), JSON.stringify(mapa, null, 1));
 

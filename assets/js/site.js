@@ -231,13 +231,16 @@
     otvoriBtn.setAttribute('aria-label', 'Pusti video sa zvukom: ' + (fig.dataset.naslov || ''));
     otvoriBtn.addEventListener('click', function () { otvoriVideo(fig); });
     fig.appendChild(otvoriBtn);
-    if (stedi) {
+    // video sa govorom ili muzikom (data-zvuk) se ne vrti sam: poster + „Pogledaj video“ otvara lightbox sa zvukom
+    if (stedi || fig.hasAttribute('data-zvuk')) {
       var p = document.createElement('button');
-      p.type = 'button'; p.className = 'video-pusti'; p.innerHTML = IKONA_PLAY + 'Pusti';
+      p.type = 'button'; p.className = 'video-pusti'; p.innerHTML = IKONA_PLAY + (fig.hasAttribute('data-zvuk') ? 'Pogledaj video' : 'Pusti');
       p.addEventListener('click', function () { otvoriVideo(fig); });
       fig.appendChild(p);
     }
   });
+  // u automatsko puštanje ulaze samo nemi isečci
+  videi = videi.filter(function (fig) { return !fig.hasAttribute('data-zvuk'); });
   if (!stedi && 'IntersectionObserver' in window && videi.length) {
     var vidljivost = new Map();
     var izaberi = function () {
@@ -310,7 +313,7 @@
     vlb.hidden = false;
     root.style.overflow = 'hidden';
     v.muted = false;
-    // isti isečak kao u malom prikazu (npr. bez zelene kuhinje ili loga): od / do
+    // isti isečak kao u malom prikazu (npr. bez teksta ili loga): od / do
     var od = parseFloat(izvor.dataset.od || '0'), doo = parseFloat(izvor.dataset.do || '0');
     v.onloadedmetadata = function () { v.currentTime = od; };
     v.ontimeupdate = doo ? function () { if (v.currentTime >= doo) { v.pause(); v.currentTime = od; } } : null;

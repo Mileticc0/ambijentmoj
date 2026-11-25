@@ -12,7 +12,11 @@ const koren = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const izvor = path.resolve(koren, '..', 'mojambijent_slike', 'video_tiktok', 'za_sajt');
 const cilj = path.join(koren, 'assets', 'video');
 fs.mkdirSync(cilj, { recursive: true });
-for (const f of fs.readdirSync(izvor)) if (!fs.existsSync(path.join(cilj, f))) fs.copyFileSync(path.join(izvor, f), path.join(cilj, f));
+// kuhinje-izbor.mp4 se NE koristi: klijent je tražio da se ukloni (25. 11.)
+const IZBACI_V = new Set(['kuhinje-izbor.mp4']);
+for (const f of fs.readdirSync(izvor)) if (!IZBACI_V.has(f) && !fs.existsSync(path.join(cilj, f))) fs.copyFileSync(path.join(izvor, f), path.join(cilj, f));
+const noviV = path.resolve(koren, '..', 'mojambijent_slike', 'nove_od_ace', 'video');
+if (fs.existsSync(noviV)) for (const f of fs.readdirSync(noviV)) if (!fs.existsSync(path.join(cilj, f))) fs.copyFileSync(path.join(noviV, f), path.join(cilj, f));
 
 const [rezim, ...arg] = process.argv.slice(2);
 const browser = await chromium.launch({ channel: 'chrome', headless: true });

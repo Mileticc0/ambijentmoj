@@ -5,11 +5,11 @@ import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 const koren = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
-const strane = ['index.html', 'kuhinje.html', 'plakari.html', 'sobe.html', 'kupatila.html', 'radovi.html', 'o-nama.html', 'kontakt.html', 'privatnost.html', 'uslovi.html'];
+const strane = ['index.html', 'kuhinje.html', 'plakari.html', 'sobe.html', 'zidni-krevet.html', 'kupatila.html', 'radovi.html', 'o-nama.html', 'kontakt.html', 'privatnost.html', 'uslovi.html'];
 const manifest = Object.keys(JSON.parse(fs.readFileSync(path.join(koren, 'assets/img/manifest.json'), 'utf8')));
 const gde = {}, vgde = {};
 let md = '# Mapa fotografija i videa\n\nPravi je `tools/mapa.mjs` iz samih stranica. Svaka fotografija i svaki video su na sajtu tačno jednom.\n\n';
-md += '## Ne koriste se nigde\n- kuhinja-zelena.jpg (zahtev klijenta)\n- kuhinja-kamen-ostrvo-1.jpg (gradilište)\n\n';
+md += '## Ne koriste se nigde\n- jedna fotografija i jedan video koje je klijent tražio da se uklone (vidi tools/slike.mjs i tools/video-kadrovi.mjs)\n- kuhinja-kamen-ostrvo-1.jpg (gradilište)\n\n';
 md += '## Fioka „Usluge“ (telefon, ista na svim stranicama)\nSličice su kadrovi iz videa (assets/img/fioka-*.jpg), ne fotografije, da se nijedna fotografija ne ponovi.\n\n';
 for (const f of strane) {
   const s = fs.readFileSync(path.join(koren, f), 'utf8').replace(/<div class="fioka"[\s\S]*?<\/div>\n<a class="poziv-dugme"/, '');

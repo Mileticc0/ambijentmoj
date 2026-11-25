@@ -131,7 +131,8 @@
       if (!a || e.metaKey || e.ctrlKey || e.shiftKey) return;
       e.preventDefault();
       var linkovi = [].slice.call(g.querySelectorAll('a[data-lb]')).filter(function (l) { return !l.closest('[hidden]'); }); // samo vidljive (filter na Radovima)
-      otvori(linkovi.map(function (l) { var img = l.querySelector('img'); return { src: l.getAttribute('href'), w: img.getAttribute('width'), h: img.getAttribute('height'), alt: img.alt }; }), linkovi.indexOf(a));
+      // ostale fotografije projekta nisu na stranici kao slike: mere i opis su u data-w / data-h / data-alt
+      otvori(linkovi.map(function (l) { var img = l.querySelector('img'); return { src: l.getAttribute('href'), w: img ? img.getAttribute('width') : l.dataset.w, h: img ? img.getAttribute('height') : l.dataset.h, alt: img ? img.alt : (l.dataset.alt || '') }; }), linkovi.indexOf(a));
     });
   });
 })();

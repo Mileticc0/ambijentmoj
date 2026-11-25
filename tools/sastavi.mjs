@@ -33,8 +33,9 @@ const foto = (ime, alt, kat) => { const [w, h] = dim(ime); return `<li${kat ? ` 
 // {{SLIKA:ime|alt|klasa|sizes|eager}} -> figura sa srcset
 const slika = (ime, alt, klasa, sizes, eager) => { const [w, h] = dim(ime); return `<figure class="${klasa}"${eager ? '' : ' data-otkrij'}><img src="assets/img/${ime}-${eager ? 1600 : 800}.jpg" srcset="assets/img/${ime}-800.jpg 800w, assets/img/${ime}-1600.jpg 1600w" sizes="${sizes || '(min-width: 960px) 45vw, 92vw'}" width="${w}" height="${h}" ${eager ? 'fetchpriority="high"' : 'loading="lazy" decoding="async"'} alt="${esc(alt)}"></figure>`; };
 // {{VIDEO:ime|naslov|od|do|klasa|kategorija}} -> uspravni video (pokreće se kad uđe u ekran)
-const VDIM = { 'kuhinja-siva-kamen-obilazak': [480, 848], 'stan-ns-obilazak': [576, 1026] };
-const video = (ime, naslov, od, doo, klasa, kat) => { const [w, h] = VDIM[ime] || [576, 1024]; return `<figure class="video${klasa ? ' ' + klasa : ''}" data-naslov="${esc(naslov)}"${kat ? ` data-kat="${kat}"` : ''}>
+const VDIM = { 'kuhinja-siva-kamen-obilazak': [480, 848], 'stan-ns-obilazak': [576, 1026], 'klasicna-kuhinja-vitrine-reel': [720, 1280], 'zidni-krevet-aco-objasnjava-reel': [720, 1280] };
+// 7. argument „zvuk“: video sa govorom/muzikom, ne vrti se sam (poster + „Pogledaj video“)
+const video = (ime, naslov, od, doo, klasa, kat, zvuk) => { const [w, h] = VDIM[ime] || [576, 1024]; return `<figure class="video${klasa ? ' ' + klasa : ''}" data-naslov="${esc(naslov)}"${kat ? ` data-kat="${kat}"` : ''}${zvuk ? ' data-zvuk' : ''}>
           <video muted loop playsinline preload="none" poster="assets/video/${ime}-poster.jpg" width="${w}" height="${h}"${od ? ` data-od="${od}"` : ''}${doo ? ` data-do="${doo}"` : ''}>
             <source src="assets/video/${ime}.mp4" type="video/mp4">
           </video>
@@ -51,7 +52,7 @@ for (const f of fs.readdirSync(dir).filter((f) => f.endsWith('.html'))) {
     t = t.replace(`<a class="tab" href="${meni}">`, `<a class="tab" href="${meni}" aria-current="page">`);
     fi = fi.replace(`<a href="${meni}">`, `<a href="${meni}" aria-current="page">`);
     // stranice usluga: u donjoj traci je aktivna stavka „Usluge“
-    if (['kuhinje.html', 'plakari.html', 'sobe.html', 'kupatila.html'].includes(meni)) t = t.replace('class="tab tab-usluge"', 'class="tab tab-usluge" data-aktivna');
+    if (['kuhinje.html', 'plakari.html', 'sobe.html', 'zidni-krevet.html', 'kupatila.html'].includes(meni)) t = t.replace('class="tab tab-usluge"', 'class="tab tab-usluge" data-aktivna');
   }
   s = s.replace(/{{FOTO:([^}]+)}}/g, (_, a) => foto(...a.split('|')))
        .replace(/{{SLIKA:([^}]+)}}/g, (_, a) => slika(...a.split('|')))
