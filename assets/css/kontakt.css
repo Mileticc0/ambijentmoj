@@ -46,12 +46,6 @@ textarea.unos { min-height: 140px; resize: vertical; }
 .brojac.blizu { color: #9B2C1F; }
 @media (max-width: 599px) { .polje-red { grid-template-columns: 1fr; } }
 
-.fajl { position: relative; display: inline-flex; }
-.fajl input { position: absolute; inset: 0; opacity: 0; cursor: pointer; width: 100%; }
-.fajl input:focus-visible + .link { outline: 2px solid var(--orah); outline-offset: 2px; }
-.pregled { display: flex; align-items: center; gap: 16px; margin-top: 8px; }
-.pregled[hidden] { display: none; }
-.pregled-ime { min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; flex: 1; font-size: 15px; color: var(--tekst-2); }
 
 .napomena { margin-top: 24px; font-size: 15px; }
 .akcije { margin-top: 28px; }
@@ -66,3 +60,7 @@ textarea.unos { min-height: 140px; resize: vertical; }
 .hvala p { font-family: var(--f-naslov); font-size: clamp(26px, 2.4vw, 34px); line-height: 1.15; }
 @media (max-width: 959px) { .akcije .btn { width: 100%; } }
 @media (prefers-reduced-motion: reduce) { .spin { animation-duration: 1.6s; } }
+
+/* napomena ispod forme: projekat ili skica mejlom ili Viberom (forma ne prima fajlove) */
+.forma-prilog { margin-top: 24px; color: var(--tekst-2); font-size: 15px; }
+.forma-prilog a { color: var(--tekst); text-underline-offset: 4px; overflow-wrap: anywhere; }

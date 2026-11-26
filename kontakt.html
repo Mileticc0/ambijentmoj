@@ -116,13 +116,13 @@
     <div class="wrap grid">
       <div class="k-forma-uvod">
         <h2 id="h-forma">Pošaljite upit</h2>
-        <p>Napišite šta vam treba i priložite projekat ili skicu ako je imate. Javljamo se da dogovorimo merenje.</p>
+        <p>Napišite šta vam treba. Javljamo se da dogovorimo merenje.</p>
       </div>
-      <form class="forma" action="https://api.web3forms.com/submit" method="POST" enctype="multipart/form-data" novalidate>
-        <input type="hidden" name="access_key" value="OVDE_KLJUC">
-        <input type="hidden" name="subject" value="Upit sa sajta: merenje">
+      <form class="forma" action="https://api.web3forms.com/submit" method="POST" novalidate>
+        <input type="hidden" name="access_key" value="4747ea26-6923-46bf-8d73-40495797d504">
+        <input type="hidden" name="subject" value="Nov upit sa sajta – Moj Ambijent">
         <input type="hidden" name="from_name" value="mojambijent.com">
-        <input type="checkbox" name="botcheck" class="vh" tabindex="-1" autocomplete="off" aria-hidden="true">
+        <input type="checkbox" name="botcheck" class="hidden" style="display: none;" tabindex="-1" autocomplete="off" aria-hidden="true">
         <div class="polje">
           <label class="p-naslov" for="ime">Ime i prezime</label>
           <input class="unos" id="ime" name="ime" type="text" autocomplete="name" maxlength="120" required aria-describedby="g-ime">
@@ -139,12 +139,6 @@
           <textarea class="unos" id="poruka" name="poruka" rows="5" maxlength="2000" aria-describedby="brojac"></textarea>
           <p class="brojac label num" id="brojac" aria-live="polite">0 / 2000</p>
         </div>
-        <div class="polje">
-          <span class="p-naslov" id="l-prilog">Prilog projekta <span class="tiho">(nije obavezno, do 10 MB)</span></span>
-          <label class="fajl"><input id="prilog" name="attachment" type="file" accept="image/*,application/pdf" aria-labelledby="l-prilog" aria-describedby="g-prilog"><span class="link">Izaberite fajl</span></label>
-          <div class="pregled" hidden><span class="pregled-ime"></span><button class="link ukloni" type="button">Ukloni</button></div>
-          <p class="greska" id="g-prilog" hidden>Fajl je veći od 10 MB. Pošaljite manji ili ga pošaljite na mojambijent@gmail.com.</p>
-        </div>
         <p class="napomena tiho">Podatke koristimo samo da vam odgovorimo. Više u delu <a href="privatnost.html">Privatnost</a>.</p>
         <div class="akcije"><button class="btn posalji" type="submit"><span class="posalji-tekst">Pošaljite upit</span><span class="spin" aria-hidden="true"></span></button></div>
         <p class="greska greska-slanja" role="alert" hidden>Slanje nije uspelo. Pokušajte ponovo ili pozovite <a class="num" href="tel:+381631105456">063 110 54 56</a>.</p>
@@ -153,6 +147,7 @@
           <p>Hvala. Javljamo se da dogovorimo merenje.</p>
         </div>
       </form>
+      <p class="forma-prilog">Projekat ili skicu pošaljite na <a href="mailto:mojambijent@gmail.com">mojambijent@gmail.com</a> ili na Viber/WhatsApp <a class="num" href="tel:+381631105456">063&nbsp;110&nbsp;54&nbsp;56</a>.</p>
     </div>
   </section>
 </main>
