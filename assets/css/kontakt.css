@@ -62,5 +62,6 @@ textarea.unos { min-height: 140px; resize: vertical; }
 @media (prefers-reduced-motion: reduce) { .spin { animation-duration: 1.6s; } }
 
 /* napomena ispod forme: projekat ili skica mejlom ili Viberom (forma ne prima fajlove) */
-.forma-prilog { margin-top: 24px; color: var(--tekst-2); font-size: 15px; }
+.forma-prilog { grid-column: 6 / -1; margin-top: 24px; color: var(--tekst-2); font-size: 15px; }
 .forma-prilog a { color: var(--tekst); text-underline-offset: 4px; overflow-wrap: anywhere; }
+@media (max-width: 959px) { .forma-prilog { grid-column: 1 / -1; } }
